@@ -2015,7 +2015,6 @@ input, select, textarea {
 		.icon.featured {
 			position: relative;
 			display: inline-block;
-			background-color: #d52349;
 			width: 9em;
 			padding: 1.75em 0 0.75em 0;
 			border-top-left-radius: 5px;
@@ -2173,18 +2172,18 @@ input, select, textarea {
 /* Banner */
 
 	#banner {
-		background: #CCE8F4 url("../../images/pic01.jpg");
+		background: url("../../images/pic01.jpg");
 		background-position: center center;
-		background-size: auto 100%;
+		background-size: 100%;
 		background-repeat: no-repeat;
 		text-align: center;
 		position: relative;
-		padding: 8em 0;
+		padding: em 80;
 		margin: 4em 0 0 0;
 	}
 
 		#banner header {
-			background-color: rgba(34, 30, 31, 0.98);
+			background-color: rgb(235, 225, 15, 0.8);
 			display: inline-block;
 			padding: 2.5em 5em;
 			border-radius: 5px;
@@ -2198,7 +2197,7 @@ input, select, textarea {
 			}
 
 			#banner header p {
-				color: #d52349;
+				color: rgb(255, 255, 128);
 				padding: 0;
 				font-style: normal;
 				margin: 0;
@@ -2311,7 +2310,7 @@ input, select, textarea {
 		}
 
 		#footer h2, #footer h3, #footer h4, #footer h5, #footer h6, #footer strong, #footer b {
-			color: #fff;
+			color:#353434;
 		}
 
 			#footer h2 a, #footer h3 a, #footer h4 a, #footer h5 a, #footer h6 a, #footer strong a, #footer b a {
