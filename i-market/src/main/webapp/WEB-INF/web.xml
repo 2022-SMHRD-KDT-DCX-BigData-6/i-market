@@ -4,4 +4,55 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+    <servlet>
+  	<servlet-name>JoinService</servlet-name>
+  	<display-name>JoinService</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller.JoinService</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LoginService</servlet-name>
+  	<display-name>LoginService</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller.LoginService</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>WriteBoardService</servlet-name>
+  	<display-name>WriteBoardService</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller.WriteBoardService</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Frontcontroller</servlet-name>
+  	<display-name>Frontcontroller</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.frontcontroller.Frontcontroller</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ChatRoomService</servlet-name>
+  	<display-name>ChatRoomService</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller.ChatRoomService</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+  	<servlet-name>JoinService</servlet-name>
+  	<url-pattern>/JoinService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LoginService</servlet-name>
+  	<url-pattern>/LoginService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>WriteBoardService</servlet-name>
+  	<url-pattern>/WriteBoardService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Frontcontroller</servlet-name>
+  	<url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ChatRoomService</servlet-name>
+  	<url-pattern>/ChatRoomService</url-pattern>
+  </servlet-mapping>
 </web-app>
