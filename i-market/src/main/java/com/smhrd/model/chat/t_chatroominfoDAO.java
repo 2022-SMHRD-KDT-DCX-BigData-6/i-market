@@ -21,6 +21,7 @@ public class t_chatroominfoDAO {
 		
 		sqlSession.close();
 		
+		
 		return cnt;
 	}
 	
