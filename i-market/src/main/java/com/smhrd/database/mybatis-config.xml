@@ -26,5 +26,5 @@
     <mapper resource="com/smhrd/database/hifiveMapper.xml" />
     <mapper resource="com/smhrd/database/UserMapper.xml"/>
     <mapper resource="com/smhrd/database/ChatMapper.xml"/>
-  </mappers>
+    </mappers>
 </configuration>

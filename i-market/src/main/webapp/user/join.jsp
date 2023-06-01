@@ -90,7 +90,7 @@ fieldset{
 		<h1>i-market</h1>
 		<fieldset>
 			<legend>회원가입</legend>
-			<form action="Join" method="post">
+			<form action="../Join" method="post">
 				<div id="join_wrapper">
 					<div id="id">
 						<input type="text" name="user_id" id="user_id" placeholder="ID을 입력하세요">

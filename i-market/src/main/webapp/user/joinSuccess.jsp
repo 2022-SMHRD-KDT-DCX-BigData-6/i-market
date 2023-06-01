@@ -68,7 +68,7 @@
 	</div>
 	<br><br>
 	<div id="goMain">
-		<a href="main.jsp"><input  class="tomain" type="button" id="button" value="메인페이지로"></a>
+		<a href="../index.html"><input  class="tomain" type="button" id="button" value="메인페이지로"></a>
 	</div>
 	</fieldset>
 </body>
