@@ -20,23 +20,23 @@
 	<section>
 		<div class="row">
 			<div class="col-12" align="right">
-				<a href="user/join.jsp"> <input type="button"
+				<a href="../user/join.jsp"> <input type="button"
 					class="btn float-right" value="Join">
-				</a> <a href="user/login.jsp"> <input type="button"
+				</a> <a href="../user/login.jsp"> <input type="button"
 					class="btn float-right" value="Login">
 				</a>
 			</div>
 		</div>
 		<!-- Logo -->
 		<h1>
-			<a href="index.html">아이 i 마켓</a>
+			<a href="../index.html">아이 i 마켓</a>
 		</h1>
 		<span>유아용품전용 중고거래 플랫폼</span>
 
 		<!-- Nav -->
 		<nav id="nav">
 			<ul>
-				<li class="current"><a href="index.html">홈</a></li>
+				<li class="current"><a href="../index.html">홈</a></li>
 				<li><a href="#">전체보기</a>
 					<ul>
 						<li><a href="#">유아동용품</a></li>
@@ -58,7 +58,7 @@
 				<div class="sc-eNQAEJ voMyM">
 					<input type="text" placeholder="검색" maxlength="40"
 						class="sc-hMqMXs cLfdog" value=""> <img
-						src="./images/2be3c66fa47ccd5ece2a.png" class="sc-hMqMXs search"
+						src=".././images/2be3c66fa47ccd5ece2a.png" class="sc-hMqMXs search"
 						width="16" height="16" alt=" " />
 				</div>
 
@@ -90,7 +90,7 @@
 							href="itemDetail.jsp?item_idx=<%=item_list.get(i).getItem_idx()%>">
 							<div class="box list">
 								<div class="image featured"><img
-									src=".././photo/<%=item_list.get(i).getItem_photo()%>" alt="" /></div>
+									src="../photo/<%=item_list.get(i).getItem_photo()%>" alt="" /></div>
 								<div class="box itemName">
 									<h4><%=item_list.get(i).getItem_name()%></h4>
 								</div>
