@@ -5,22 +5,10 @@
 <web-app>
 	<display-name>Archetype Created Web Application</display-name>
 	<servlet>
-		<servlet-name>Join</servlet-name>
-		<display-name>Join</display-name>
+		<servlet-name>Frontcontroller</servlet-name>
+		<display-name>Frontcontroller</display-name>
 		<description></description>
-		<servlet-class>com.main.controller.Join</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>Logout</servlet-name>
-		<display-name>Logout</display-name>
-		<description></description>
-		<servlet-class>com.main.controller.Logout</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>Update</servlet-name>
-		<display-name>Update</display-name>
-		<description></description>
-		<servlet-class>com.main.controller.Update</servlet-class>
+		<servlet-class>com.smhrd.frontcontroller.Frontcontroller</servlet-class>
 	</servlet>
 	<servlet>
 		<servlet-name>Delete</servlet-name>
@@ -29,16 +17,10 @@
 		<servlet-class>com.main.controller.Delete</servlet-class>
 	</servlet>
 	<servlet>
-		<servlet-name>delete</servlet-name>
-		<display-name>delete</display-name>
+		<servlet-name>Join</servlet-name>
+		<display-name>Join</display-name>
 		<description></description>
-		<servlet-class>com.main.controller.delete</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>DeleteService</servlet-name>
-		<display-name>DeleteService</display-name>
-		<description></description>
-		<servlet-class>com.main.controller.DeleteService</servlet-class>
+		<servlet-class>com.main.controller.Join</servlet-class>
 	</servlet>
 	<servlet>
 		<servlet-name>Login</servlet-name>
@@ -59,6 +41,18 @@
 		<servlet-class>com.main.controller.Update</servlet-class>
 	</servlet>
 	<servlet>
+		<servlet-name>ChatRoomService</servlet-name>
+		<display-name>ChatRoomService</display-name>
+		<description></description>
+		<servlet-class>com.smhrd.controller.ChatRoomService</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CreateChatService</servlet-name>
+		<display-name>CreateChatService</display-name>
+		<description></description>
+		<servlet-class>com.smhrd.controller.CreateChatService</servlet-class>
+	</servlet>
+	<servlet>
 		<servlet-name>JoinService</servlet-name>
 		<display-name>JoinService</display-name>
 		<description></description>
@@ -71,24 +65,74 @@
 		<servlet-class>com.smhrd.controller.LoginService</servlet-class>
 	</servlet>
 	<servlet>
-		<servlet-name>WriteBoardService</servlet-name>
-		<display-name>WriteBoardService</display-name>
+		<servlet-name>LogoutService</servlet-name>
+		<display-name>LogoutService</display-name>
 		<description></description>
-		<servlet-class>com.smhrd.controller.WriteBoardService</servlet-class>
+		<servlet-class>com.smhrd.controller.LogoutService</servlet-class>
 	</servlet>
 	<servlet>
+		<servlet-name>SendChatService</servlet-name>
+		<display-name>SendChatService</display-name>
+		<description></description>
+		<servlet-class>com.smhrd.controller.SendChatService</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>uploaditemService</servlet-name>
+		<display-name>uploaditemService</display-name>
+		<description></description>
+		<servlet-class>com.item.controller.uploaditemService</servlet-class>
+	</servlet>
+		<servlet-mapping>
 		<servlet-name>Frontcontroller</servlet-name>
-		<display-name>Frontcontroller</display-name>
-		<description></description>
-		<servlet-class>com.smhrd.frontcontroller.Frontcontroller</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>ChatRoomService</servlet-name>
-		<display-name>ChatRoomService</display-name>
-		<description></description>
-		<servlet-class>com.smhrd.controller.ChatRoomService</servlet-class>
-	</servlet>
-
-	
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+		<servlet-mapping>
+			<servlet-name>Delete</servlet-name>
+			<url-pattern>/Delete</url-pattern>
+		</servlet-mapping>
+		<servlet-mapping>
+			<servlet-name>Join</servlet-name>
+			<url-pattern>/Join</url-pattern>
+		</servlet-mapping>
+		<servlet-mapping>
+			<servlet-name>Login</servlet-name>
+			<url-pattern>/Login</url-pattern>
+		</servlet-mapping>
+		<servlet-mapping>
+			<servlet-name>Logout</servlet-name>
+			<url-pattern>/Logout</url-pattern>
+		</servlet-mapping>
+		<servlet-mapping>
+			<servlet-name>Update</servlet-name>
+			<url-pattern>/Update</url-pattern>
+		</servlet-mapping>
+		<servlet-mapping>
+			<servlet-name>ChatRoomService</servlet-name>
+			<url-pattern>/ChatRoomService</url-pattern>
+		</servlet-mapping>
+		<servlet-mapping>
+			<servlet-name>CreateChatService</servlet-name>
+			<url-pattern>/CreateChatService</url-pattern>
+		</servlet-mapping>
+		<servlet-mapping>
+			<servlet-name>JoinService</servlet-name>
+			<url-pattern>/JoinService</url-pattern>
+		</servlet-mapping>
+		<servlet-mapping>
+			<servlet-name>LoginService</servlet-name>
+			<url-pattern>/LoginService</url-pattern>
+		</servlet-mapping>
+		<servlet-mapping>
+			<servlet-name>LogoutService</servlet-name>
+			<url-pattern>/LogoutService</url-pattern>
+		</servlet-mapping>
+		<servlet-mapping>
+			<servlet-name>SendChatService</servlet-name>
+			<url-pattern>/SendChatService</url-pattern>
+		</servlet-mapping>
+		<servlet-mapping>
+			<servlet-name>uploaditemService</servlet-name>
+			<url-pattern>/uploaditemService</url-pattern>
+		</servlet-mapping>
 
 </web-app>
