@@ -23,12 +23,9 @@
   </environments>
   <mappers>
     <mapper resource="com/smhrd/database/WebMemberMapper.xml"/>
-<<<<<<< HEAD
     <mapper resource="com/smhrd/database/hifiveMapper.xml" />
-=======
     <mapper resource="com/smhrd/database/WebBoardMapper.xml"/>
     <mapper resource="com/smhrd/database/UserMapper.xml"/>
     <mapper resource="com/smhrd/database/ChatMapper.xml"/>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-DCX-BigData-6/i-market.git
   </mappers>
 </configuration>
