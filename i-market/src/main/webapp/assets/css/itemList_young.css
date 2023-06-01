@@ -291,7 +291,7 @@ input, select, textarea {
 		}
 
 		.row > .col-4 {
-			width: 20%;
+			width: 25%;
 		}
 
 		.row > .off-4 {
@@ -1580,23 +1580,31 @@ input, select, textarea {
 
 	.box {
 		background: #ffffff;
-		border-bottom: solid 1px #ccc;
-		padding: 2.75em 1.75em 2.75em 1.75em;
+		/* border-bottom: solid 1px #ccc; */
+		padding: 0em 0em 0em 0em;
 		height: auto;
-		border: 1px solid rgb(238, 238, 238);
+		/* border: 1px solid rgb(238, 238, 238); */
     	display: block;
 		
 	}
+		
+		.box.container{
+		background: #f9f9f9;	
+    	width: 800px;
+    	margin: 0 auto;
+    	margin-bottom: 20px;
+		}
+		
 		.box.list{
 		background: #ffffff;
-		border-bottom: solid 1px #ccc;
+		/* border-bottom: solid 1px #ccc; */
 		padding: 2.75em 1.75em 2.75em 1.75em;
 		height: auto;
 		border: 1px solid rgb(238, 238, 238);
     	display: block;
 		}
 		.box.content{
-		padding: 15px 10px;
+		padding: 0px 0px 0px 0px;
     	height: 80px;
 		}
 		.box.photo{
@@ -1610,8 +1618,17 @@ input, select, textarea {
 		.box.itemName{
 		position: relative;
     	font-size: 14px;
-    	padding-bottom: 20px;
+		padding: 0px 0px 0px 0px;
     	text-overflow: ellipsis;
+    	white-space: nowrap;
+    	overflow: hidden;
+		}
+		
+		.box.itemAddr{
+		position: relative;
+		font-size: 8px;
+		padding: 0px 0px 0px 0px;
+		text-overflow: ellipsis;
     	white-space: nowrap;
     	overflow: hidden;
 		}

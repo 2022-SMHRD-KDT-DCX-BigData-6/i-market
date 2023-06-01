@@ -53,7 +53,7 @@
 					</ul></li>
 				<li><a href="left-sidebar.html">News</a></li>
 				<li><a href="right-sidebar.html">게시판</a></li>
-				<li><a href="no-sidebar.html">판매하기</a></li>
+				<li><a href="uploadItemBoard.jsp">판매하기</a></li>
 				<li><a href="no-sidebar.html">마이페이지</a></li>
 				<div class="sc-eNQAEJ voMyM">
 					<input type="text" placeholder="검색" maxlength="40"
@@ -80,42 +80,40 @@
 		%>
 
 		<section>
-			<div class="row">
-				<%
-				for (int i = (item_list.size() - 1); i >= 0; i--) {
-				%>
-				<div class="col-4 col-6-medium col-12-small">
-					<a
-						href="itemDetail.jsp?item_idx=<%=item_list.get(i).getItem_idx()%>">
-						<div class="box list">
-							<div class="box photo">
+			<div class="box container">
+				<div class="row">
+					<%
+					for (int i = (item_list.size() - 1); i >= 0; i--) {
+					%>
+					<div class="col-4 col-6-medium col-12-small">
+						<a
+							href="itemDetail.jsp?item_idx=<%=item_list.get(i).getItem_idx()%>">
+							<div class="box list">
 								<a href="#" class="image featured"><img
 									src="./photo/<%=item_list.get(i).getItem_photo()%>" alt="" /></a>
-							</div>
-							<div class="box content">
 								<div class="box itemName">
 									<h4><%=item_list.get(i).getItem_name()%></h4>
 								</div>
 								<div class="box itemPriceTime">
 									<div class="box itemPrice">
-										<p><%=item_list.get(i).getItem_price()%>
-											원
-										</p>
+										<%=item_list.get(i).getItem_price()%>
+										원
 									</div>
 									<div class="box itemTime">
 										<%=item_list.get(i).getUploaded_at()%>
 									</div>
 								</div>
-								<div class="itemAddr">
-									<%=item_list.get(i).getUser_addr_at() %>
+								<div class="box itemAddr">
+									<img src="https://m.bunjang.co.kr/pc-static/resource/5dcce33ad99f3020a4ab.png"
+										width="15" height="17">  <%=item_list.get(i).getUser_addr_at()%>
 								</div>
 							</div>
-						</div>
-					</a>
+						</a>
+					</div>
+					<%
+					}
+					%>
 				</div>
-				<%
-				}
-				%>
 			</div>
 		</section>
 
