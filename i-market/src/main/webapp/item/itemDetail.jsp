@@ -61,10 +61,12 @@
 
 			</div>
 			<p id="article-counts">관심 15 ∙ 채팅 3 ∙ 조회 716</p>
+			<form action="CreateChatService.do">
 			<tr>
-						<td colspan="2"><input type="reset" value="초기화"> <input
-							type="submit" value="채팅"></td>
+						<td colspan="2"><input type="reset" value="초기화">
+						 <input type="submit" value="채팅"></td>
 					</tr>
+			</form>
 		</section>
 	</article>
 
