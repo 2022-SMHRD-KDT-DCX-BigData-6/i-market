@@ -84,6 +84,30 @@
 	</servlet>
 
 	<servlet-mapping>
+		<servlet-name>JoinService</servlet-name>
+		<url-pattern>/JoinService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LoginService</servlet-name>
+		<url-pattern>/LoginService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>WriteBoardService</servlet-name>
+		<url-pattern>/WriteBoardService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Frontcontroller</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ChatRoomService</servlet-name>
+		<url-pattern>/ChatRoomService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>uploadItemService</servlet-name>
+		<url-pattern>/uploadItemService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
 		<servlet-name>Join</servlet-name>
 		<url-pattern>/Join</url-pattern>
 	</servlet-mapping>
@@ -105,23 +129,5 @@
 	</servlet-mapping>
 
 
-
-	<servlet-mapping>
-		<servlet-name>JoinService</servlet-name>
-		<url-pattern>/JoinService</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>LoginService</servlet-name>
-		<url-pattern>/LoginService</url-pattern>
-	</servlet-mapping>
-
-	<servlet-mapping>
-		<servlet-name>Frontcontroller</servlet-name>
-		<url-pattern>*.do</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>ChatRoomService</servlet-name>
-		<url-pattern>/ChatRoomService</url-pattern>
-	</servlet-mapping>
 
 </web-app>
