@@ -34,6 +34,12 @@
   	<description></description>
   	<servlet-class>com.smhrd.controller.ChatRoomService</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>uploadItemService</servlet-name>
+  	<display-name>uploadItemService</display-name>
+  	<description></description>
+  	<servlet-class>com.item.controller.uploadItemService</servlet-class>
+  </servlet>
 
   <servlet-mapping>
   	<servlet-name>JoinService</servlet-name>
@@ -54,5 +60,9 @@
   <servlet-mapping>
   	<servlet-name>ChatRoomService</servlet-name>
   	<url-pattern>/ChatRoomService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>uploadItemService</servlet-name>
+  	<url-pattern>/uploadItemService</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -1,20 +1,14 @@
-<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
-<%@page import="com.main.model.t_iteminfoDAO"%>
-<%@page import="com.main.model.t_iteminfoDTO"%>
-<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>전체상품</title>
-<style type="text/css">
-</style>
+<title>Insert title here</title>
 <meta charset="utf-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="assets/css/itemList_young.css" />
+<link rel="stylesheet" href="../assets/css/itemList_young.css" />
 </head>
 <body>
 	<section>
@@ -73,50 +67,67 @@
 			</header>
 		</section>
 	</section>
-	<div id="page-wrapper">
+	<div class="box container">
+		<div id="board">
+			<form action="uploadItemService" method="post"
+				enctype="multipart/form-data">
 
-		<%
-		List<t_iteminfoDTO> item_list = new t_iteminfoDAO().showItem();
-		%>
+				<table id="itemList">
+					<tr>
+						<td>제목</td>
+						<td><input type="text" name="item_name"></td>
+					</tr>
+					<tr>
+						<td>작성자</td>
+						<td><input type="text" name="user_id"></td>
+					</tr>
+					<tr>
+						<td>가격</td>
+						<td><input type="number" name="item_price"></td>
+					</tr>
+					<tr>
+						<td>분류</td>
+						<td><select name="item_category">
+								<option value="분류1">분류1</option>
+								<option value="분류2">분류2</option>
+								<option value="분류3">분류3</option>
+						</select></td>
+					</tr>
+					<tr>
+						<td>거래장소</td>
+						<td><input type="text" name="user_addr_at"></td>
+					</tr>
+					<tr>
+						<td>흥정여부</td>
+						<td><input type="radio" name="item_bargain_YN" value="1">예<input
+							type="radio" name="item_bargain_YN" value="0">아니오</td>
 
-		<section>
-			<div class="box container">
-				<div class="row">
-					<%
-					for (int i = (item_list.size() - 1); i >= 0; i--) {
-					%>
-					<div class="col-4 col-6-medium col-12-small">
-						<a
-							href="itemDetail.jsp?item_idx=<%=item_list.get(i).getItem_idx()%>">
-							<div class="box list">
-								<a href="#" class="image featured"><img
-									src="./photo/<%=item_list.get(i).getItem_photo()%>" alt="" /></a>
-								<div class="box itemName">
-									<h4><%=item_list.get(i).getItem_name()%></h4>
-								</div>
-								<div class="box itemPriceTime">
-									<div class="box itemPrice">
-										<%=item_list.get(i).getItem_price()%>
-										원
-									</div>
-									<div class="box itemTime">
-										<%=item_list.get(i).getUploaded_at()%>
-									</div>
-								</div>
-								<div class="box itemAddr">
-									<img src="https://m.bunjang.co.kr/pc-static/resource/5dcce33ad99f3020a4ab.png"
-										width="15" height="17">  <%=item_list.get(i).getUser_addr_at()%>
-								</div>
-							</div>
-						</a>
-					</div>
-					<%
-					}
-					%>
-				</div>
-			</div>
-		</section>
-
+					</tr>
+					<tr>
+						<td colspan="2">내용</td>
+					</tr>
+					<tr>
+						<td colspan="2"><input type="file" name="item_photo"
+							style="float: right;"> <textarea rows="10"
+								name="item_info" style="resize: none;"></textarea></td>
+					</tr>
+					<tr>
+						<td colspan="2"><input type="reset" value="초기화"> <input
+							type="submit" value="작성하기"></td>
+					</tr>
+				</table>
+			</form>
+		</div>
 	</div>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="assets/js/main.js"></script>
+
+
 </body>
 </html>

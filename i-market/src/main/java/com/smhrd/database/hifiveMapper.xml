@@ -14,7 +14,7 @@
 	</insert>
 	
 	<select id="showItem" resultType="com.main.model.t_iteminfoDTO">
-		select * from t_iteminfo
+		select * from t_iteminfo order by item_idx
 	</select>
 	
 	<select id="showItemDetail" resultType="com.main.model.t_iteminfoDTO">

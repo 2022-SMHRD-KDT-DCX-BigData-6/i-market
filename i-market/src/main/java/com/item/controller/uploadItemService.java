@@ -1,4 +1,4 @@
-package com.hifive.controller;
+package com.item.controller;
 
 import java.io.IOException;
 
@@ -38,13 +38,14 @@ public class uploadItemService extends HttpServlet {
 			String user_addr_at = multi.getParameter("user_addr_at");
 			String user_addr = "참조키";
 			String item_bargain_YN = multi.getParameter("item_bargain_YN");
-			t_iteminfoDTO dto =  new t_iteminfoDTO(item_idx, item_name, item_price, item_info, item_category, null, item_photo, user_id, item_status, user_addr_at, user_addr, item_bargain_YN);
+			t_iteminfoDTO dto = new t_iteminfoDTO(item_idx, item_name, item_price, item_info, item_category, null,
+					item_photo, user_id, item_status, user_addr_at, user_addr, item_bargain_YN);
 			cnt = new t_iteminfoDAO().itemUpload(dto);
-			
-			if (cnt==0) {
+
+			if (cnt == 0) {
 				response.sendRedirect("uploadItemBoard.jsp");
-			}else {
-				response.sendRedirect("main.jsp");
+			} else {
+				response.sendRedirect("itemListMain.jsp");
 			}
 
 		} catch (Exception e) {
