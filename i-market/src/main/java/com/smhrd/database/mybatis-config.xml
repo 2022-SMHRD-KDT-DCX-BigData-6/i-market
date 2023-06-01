@@ -6,6 +6,9 @@
   <properties resource="com/smhrd/database/db.properties"></properties>
     <typeAliases>
   	<typeAlias type="com.main.model.WebMemberDTO" alias="WebMember"/>
+  	<typeAlias type="com.smhrd.model.chat.t_chatroominfoDTO" alias="ChatRoom"/>
+	<typeAlias type="com.smhrd.model.chat.t_chattinginfoDTO" alias="Chatting"/>
+	<typeAlias type="com.smhrd.model.user.t_userinfoDTO" alias="User"/>
 </typeAliases>
   <environments default="development">
     <environment id="development">
@@ -20,6 +23,12 @@
   </environments>
   <mappers>
     <mapper resource="com/smhrd/database/WebMemberMapper.xml"/>
+<<<<<<< HEAD
     <mapper resource="com/smhrd/database/hifiveMapper.xml" />
+=======
+    <mapper resource="com/smhrd/database/WebBoardMapper.xml"/>
+    <mapper resource="com/smhrd/database/UserMapper.xml"/>
+    <mapper resource="com/smhrd/database/ChatMapper.xml"/>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-DCX-BigData-6/i-market.git
   </mappers>
 </configuration>
