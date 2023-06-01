@@ -12,6 +12,7 @@ import com.main.model.WebMemberDTO;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
+
 public class Join extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -41,7 +42,7 @@ public class Join extends HttpServlet {
 					HttpSession session = request.getSession();
 					session.setAttribute("user_nick", user_nick);
 
-					 response.sendRedirect("joinSuccess.jsp");
+					 response.sendRedirect("user/joinSuccess.jsp");
 				} else {
 					 response.sendRedirect("index.html");
 				}

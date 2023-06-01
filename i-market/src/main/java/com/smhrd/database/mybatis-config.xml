@@ -20,6 +20,5 @@
   </environments>
   <mappers>
     <mapper resource="com/smhrd/database/WebMemberMapper.xml"/>
-    <mapper resource="com/smhrd/database/WebBoardMapper.xml"/>
   </mappers>
 </configuration>
