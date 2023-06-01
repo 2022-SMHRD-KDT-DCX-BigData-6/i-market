@@ -23,7 +23,6 @@
   </environments>
   <mappers>
     <mapper resource="com/smhrd/database/WebMemberMapper.xml"/>
-    <mapper resource="com/smhrd/database/WebBoardMapper.xml"/>
     <mapper resource="com/smhrd/database/UserMapper.xml"/>
     <mapper resource="com/smhrd/database/ChatMapper.xml"/>
     </mappers>
