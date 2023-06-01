@@ -43,19 +43,21 @@ public class Frontcontroller extends HttpServlet {
 		String result = reqURI.substring(contextPath.length() + 1);
 		String moveURL = null;
 		Command service = null;
-		if (result.equals("LoginService.do")) {
+		System.out.println(result);
+		if (result.equals("chat/LoginService.do")) {
 			service = new LoginService();
-		} else if (result.equals("JoinService.do")) {
+		} else if (result.equals("chat/JoinService.do")) {
 			service = new JoinService();
-		} else if (result.equals("LogoutService.do")) {
+		} else if (result.equals("chat/LogoutService.do")) {
 			service = new LogoutService();
-		} else if (result.equals("ChatRoomService.do")) {
+		} else if (result.equals("chat/ChatRoomService.do")) {
 			service = new ChatRoomService();
-		} else if (result.equals("SendChatService.do")) {
+		} else if (result.equals("chat/SendChatService.do")) {
 			service = new SendChatService();
-		} else if (result.equals("CreateChatService.do")) {
+		} else if (result.equals("chat/CreateChatService.do")) {
 			service = new CreateChatService();
 		}
+		System.out.println(service);
 		moveURL = service.execute(request, response);
 		response.sendRedirect(moveURL);
 

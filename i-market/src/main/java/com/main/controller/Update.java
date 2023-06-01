@@ -14,7 +14,6 @@ import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 public class Update extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		WebMemberDTO loginMember = (WebMemberDTO) session.getAttribute("loginMember");
