@@ -90,7 +90,7 @@
 							href="itemDetail.jsp?item_idx=<%=item_list.get(i).getItem_idx()%>">
 							<div class="box list">
 								<div class="image featured"><img
-									src="../photo/<%=item_list.get(i).getItem_photo()%>" alt="" /></div>
+									src="../photo/<%=item_list.get(i).getItem_photo()%>" /></div>
 								<div class="box itemName">
 									<h4><%=item_list.get(i).getItem_name()%></h4>
 								</div>
