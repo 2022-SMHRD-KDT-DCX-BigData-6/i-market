@@ -15,6 +15,7 @@ public class Join extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// 회원가입
+				request.setCharacterEncoding("UTF-8");
 				// [회원가입기능]
 				// 1. 입력받은 회원정보 가져오기
 				String user_id = request.getParameter("user_id");

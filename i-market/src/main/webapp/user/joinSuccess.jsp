@@ -143,7 +143,7 @@
 	</div>
 	<br><br>
 	<div id="goMain">
-		<a href="main.jsp"><input class="tomain" type="submit" id="button" value="메인페이지로"></a>
+		<a href="../main.jsp"><input class="tomain" type="submit" id="button" value="메인페이지로"></a>
 		</div>
 	<div id="gologin">
 		<a href="login.jsp"><input class="login" type="submit" id="button" value="Login"></a>
