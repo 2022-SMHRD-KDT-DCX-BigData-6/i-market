@@ -9,6 +9,8 @@
   	<typeAlias type="com.smhrd.model.chat.t_chatroominfoDTO" alias="ChatRoom"/>
 	<typeAlias type="com.smhrd.model.chat.t_chattinginfoDTO" alias="Chatting"/>
 	<typeAlias type="com.smhrd.model.user.t_userinfoDTO" alias="User"/>
+	<typeAlias type="com.smhrd.model.board.BoardInfoDTO" alias="BoardInfo"/>
+	<typeAlias type="com.smhrd.model.board.CommentInfoDTO" alias="CommentInfo"/>
 </typeAliases>
   <environments default="development">
     <environment id="development">
@@ -26,5 +28,6 @@
     <mapper resource="com/smhrd/database/hifiveMapper.xml" />
     <mapper resource="com/smhrd/database/UserMapper.xml"/>
     <mapper resource="com/smhrd/database/ChatMapper.xml"/>
+    <mapper resource="com/smhrd/database/BoardInfoMapper.xml"/>
     </mappers>
 </configuration>
