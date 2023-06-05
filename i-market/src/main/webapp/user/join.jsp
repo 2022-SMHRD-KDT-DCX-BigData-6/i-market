@@ -3,96 +3,178 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
+
+
+
 <meta charset="UTF-8">
 <title>Join Page</title>
 <style type="text/css">
-fieldset{
-	width: 300px;
-	height: 300px;
+ fieldset{
+ 
+	width: 800px;
+	height: 600px;
 	position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 20px;
+    border: 1px solid #000;
+	}
+	
+	div#id{
+	
+	padding-top: 30px;
+	top: 40%;
+    left: 25%;
 	}
 	
 	#user_id {
-		height:30px;
+	height:65px;
+		width: 400px;
 	}
 	
 	div#pw{
-	position: absolute;
-	top: 17%;
-    left: 24%;
+	padding-top: 30px;
+	top: 40%;
+    left: 25%;
 	}
 	
 	#user_pw {
-		height:30px;
+	height:65px;
+		width: 400px;
 	}
 	
 	div#phone{
-	position: absolute;
-	top: 32%;
-    left: 24%;
+	padding-top: 30px;
+	top: 40%;
+    left: 25%;
 	}
 	
 	#user_phone {
-		height:30px;
+		height:65px;
+		width: 400px;
 	}
 	
 	div#nick{
-	position: absolute;
-	top: 47%;
-    left: 24%;
+	padding-top: 30px;
+	top: 40%;
+    left: 25%;
 	}
 	
 	#user_nick {
-		height:30px;
+		height:65px;
+		width: 400px;
 	}
 	
 	div#addr{
-	position: absolute;
-	top: 62%;
-    left: 24%;
+	padding-top: 30px;
+	top: 40%;
+    left: 25%;
 	}
 	
 	#user_addr {
-		height:30px;
+		height:65px;
+		width: 400px;
 	}
 	
 	div#join{
-	position: absolute;
+	padding-top: 30px;
 	height: auto;
 	top: 77%;
     left: 39%;
 	}
 	
 	#button{
-	width:55pt;
-	height:30pt; 
-	background-Color:yellow;
-	border: 1px solid #FFD700;
+	width:300pt;
+	height:40pt; 
+	background-Color:#f2ec1d;
+	border: 1px solid #000;
 	border-radius: 10px;
 	}
 	
 	h1{
-	position:absolute;
-	 width: 1420px;
-	 line-height: 200px;
+ line-height: 200px;
 	 text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
 	 color: yellow;
+	 }
+	 
+	.index_01{
+	text-decoration:none;
+	font-family: 'Hi Melody', cursive;
+	color:#f2ec1d;
+	font-size: 60px;
+	font-style: normal;
+	font-weight: 100;
+	text-shadow: 1px 0 10px #110f10;
+}
+	
+	
+	@font-face {
+     font-family: 'Hi Melody', cursive;
+     src: url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+ body{
+  font-family: 'Hi Melody', cursive;
+  background: var(--background);
+  color: var(--color);
+}
+	
+		input[type="submit"]
+	{
+	 font-family: 'Hi Melody', cursive;
+  background: var(--background);
+  font-size: 20px;
+	
 	}
+	 
+	 .Join{
+	
+	 font-family: 'Hi Melody', cursive;
+   background: var(--background);
+   font-size: 30px;
+	
+	}
+	input[type="text"]
+	{
+  font-size: 20px;
+	
+	}
+	
+	input[type="password"]
+	{
+  font-size: 20px;
+	
+	}
+	
+	
+	input[type="submit"],input[type="text"],a,legend,
+ div,fieldset,input[type="password"]{
+
+	 font-family:'Hi Melody', cursive;
+}
+	
 
 </style>
 </head>
 <body align="center">
 	<ul class="actions vertical">
-		<h1>i-market</h1>
+	<div>
+			<h1 >
+				<a class="index_01" style="font-family: 'Hi Melody', cursive;" href="main.jsp">아이 i 마켓</a>
+			</h1>
+			</div>
 		<fieldset>
-			<legend>회원가입</legend>
-			<form action="../Join" method="post">
+			<legend class="Join" style="font-family: 'Hi Melody', cursive;">Join</legend>
+			<form action="Join" method="post">
 				<div id="join_wrapper">
-					<div id="id">
+					<div id="idv">
 						<input type="text" name="user_id" id="user_id" placeholder="ID을 입력하세요">
 					</div>
 					<div id="pw">

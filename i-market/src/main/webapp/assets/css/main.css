@@ -1,5 +1,3 @@
-@import url("fontawesome-all.min.css");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic");
 
 /*
 	Dopetrope by HTML5 UP
@@ -8,7 +6,7 @@
 */
 
 html, body, div, span, applet, object,
-iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+iframe, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
 code, del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var, b,
@@ -28,6 +26,7 @@ section, summary, time, mark, audio, video {
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
+	
 
 body {
 	line-height: 1;
@@ -83,7 +82,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #252122;
+		background: 	#FFFACD;
 		background-image: url("images/bg02.png");
 	}
 
@@ -99,7 +98,7 @@ input, select, textarea {
 		}
 
 	body, input, textarea, select {
-		font-family: 'Source Sans Pro';
+		font-family: 'KorailRoundGothicBold';
 		font-weight: 300;
 		color: #5d5d5d;
 		font-size: 14pt;
@@ -112,7 +111,7 @@ input, select, textarea {
 	}
 
 	i, em {
-		font-style: italic;
+		font-style: normal;
 	}
 
 	sub {
@@ -130,15 +129,15 @@ input, select, textarea {
 	blockquote {
 		border-left: solid 0.75em #dddddd;
 		padding: 1em 0 1em 1.5em;
-		font-style: italic;
+		font-style:normal;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
+	 h2, h3, h4, h5, h6 {
 		color: #252122;
 		font-weight: 700;
 	}
 
-	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+ h2 a, h3 a, h4 a, h5 a, h6 a {
 		color: inherit;
 		text-decoration: none;
 	}
@@ -152,8 +151,8 @@ input, select, textarea {
 	}
 
 	a {
-		color: #d52349;
-		text-decoration: underline;
+		color: #000;
+		text-decoration: none;
 	}
 
 		a:hover {
@@ -349,7 +348,7 @@ input, select, textarea {
 		}
 
 		.row > .col-12 {
-			width: 100%;
+			width: 80%;
 		}
 
 		.row > .off-12 {
@@ -1540,7 +1539,7 @@ input, select, textarea {
 
 		header > p {
 			display: block;
-			font-style: italic;
+			font-style:normal;
 			margin: 0.5em 0 0 0;
 			padding-bottom: 0.5em;
 		}
@@ -1614,8 +1613,8 @@ input, select, textarea {
 		cursor: pointer;
 		border: 0;
 		border-radius: 5px;
-		background: #d52349;
-		color: #fff !important;
+		background:	#d52349;
+		color: 	#FFf;
 		font-weight: 700;
 		outline: 0;
 		font-size: 1.1em;
@@ -1632,7 +1631,7 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background: #e53359;
+			background: #FFDAB9;
 		}
 
 		input[type="button"]:active,
@@ -1797,6 +1796,9 @@ input, select, textarea {
 				font-size: 1.1em;
 			}
 
+
+
+
 			ul.contact li p {
 				margin: 0;
 			}
@@ -1927,11 +1929,11 @@ input, select, textarea {
 					line-height: 1.5em;
 				}
 
-				ul.social li a.fa-facebook {
+				ul.social li a.fa-facebook-f {
 					background: #3c5a98;
 				}
 
-					ul.social li a.fa-facebook:hover {
+					ul.social li a.fa-facebook-f:hover {
 						background: #4c6aa8;
 					}
 
@@ -1943,11 +1945,11 @@ input, select, textarea {
 						background: #3dbaf4;
 					}
 
-				ul.social li a.fa-dribbble {
+				ul.social li a.fa-instagram {
 					background: #c4376b;
 				}
 
-					ul.social li a.fa-dribbble:hover {
+					ul.social li a.fa-instagram:hover {
 						background: #d4477b;
 					}
 
@@ -1967,11 +1969,11 @@ input, select, textarea {
 						background: #3b5671;
 					}
 
-				ul.social li a.fa-google-plus {
+				ul.social li a.fa-google {
 					background: #da2713;
 				}
 
-					ul.social li a.fa-google-plus:hover {
+					ul.social li a.fa-google:hover {
 						background: #ea3723;
 					}
 
@@ -1992,7 +1994,8 @@ input, select, textarea {
 			text-rendering: auto;
 			line-height: 1;
 			text-transform: none !important;
-			font-family: 'Font Awesome 5 Free';
+			font-family: 'KorailRoundGothicBold';
+
 			font-weight: 400;
 		}
 
@@ -2001,7 +2004,7 @@ input, select, textarea {
 		}
 
 		.icon.brands:before {
-			font-family: 'Font Awesome 5 Brands';
+			font-family: 'KorailRoundGothicBold';
 		}
 
 		.icon:before {
@@ -2015,6 +2018,7 @@ input, select, textarea {
 		.icon.featured {
 			position: relative;
 			display: inline-block;
+			background-color: #fff;
 			width: 9em;
 			padding: 1.75em 0 0.75em 0;
 			border-top-left-radius: 5px;
@@ -2063,21 +2067,28 @@ input, select, textarea {
 
 /* Header */
 
-	#header {
-		position: relative;
-		background: #ffffff;
-		border-bottom: solid 1px #ccc;
-		padding: 5em 0 4em 0;
-		text-align: center;
-	}
+	#header{
+  font-family: 'KCCMurukmuruk', cursive;
+  background: var(--background);
+  color: var(--color);
+  transition: 4s;
+  text-align: center;
+}
 
-		#header h1 {
-			color: #252122;
-			font-weight: 900;
-			font-size: 2.5em;
-			letter-spacing: -0.035em;
-			line-height: 1;
-		}
+	.index_01{
+  text-align: center;
+  width: 100%;
+  margin: 0px auto;
+  font-size: 80px;
+  letter-spacing: 5px;
+  position: relative;
+  margin-top: -40px;
+  transition: 4s;
+  
+  text-shadow: -1px -1px 0px var(--background),
+    3px 3px 0px var(--background),
+    6px 6px 0px #00000055;
+}
 
 /* Nav */
 
@@ -2091,7 +2102,7 @@ input, select, textarea {
 
 			#nav > ul > li {
 				display: inline-block;
-				font-style: italic;
+				font-style: 'KorailRoundGothicBold';
 				margin: 0 0.35em 0 0.35em;
 			}
 
@@ -2126,7 +2137,7 @@ input, select, textarea {
 		background-color: #252122;
 		background-color: rgba(34, 30, 31, 0.98);
 		padding: 1.25em 1.5em 1.25em 1.5em;
-		font-style: italic;
+		font-style: normal;
 		min-width: 13em;
 		box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.5);
 		text-align: left;
@@ -2173,15 +2184,16 @@ input, select, textarea {
 
 	#banner {
 		background: url("../../images/pic01.jpg");
-		background-position: center center;
+		background-position: center;
 		background-size: 100%;
 		background-repeat: no-repeat;
 		text-align: center;
 		position: relative;
-		padding: em 80;
-		margin: 4em 0 0 0;
+		padding: 5em 8em 5em 8em ;
+		margin: 4em 0em 0em 0em;
+		
+		
 	}
-
 		#banner header {
 			background-color: rgb(235, 225, 15, 0.8);
 			display: inline-block;
@@ -2306,11 +2318,11 @@ input, select, textarea {
 		}
 
 		#footer a {
-			color: #c5c4c4;
+			color: rgb(255, 255, 255);
 		}
 
 		#footer h2, #footer h3, #footer h4, #footer h5, #footer h6, #footer strong, #footer b {
-			color:#353434;
+			color: #000;
 		}
 
 			#footer h2 a, #footer h3 a, #footer h4 a, #footer h5 a, #footer h6 a, #footer strong a, #footer b a {
@@ -2584,7 +2596,7 @@ input, select, textarea {
 						text-rendering: auto;
 						line-height: 1;
 						text-transform: none !important;
-						font-family: 'Font Awesome 5 Free';
+						font-family: 'KorailRoundGothicBold';
 						font-weight: 900;
 					}
 
@@ -2642,7 +2654,7 @@ input, select, textarea {
 					line-height: 44px;
 					border-top: solid 1px rgba(255, 255, 255, 0.05);
 					padding: 0 1em 0 1em;
-					font-style: italic;
+					font-style: normal;
 				}
 
 					#navPanel .link:first-child {
@@ -2847,12 +2859,6 @@ input, select, textarea {
 				padding: 2em 0;
 			}
 
-				#header h1 {
-					color: #252122;
-					font-weight: 900;
-					font-size: 1.75em;
-					letter-spacing: -0.035em;
-				}
 
 		/* Intro */
 
