@@ -254,10 +254,10 @@ section, summary, time, mark, audio, video {
 	<div class="row">
 		<div class="col-12" align="right">
 		<%if(loginMember==null) { %>
-		<a href="join.jsp">
+		<a href="user/join.jsp">
 				<input type="button" class="btn float-right" value="Join">
 		</a>
-		<a href="login.jsp">
+		<a href="user/login.jsp">
 			<input type="button" class="btn float-right" value="Login">
 			</a>
 		<%} else { 
