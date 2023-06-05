@@ -313,7 +313,7 @@ section, summary, time, mark, audio, video {
 					<li><a href="left-sidebar.html">판매하기</a></li>
 					<li><a href="boardController?pagebutton=1">게시판</a></li>
 					<li><a href="no-sidebar.html">NEWS</a></li>
-					<li><a href="myPage.jsp">마이페이지</a></li>
+					<li><a href="user/myPage.jsp">마이페이지</a></li>
 						<input type="text" placeholder="search" maxlength="40" class="sc-hMqMXs cLfdog" value="">
 						<img src="./images/2be3c66fa47ccd5ece2a.png" class="sc-hMqMXs search" width="16" height="16" alt=" " />
 				</ul>

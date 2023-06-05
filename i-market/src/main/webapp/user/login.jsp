@@ -172,7 +172,7 @@ background: #fff !important;
 		
 		
 		
-			<form action="Login" method="post">
+			<form action="../Login" method="post">
 			<div id="login_wrapper">
 				<div id="id">
 				<input type="text" name="user_id" id="user_id" placeholder="    ID을 입력하세요">

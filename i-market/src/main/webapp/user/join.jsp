@@ -172,7 +172,7 @@
 			</div>
 		<fieldset>
 			<legend class="Join" style="font-family: 'Hi Melody', cursive;">Join</legend>
-			<form action="Join" method="post">
+			<form action="../Join" method="post">
 				<div id="join_wrapper">
 					<div id="idv">
 						<input type="text" name="user_id" id="user_id" placeholder="ID을 입력하세요">

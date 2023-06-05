@@ -40,7 +40,7 @@ public class Join extends HttpServlet {
 
 					 response.sendRedirect("user/joinSuccess.jsp");
 				} else {
-					 response.sendRedirect("index.html");
+					 response.sendRedirect("main.jsp");
 				}
 	}
 
