@@ -10,7 +10,8 @@
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="../assets/css/itemList_young.css" />
 <script type="text/javascript" src="upload.js"></script>
-
+<script type="../assets/js/jquery.min.js">
+</script>
 </head>
 <body>
 	<section>
@@ -86,7 +87,7 @@
 			</nav>
 		</div>
 		<div class="ProductNewstyle__Wrapper-sc-7fge4a-0 hvgCyR">
-			<form action="uploadItemService" method="post"
+			<form action="../uploaditemService" method="post"
 				enctype="multipart/form-data">
 				<main class="ProductNewstyle__Main-sc-7fge4a-1 VvECz">
 					<section class="ProductNewstyle__Basic-sc-7fge4a-2 lmrVST">
@@ -149,13 +150,6 @@
 													<button type="button" class="CategoryBoxstyle__CategoryButton-sc-r1u93i-4 kulsCh" name="item_category" value="이유용품/유아식기">이유용품/유아식기</button></li>
 											</ul>
 										</div>
-									</div>
-									<div
-										style="display: flex; align-items: center; justify-content: space-between; margin-top: 1.5rem;">
-										<h3
-											class="CategoryBoxstyle__SelectedCategory-sc-r1u93i-5 jYpteP">
-											선택한 카테고리 : <b></b>
-										</h3>
 									</div>
 								</div></li>
 							<li class="ProductNewstyle__Group-sc-7fge4a-4 UPAMp"><div
