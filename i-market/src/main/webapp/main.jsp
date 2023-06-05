@@ -254,10 +254,10 @@ section, summary, time, mark, audio, video {
 	<div class="row">
 		<div class="col-12" align="right">
 		<%if(loginMember==null) { %>
-		<a href="join.jsp">
+		<a href="user/join.jsp">
 				<input type="button" class="btn float-right" value="Join">
 		</a>
-		<a href="login.jsp">
+		<a href="user/login.jsp">
 			<input type="button" class="btn float-right" value="Login">
 			</a>
 		<%} else { 
@@ -311,9 +311,9 @@ section, summary, time, mark, audio, video {
 							<li><a href="#">기타</a></li>
 						</ul></li>
 					<li><a href="left-sidebar.html">판매하기</a></li>
-					<li><a href="right-sidebar.html">게시판</a></li>
+					<li><a href="../boardController">게시판</a></li>
 					<li><a href="no-sidebar.html">NEWS</a></li>
-					<li><a href="myPage.jsp">마이페이지</a></li>
+					<li><a href="user/myPage.jsp">마이페이지</a></li>
 						<input type="text" placeholder="search" maxlength="40" class="sc-hMqMXs cLfdog" value="">
 						<img src="./images/2be3c66fa47ccd5ece2a.png" class="sc-hMqMXs search" width="16" height="16" alt=" " />
 				</ul>
