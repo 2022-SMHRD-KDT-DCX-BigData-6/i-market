@@ -58,8 +58,8 @@
 				<div class="sc-eNQAEJ voMyM">
 					<input type="text" placeholder="검색" maxlength="40"
 						class="sc-hMqMXs cLfdog" value=""> <img
-						src=".././images/2be3c66fa47ccd5ece2a.png" class="sc-hMqMXs search"
-						width="16" height="16" alt=" " />
+						src=".././images/2be3c66fa47ccd5ece2a.png"
+						class="sc-hMqMXs search" width="16" height="16" alt=" " />
 				</div>
 
 			</ul>
@@ -89,8 +89,9 @@
 						<a
 							href="itemDetail.jsp?item_idx=<%=item_list.get(i).getItem_idx()%>">
 							<div class="box list">
-								<div class="image featured"><img
-									src="../photo/<%=item_list.get(i).getItem_photo()%>" alt="" /></div>
+								<div class="image featured">
+									<img src="../photo/<%=item_list.get(i).getItem_photo()%>" />
+								</div>
 								<div class="box itemName">
 									<h4><%=item_list.get(i).getItem_name()%></h4>
 								</div>
@@ -104,8 +105,10 @@
 									</div>
 								</div>
 								<div class="box itemAddr">
-									<img src="https://m.bunjang.co.kr/pc-static/resource/5dcce33ad99f3020a4ab.png"
-										width="15" height="17">  <%=item_list.get(i).getUser_addr_at()%>
+									<img
+										src="https://m.bunjang.co.kr/pc-static/resource/5dcce33ad99f3020a4ab.png"
+										width="15" height="17">
+									<%=item_list.get(i).getUser_addr_at()%>
 								</div>
 							</div>
 						</a>
@@ -118,5 +121,22 @@
 		</section>
 
 	</div>
+
+	<div class="sc-cZBZkQ dRROgx">
+		<div class="sc-fEUNkw iBxkck">
+			<a class="sc-dREXXX dlXzcb"><img
+				src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDEyIDEyIj4KICAgIDxwYXRoIGZpbGw9IiM5Qjk5QTkiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNiAxMmEuNTk2LjU5NiAwIDAgMCAuNDQ5LS4yMDJsNC44LTUuNGEuNi42IDAgMCAwIDAtLjc5N2wtNC44LTUuNGEuNi42IDAgMSAwLS44OTcuNzk3TDcuNTk4IDYgMy4xNTIgMTFBLjYuNiAwIDAgMCAzLjYgMTIiLz4KPC9zdmc+Cg=="
+				width="12" height="12" alt="페이징 아이콘" class="sc-kcbnda fganyk"></a><a
+				class="sc-dREXXX ihdOwP">1</a><a class="sc-dREXXX bmIYAP">2</a><a
+				class="sc-dREXXX bmIYAP">3</a><a class="sc-dREXXX bmIYAP">4</a><a
+				class="sc-dREXXX bmIYAP">5</a><a class="sc-dREXXX bmIYAP">6</a><a
+				class="sc-dREXXX bmIYAP">7</a><a class="sc-dREXXX bmIYAP">8</a><a
+				class="sc-dREXXX bmIYAP">9</a><a class="sc-dREXXX bmIYAP">10</a><a
+				class="sc-dREXXX bmIYAP"><img
+				src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDEyIDEyIj4KICAgIDxwYXRoIGZpbGw9IiM5Qjk5QTkiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNiAxMmEuNTk2LjU5NiAwIDAgMCAuNDQ5LS4yMDJsNC44LTUuNGEuNi42IDAgMCAwIDAtLjc5N2wtNC44LTUuNGEuNi42IDAgMSAwLS44OTcuNzk3TDcuNTk4IDYgMy4xNTIgMTFBLjYuNiAwIDAgMCAzLjYgMTIiLz4KPC9zdmc+Cg=="
+				width="12" height="12" alt="페이징 아이콘"></a>
+		</div>
+	</div>
+
 </body>
 </html>

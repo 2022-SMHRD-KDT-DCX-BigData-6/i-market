@@ -238,5 +238,4 @@
 			<servlet-name>uploaditemService</servlet-name>
 			<url-pattern>/uploaditemService</url-pattern>
 		</servlet-mapping>
-
 </web-app>
