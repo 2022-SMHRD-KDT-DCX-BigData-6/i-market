@@ -38,6 +38,9 @@
 			}
 		})
 		AF('banners', 'showBanner')
+  function openPop(){
+    var popup = window.open('http://localhost:8090/i-market/item/CreateChatService.do', '채팅', 'width=700px,height=800px,scrollbars=no,menubar=0,location=no');
+  }
 	</script>
 
 	<%
@@ -135,6 +138,10 @@
 				<p><%=item_list.get(0).getItem_info()%></p>
 			</div>
 			<p id="article-counts">관심 5 ∙ 채팅 1 ∙ 조회 124</p>
+			<tr>
+						<td colspan="2"><input type="reset" value="초기화">
+						 <input type="button" onclick="openPop()" value="채팅"></td>
+					</tr>
 		</section>
 	</article>
 

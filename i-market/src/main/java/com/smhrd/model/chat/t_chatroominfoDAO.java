@@ -25,6 +25,16 @@ public class t_chatroominfoDAO {
 		return cnt;
 	}
 	
+	public t_chatroominfoDTO selectRoom(t_chatroominfoDTO dto) {
+		t_chatroominfoDTO chatRoom;
+		
+		chatRoom = sqlSession.selectOne("com.smhrd.database.ChatMapper.chatRoomIdx", dto);
+
+		sqlSession.close();
+		
+		return chatRoom;
+	}
+	
 	// 게시글 조회
 	public List<t_chatroominfoDTO> showChatRoom(t_chatroominfoDTO user_id){
 		List<t_chatroominfoDTO> chat_list = sqlSession.selectList("com.smhrd.database.ChatMapper.showChatRoom", user_id);
