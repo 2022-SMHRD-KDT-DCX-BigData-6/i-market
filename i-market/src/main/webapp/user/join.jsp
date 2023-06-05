@@ -17,7 +17,7 @@
 	width: 800px;
 	height: 600px;
 	position: absolute;
-    top: 55%;
+    top: 57%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 20px;
@@ -96,7 +96,7 @@
 	}
 	
 	h1{
- line-height: 200px;
+ line-height: 150px;
 	 text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
 	 color: yellow;
 	 }
