@@ -13,28 +13,45 @@ public class CreateChatService implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
 		HttpSession session = request.getSession();
 		String user_id = (String)session.getAttribute("user_id");
-		String croom_title = (String)session.getAttribute("croom_title");
-		String croom_content = (String)session.getAttribute("croom_content");
-		String to_id = "222";
-		System.out.println(croom_title);
+		String croom_title = (String)session.getAttribute("item_name");
+		String croom_content = (String)session.getAttribute("item_info");
+		String to_id = (String)session.getAttribute("to_id");
+		System.out.println(to_id);
 		
-		t_chatroominfoDTO dto = new t_chatroominfoDTO(croom_title, croom_content, user_id, to_id);
-		t_chatroominfoDAO dao = new t_chatroominfoDAO();
-		int cnt = dao.createChat(dto);
-
 		String moveURL = null;
+
+		t_chatroominfoDTO chatRoomChk = new t_chatroominfoDTO(croom_title, user_id, to_id);
+		t_chatroominfoDAO dao = new t_chatroominfoDAO();
+		t_chatroominfoDTO sel_chatRoomChk = dao.selectRoom(chatRoomChk);
+		System.out.println("챗룸확인"+sel_chatRoomChk.getCroom_idx());
+		int croom_idxChk = sel_chatRoomChk.getCroom_idx();
+		
+		if (croom_idxChk < 0 ) {
+		
+			t_chatroominfoDTO dto = new t_chatroominfoDTO(croom_title, croom_content, user_id, to_id);
+			int cnt = dao.createChat(dto);
 		
 
-		if (cnt > 0) {
-			session.setAttribute("user_id", user_id);
-			session.setAttribute("croom_title", croom_title);
-			session.setAttribute("croom_content", croom_content);
-			session.setAttribute("to_id", to_id);
-		} else {
+		
+
+			if (cnt > 0) {
+			
+				session.setAttribute("chatroom", dto);
+				System.out.println(dto);
+			
+				t_chatroominfoDTO chatRoom = new t_chatroominfoDTO(croom_title, user_id, to_id);
+				t_chatroominfoDTO sel_chatRoom = dao.selectRoom(chatRoom);
+				System.out.println("챗룸확인"+sel_chatRoom.getCroom_idx());
+				int croom_idx = sel_chatRoom.getCroom_idx();
+				session.setAttribute("croom_idx", croom_idx);
+				moveURL = "MoveChatRoomService.do";
+			} else {
+				moveURL = "Chat01.jsp";
+			}
+			
+		}else {
+			moveURL = "../chat/Chat02.jsp?croom_idx="+croom_idxChk;
 		}
-		session.setAttribute("chatroom", dto);
-		int croom_idx = (int)session.getAttribute("chatroom");
-		moveURL = "Chat02.jsp?croom_idx="+croom_idx;
 		return moveURL;
 	}
 
