@@ -15,10 +15,201 @@
 -->
 <html>
 	<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
 		<title>Dopetrope by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
+<style type="text/css">
+
+/* Button */
+	
+	input[type="submit"],
+	input[type="reset"],
+	button,
+	.button {
+		-webkit-appearance: none;
+		display: inline-block;
+		text-decoration: none;
+		cursor: pointer;
+		border: 0;
+		border-radius: 5px;
+		background:	#217214a3;
+		color: 	#FFf;
+		font-weight: 700;
+		outline: 0;
+		font-size: 1.1em;
+		padding: 0.4em 1em 0.4em 1em;
+		text-align: center;
+		-moz-transition: background-color .25s ease-in-out;
+		-webkit-transition: background-color .25s ease-in-out;
+		-ms-transition: background-color .25s ease-in-out;
+		transition: background-color .25s ease-in-out;
+	}
+	
+	input[type="button"]{
+	
+	-webkit-appearance: none;
+		display: inline-block;
+		text-decoration: none;
+		cursor: pointer;
+		border: 0;
+		border-radius: 5px;
+		background:	rgb(235, 225, 15);
+		color: 	#FFf;
+		font-weight: 700;
+		outline: 0;
+		font-size: 1.1em;
+		padding: 0.4em 1em 0.4em 1em;
+		height: 1.3em
+		text-align: center;
+		-moz-transition: background-color .25s ease-in-out;
+		-webkit-transition: background-color .25s ease-in-out;
+		-ms-transition: background-color .25s ease-in-out;
+		transition: background-color .25s ease-in-out;
+	}
+	
+	button:hover,
+		.button:hover
+		{
+		
+		background: rgb(235, 225, 15);
+		}
+
+		input[type="button"]:hover,
+		input[type="submit"]:hover,
+		input[type="reset"]:hover
+		 {
+			background: rgb(235, 225, 15);
+		}
+
+		input[type="button"]:active,
+		input[type="submit"]:active,
+		input[type="reset"]:active,
+		button:active,
+		.button:active {
+			background: rgb(235, 225, 15);
+		}
+		
+		input[type="button"].alt:hover,
+			input[type="submit"].alt:hover,
+			input[type="reset"].alt:hover{
+			
+			background: #217214a3;
+			
+			}
+
+		input[type="button"].alt,
+		input[type="submit"].alt,
+		input[type="reset"].alt,
+		button.alt,
+		.button.alt {
+			background:#f97777;
+		}
+			button.alt:hover,
+			.button.alt:hover {
+				background: rgb(235, 225, 15);
+			}
+
+		input[type="button"].icon:before,
+		input[type="submit"].icon:before,
+		input[type="reset"].icon:before,
+		button.icon:before,
+		.button.icon:before {
+			opacity: 0.35;
+			position: relative;
+			top: 0.05em;
+			margin-right: 0.75em;
+		}
+
+		input[type="button"].large,
+		input[type="submit"].large,
+		input[type="reset"].large,
+		button.large,
+		.button.large {
+			font-size: 1.5em;
+			padding: 0.5em 1em 0.5em 1em;
+		}
+
+/*@font-face {
+    font-family: 'Dovemayo_gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+@font-face {
+    font-family: 'Hi Melody', cursive;
+    src: url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+
+/* font-family: 'Hi Melody', cursive;*/
+  background: var(--background);
+  color: var(--color);
+}
+.index_01{
+
+	font-family:'Hi Melody', cursive;
+	color:#f2ec1d;
+	font-size: 80px;
+	font-style: normal;
+	font-weight: 100;
+	text-shadow: 1px 0 10px #110f10;
+
+}
+
+#nav > ul > li {
+	position:relative; 
+	padding-left: 15px;
+	padding-right: 15px;
+	
+}
+
+#nav > ul > li.current > a {
+    background: #217214a3;
+    color: #fff !important;
+    font-weight: 700;
+}
+
+#footer a {
+			color: #fff;
+		}
+
+html, body, div, span, applet, object,
+iframe, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video {
+
+	font-family:'Hi Melody', cursive;
+}
+.b_update {
+	width: 120%;
+		margin-left: 120px;
+}
+
+.back {
+margin-left: 120px;
+}
+.td_01{
+	width: 400px;
+}
+.td_02 {
+	width: 80%;
+}
+</style>
 	</head>
 	<body class="right-sidebar is-preload">
 		<div id="page-wrapper">
@@ -26,8 +217,16 @@
 			<!-- Header -->
 				<section id="header">
 
-					<!-- Logo -->
-						<h1><a href="main.jsp">BABY COMMUNITY</a></h1>
+			<!-- Logo -->
+			<div>
+			<h1 >
+				<a class="index_01" href="main.jsp">아이 i 마켓</a>
+			</h1>
+			</div>
+			
+			<div>
+			<span>유아용품전용 중고거래 플랫폼</span>
+			</div>
 
 					<!-- Nav -->
 						<nav id="nav">
@@ -82,7 +281,7 @@
 	
 	<form action="../BoardUpdateService" method="post" enctype="multipart/form-data">
 	
-	<table border="1">
+	<table border="1" class="b_update">
 		<tr>
 			<td>제목</td>
 		
@@ -92,7 +291,7 @@
 		
 		</tr>
 		<tr>
-			<td>작성자</td><td>닉네임</td><td>작성일</td>
+			<td>작성자</td><td class="td_01">닉네임</td><td class="td_01">작성일</td>
 		
 		</tr>
 		<tr>
@@ -112,16 +311,19 @@
 		
 		</tr>
 		<tr>
-			<td><input type="file" name="b_file">파일 선택 없이 수정완료를 누를 시 기존 업로드 파일도 삭제됩니다.</td>
+			<td class="td_02" colspan="1"><input type="file" name="b_file">파일 선택 필수.</td>
 		
 		</tr>
 		
 
 	</table>
-	<input type="submit" value="수정완료">
+	<div class="back">
+	<a href="../BoardUpdateService">
+	<button>수정완료</button></a>
 	</form>
 	<input type="reset" value="초기화">
 	<a href="boardDetail.jsp?board_idx=<%=b_idx%>"><button>뒤로가기</button></a>
+	</div>
 							</div>
 						</div>
 					</div>

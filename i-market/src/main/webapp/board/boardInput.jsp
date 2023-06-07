@@ -10,10 +10,216 @@
 -->
 <html>
 	<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
 		<title>Dopetrope by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
+<style type="text/css">
+
+/* Button */
+	
+	input[type="submit"],
+	input[type="reset"],
+	button,
+	.button {
+		-webkit-appearance: none;
+		display: inline-block;
+		text-decoration: none;
+		cursor: pointer;
+		border: 0;
+		border-radius: 5px;
+		background:	#217214a3;
+		color: 	#FFf;
+		font-weight: 700;
+		outline: 0;
+		font-size: 1.1em;
+		padding: 0.4em 1em 0.4em 1em;
+		text-align: center;
+		-moz-transition: background-color .25s ease-in-out;
+		-webkit-transition: background-color .25s ease-in-out;
+		-ms-transition: background-color .25s ease-in-out;
+		transition: background-color .25s ease-in-out;
+	}
+	
+	input[type="button"]{
+	
+	-webkit-appearance: none;
+		display: inline-block;
+		text-decoration: none;
+		cursor: pointer;
+		border: 0;
+		border-radius: 5px;
+		background:	rgb(235, 225, 15);
+		color: 	#FFf;
+		font-weight: 700;
+		outline: 0;
+		font-size: 1.1em;
+		padding: 0.4em 1em 0.4em 1em;
+		text-align: center;
+		-moz-transition: background-color .25s ease-in-out;
+		-webkit-transition: background-color .25s ease-in-out;
+		-ms-transition: background-color .25s ease-in-out;
+		transition: background-color .25s ease-in-out;
+	}
+	
+	button:hover,
+		.button:hover
+		{
+		
+		background: rgb(235, 225, 15);
+		}
+
+		input[type="button"]:hover,
+		input[type="submit"]:hover,
+		input[type="reset"]:hover
+		 {
+			background: #217214a3;
+		}
+
+		input[type="button"]:active,
+		input[type="submit"]:active,
+		input[type="reset"]:active,
+		button:active,
+		.button:active {
+			background: rgb(235, 225, 15);
+		}
+		
+		input[type="button"].alt:hover,
+			input[type="submit"].alt:hover,
+			input[type="reset"].alt:hover{
+			
+			background: #217214a3;
+			
+			}
+
+		input[type="button"].alt,
+		input[type="submit"].alt,
+		input[type="reset"].alt,
+		button.alt,
+		.button.alt {
+			background:#f97777;
+		}
+			button.alt:hover,
+			.button.alt:hover {
+				background: rgb(235, 225, 15);
+			}
+
+		input[type="button"].icon:before,
+		input[type="submit"].icon:before,
+		input[type="reset"].icon:before,
+		button.icon:before,
+		.button.icon:before {
+			opacity: 0.35;
+			position: relative;
+			top: 0.05em;
+			margin-right: 0.75em;
+		}
+
+		input[type="button"].large,
+		input[type="submit"].large,
+		input[type="reset"].large,
+		button.large,
+		.button.large {
+			font-size: 1.5em;
+			padding: 0.5em 1em 0.5em 1em;
+		}
+	
+	form input[type=email],
+	form input[type=password],
+	form select {
+		-webkit-appearance: none;
+		display: block;
+		border: 0;
+		padding: 0.75em 1em;
+		font-size: 1em;
+		border-radius: 5px;
+		border: solid 1px #dddddd;
+		background: #fff;
+		width: 90%;
+	}
+	form input[type=text],
+	form textarea {
+	-webkit-appearance: none;
+		display: block;
+		border: 0;
+		padding: 0.75em 1em;
+		font-size: 1em;
+		border-radius: 5px;
+		border: solid 1px #dddddd;
+		background: #fff;
+		width: 90%;
+	}
+	
+	.title, .content, .file, .back {
+		padding-left: 130px;
+	}
+/*@font-face {
+    font-family: 'Dovemayo_gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+@font-face {
+    font-family: 'Hi Melody', cursive;
+    src: url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+
+/* font-family: 'Hi Melody', cursive;*/
+  background: var(--background);
+  color: var(--color);
+}
+.index_01{
+
+	font-family:'Hi Melody', cursive;
+	color:#f2ec1d;
+	font-size: 80px;
+	font-style: normal;
+	font-weight: 100;
+	text-shadow: 1px 0 10px #110f10;
+
+}
+
+#nav > ul > li {
+	position:relative; 
+	padding-left: 15px;
+	padding-right: 15px;
+	
+}
+
+#nav > ul > li.current > a {
+    background: #217214a3;
+    color: #fff !important;
+    font-weight: 700;
+}
+
+#footer a {
+			color: #fff;
+		}
+
+html, body, div, span, applet, object,
+iframe, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video {
+
+	font-family:'Hi Melody', cursive;
+}
+
+</style>
 	</head>
 	<body class="right-sidebar is-preload">
 		<div id="page-wrapper">
@@ -53,7 +259,19 @@
 							</ul>
 						</nav>
 
+								</ul></li>
+							<li><a href="#">기타</a></li>
+						</ul></li>
+					<li><a href="left-sidebar.html">판매하기</a></li>
+					<li><a href="boardController?pagebutton=1">게시판</a></li>
+					<li><a href="no-sidebar.html">NEWS</a></li>
+					<li><a href="user/myPage.jsp">마이페이지</a></li>
+						<input type="text" placeholder="search" maxlength="40" class="sc-hMqMXs cLfdog" value="">
+						<img src="./images/2be3c66fa47ccd5ece2a.png" class="sc-hMqMXs search" width="16" height="16" alt=" " />
+				</ul>
+			</nav>
 				</section>
+			
 
 			<!-- Main -->
 				<section id="main">
@@ -64,15 +282,22 @@
 							<form action="../BoardWriteService" method="post" enctype="multipart/form-data">
 								
 								<h1>제목 <input type="text" name="b_title" maxlength="30"></h1><br>
+								</div>
+								<div class="content">
 								<h1>내용 <textarea rows="50" cols="10" name="b_content" maxlength="3000"></textarea><br>
+								</div>
 								<!-- <h1>내용 <input type="text" name="b_content"></h1> -->
+								<div class="file">
 								<br><h1>첨부자료 <input type="file" name="b_file"></h1><br>
 								<input type="reset" value="초기화">&nbsp;&nbsp;
 								<input type="submit" value="작성하기">
+								</div>
 								
 								</form>
 								<br>
+								<div class="back">
 								<a href="../boardController?pagebutton=1"><button>뒤로가기</button></a>
+								</div>
 
 							</div>
 						</div>

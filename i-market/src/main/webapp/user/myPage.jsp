@@ -25,6 +25,7 @@
     	height:120px;
 		border-radius: 70%;
 		overflow: hidden;
+		margin-left: 150px;
 	}
 	 .profile3 {
 	 
@@ -84,11 +85,50 @@
 		-webkit-transition: background-color .25s ease-in-out;
 		-ms-transition: background-color .25s ease-in-out;
 		transition: background-color .25s ease-in-out;
-	
 	}
 	
+	#button1, #button2 {
+		-webkit-appearance: none;
+		display: inline-block;
+		text-decoration: none;
+		cursor: pointer;
+		border: 0;
+		border-radius: 5px;
+		background:	#217214a3;
+		color: 	#FFf;
+		font-weight: 700;
+		outline: 0;
+		font-size: 1.1em;
+		padding: 0.4em 1em 0.4em 1em;
+		text-align: center;
+		-moz-transition: background-color .25s ease-in-out;
+		-webkit-transition: background-color .25s ease-in-out;
+		-ms-transition: background-color .25s ease-in-out;
+		transition: background-color .25s ease-in-out;
+	}
 	
-	
+	#button1, #button2 {
+		-webkit-appearance: none;
+		display: inline-block;
+		text-decoration: none;
+		cursor: pointer;
+		border: 0;
+		border-radius: 5px;
+		background:	#217214a3;
+		color: 	#FFf;
+		font-weight: 700;
+		outline: 0;
+		font-size: 1.1em;
+		padding: 0.4em 1em 0.4em 1em;
+		text-align: center;
+		-moz-transition: background-color .25s ease-in-out;
+		-webkit-transition: background-color .25s ease-in-out;
+		-ms-transition: background-color .25s ease-in-out;
+		transition: background-color .25s ease-in-out;
+	}
+	#button1:hover, #button2:hover{
+		background:	rgb(235, 225, 15);
+	}
 	button:hover,
 		.button:hover
 		{
@@ -219,13 +259,27 @@ body{
 #footer a {
 			color: #fff;
 		}
+html, body, div, span, applet, object,
+iframe, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video {
+
+	font-family:'Hi Melody', cursive;
+}
 	
 	
 	
 	
 </style>
 </head>
-<body class="no-sidebar is-preload">
+<body class="no-sidebar is-preload" style="font-family: 'Hi Melody', cursive;">
 	<%
 		String user_id = (String)session.getAttribute("user_id");
 		WebMemberDTO dto = new WebMemberDTO(user_id);
@@ -255,8 +309,8 @@ body{
 			<!-- Nav -->
 			<nav id="nav">
 				<ul>
-					<li><a href="../main.jsp">홈</a></li>
-					<li><a href="../item/itemListMain.jsp">전체보기</a>
+					<li class="current"><a href="main.jsp">홈</a></li>
+					<li><a href="#">전체보기</a>
 						<ul>
 							<li><a href="#">유아동용품</a></li>
 							<li><a href="#">유아동잡화</a></li>

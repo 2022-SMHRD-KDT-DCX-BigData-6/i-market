@@ -9,6 +9,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
 <title>Dopetrope by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -187,9 +190,28 @@ body{
     color: #fff !important;
     font-weight: 700;
 }
+#footer a {
+			color: #fff;
+		}
 
+html, body, div, span, applet, object,
+iframe, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video {
 
+	font-family:'Hi Melody', cursive;
+}
 
+#pagebutton {
+	margin-left: 500px;
+}
 
 
 #footer a {
@@ -211,8 +233,16 @@ body{
 	<!-- Header -->
 				<section id="header">
 
-					<!-- Logo -->
-						<h1><a href="#">BABY COMMUNITY</a></h1>
+			<!-- Logo -->
+			<div>
+			<h1 >
+				<a class="index_01" href="main.jsp">아이 i 마켓</a>
+			</h1>
+			</div>
+			
+			<div>
+			<span>유아용품전용 중고거래 플랫폼</span>
+			</div>
 
 					<!-- Nav -->
 						<nav id="nav">
@@ -269,8 +299,8 @@ body{
 							
 						
 						<!-- 검색기능 -->
-						<div >
-								<div >
+						<div class="click">
+								<div>
 									<!-- <form method="post" name="search" action="BoardSearchService"> -->
 										
 											
@@ -296,7 +326,7 @@ body{
 								
 						
 						<!-- 메인기능 -->
-							<table border="1">
+							<table border="1" class="boardMain">
 								<tr>
 									<td style="color:blue">글번호</td>
 									<td>제목(댓글수)</td>
