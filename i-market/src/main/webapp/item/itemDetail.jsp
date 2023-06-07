@@ -89,9 +89,6 @@
 				<h3 class="hide">프로필</h3>
 				<div class="space-between">
 					<div style="display: flex;">
-						<div id="article-profile-image">
-							<img alt="프로필이미지">
-						</div>
 						<div id="article-profile-left">
 							<div id="nickname"><%=item_list.get(0).getUser_id()%></div>
 							<div id="region-name"><%=item_list.get(0).getUser_addr_at()%></div>

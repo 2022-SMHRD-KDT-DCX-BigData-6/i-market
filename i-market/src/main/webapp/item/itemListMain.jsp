@@ -1,3 +1,4 @@
+<%@page import="java.security.Timestamp"%>
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@page import="com.main.model.t_iteminfoDAO"%>
 <%@page import="com.main.model.t_iteminfoDTO"%>
@@ -94,70 +95,70 @@ request.setCharacterEncoding("UTF-8");
 				<div>
 					<button class="sc-dliRfk imEKSd" type="submit"
 						name="itemCategoryKey" value="베이비의류(0-2세)"
-						href="itemListCategory.jsp">
+						href="itemListSearch.jsp">
 						<div class="sc-kLIISr kcDYue">베이비의류(0-2세)</div>
 					</button>
 				</div>
 				<div>
 					<button class="sc-dliRfk imEKSd" type="submit"
 						name="itemCategoryKey" value="여아의류(3-6세)"
-						href="itemListCategory.jsp">
+						href="itemListSearch.jsp">
 						<div class="sc-kLIISr kcDYue">여아의류(3-6세)</div>
 					</button>
 				</div>
 				<div>
 					<button class="sc-dliRfk imEKSd" type="submit"
 						name="itemCategoryKey" value="여주니어의류(7세~)"
-						href="itemListCategory.jsp">
+						href="itemListSearch.jsp">
 						<div class="sc-kLIISr kcDYue">여주니어의류(7세~)</div>
 					</button>
 				</div>
 				<div>
 					<button class="sc-dliRfk imEKSd" type="submit"
 						name="itemCategoryKey" value="남아의류(3-6세)"
-						href="itemListCategory.jsp">
+						href="itemListSearch.jsp">
 						<div class="sc-kLIISr kcDYue">남아의류(3-6세)</div>
 					</button>
 				</div>
 				<div>
 					<button class="sc-dliRfk imEKSd" type="submit"
 						name="itemCategoryKey" value="남주니어의류(7세~)"
-						href="itemListCategory.jsp">
+						href="itemListSearch.jsp">
 						<div class="sc-kLIISr kcDYue">남주니어의류(7세~)</div>
 					</button>
 				</div>
 				<div>
 					<button class="sc-dliRfk imEKSd" type="submit"
 						name="itemCategoryKey" value="유아동신발/잡화"
-						href="itemListCategory.jsp">
+						href="itemListSearch.jsp">
 						<div class="sc-kLIISr kcDYue">유아동신발/잡화</div>
 					</button>
 				</div>
 				<div>
 					<button class="sc-dliRfk imEKSd" type="submit"
 						name="itemCategoryKey" value="교육/완구/인형"
-						href="itemListCategory.jsp">
+						href="itemListSearch.jsp">
 						<div class="sc-kLIISr kcDYue">교육/완구/인형</div>
 					</button>
 				</div>
 				<div>
 					<button class="sc-dliRfk imEKSd" type="submit"
 						name="itemCategoryKey" value="유아동용품"
-						href="itemListCategory.jsp">
+						href="itemListSearch.jsp">
 						<div class="sc-kLIISr kcDYue">유아동용품</div>
 					</button>
 				</div>
 				<div>
 					<button class="sc-dliRfk imEKSd" type="submit"
 						name="itemCategoryKey" value="출산/임부용품"
-						href="itemListCategory.jsp">
+						href="itemListSearch.jsp">
 						<div class="sc-kLIISr kcDYue">출산/임부용품</div>
 					</button>
 				</div>
 				<div>
 					<button class="sc-dliRfk imEKSd" type="submit"
 						name="itemCategoryKey" value="이유용품/유아식기"
-						href="itemListCategory.jsp">
+						href="itemListSearch.jsp">
 						<div class="sc-kLIISr kcDYue">이유용품/유아식기</div>
 					</button>
 				</div>
