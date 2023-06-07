@@ -4,8 +4,8 @@
 
 <web-app>
 	<display-name>Archetype Created Web Application</display-name>
-	
-		<servlet>
+
+	<servlet>
 		<servlet-name>commentDeleteService</servlet-name>
 		<display-name>commentDeleteService</display-name>
 		<description></description>
@@ -59,13 +59,13 @@
 		<description></description>
 		<servlet-class>com.board.controller.BoardWriteService</servlet-class>
 	</servlet>
-	<servlet>	
+	<servlet>
 		<servlet-name>BoardSearchService</servlet-name>
 		<display-name>BoardSearchService</display-name>
 		<description></description>
 		<servlet-class>com.board.controller.BoardSearchService</servlet-class>
 	</servlet>
-	
+
 	<servlet>
 		<servlet-name>Frontcontroller</servlet-name>
 		<display-name>Frontcontroller</display-name>
@@ -151,48 +151,49 @@
 		<servlet-class>com.item.controller.itemSearchService</servlet-class>
 	</servlet>
 	
+
 	<servlet-mapping>
-			<servlet-name>commentDeleteService</servlet-name>
-			<url-pattern>/commentDeleteService</url-pattern>
-		</servlet-mapping>
-		<servlet-mapping>
-			<servlet-name>CommentUpdateService</servlet-name>
-			<url-pattern>/CommentUpdateService</url-pattern>
-		</servlet-mapping>
-		<servlet-mapping>
-			<servlet-name>CommentService</servlet-name>
-			<url-pattern>/CommentService</url-pattern>
-		</servlet-mapping>
-		<servlet-mapping>
-			<servlet-name>BoardDeleteService</servlet-name>
-			<url-pattern>/BoardDeleteService</url-pattern>
-		</servlet-mapping>
-		<servlet-mapping>
-			<servlet-name>BoardSuggest</servlet-name>
-			<url-pattern>/BoardSuggest</url-pattern>
-		</servlet-mapping>
-		<servlet-mapping>
-			<servlet-name>BoardUpdateService</servlet-name>
-			<url-pattern>/BoardUpdateService</url-pattern>
-		</servlet-mapping>
-		<servlet-mapping>
-			<servlet-name>BoardShowService</servlet-name>
-			<url-pattern>/BoardShowService</url-pattern>
-		</servlet-mapping>
-		<servlet-mapping>
-			<servlet-name>BoardWriteService</servlet-name>
-			<url-pattern>/BoardWriteService</url-pattern>
-		</servlet-mapping>
-		<servlet-mapping>
-			<servlet-name>boardController</servlet-name>
-			<url-pattern>/boardController</url-pattern>
-		</servlet-mapping>
-		<servlet-mapping>
-			<servlet-name>BoardSearchService</servlet-name>
-			<url-pattern>/BoardSearchService</url-pattern>
-		</servlet-mapping>
-			
-		<servlet-mapping>
+		<servlet-name>commentDeleteService</servlet-name>
+		<url-pattern>/commentDeleteService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CommentUpdateService</servlet-name>
+		<url-pattern>/CommentUpdateService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CommentService</servlet-name>
+		<url-pattern>/CommentService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>BoardDeleteService</servlet-name>
+		<url-pattern>/BoardDeleteService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>BoardSuggest</servlet-name>
+		<url-pattern>/BoardSuggest</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>BoardUpdateService</servlet-name>
+		<url-pattern>/BoardUpdateService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>BoardShowService</servlet-name>
+		<url-pattern>/BoardShowService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>BoardWriteService</servlet-name>
+		<url-pattern>/BoardWriteService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>boardController</servlet-name>
+		<url-pattern>/boardController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>BoardSearchService</servlet-name>
+		<url-pattern>/BoardSearchService</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
 		<servlet-name>Frontcontroller</servlet-name>
 		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
@@ -248,4 +249,5 @@
 			<servlet-name>itemSearchService</servlet-name>
 			<url-pattern>/itemSearchService</url-pattern>
 		</servlet-mapping>
+
 </web-app>

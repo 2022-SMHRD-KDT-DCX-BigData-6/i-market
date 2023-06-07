@@ -44,6 +44,13 @@ public class t_chatroominfoDTO {
 		this.user_id = user_id;
 		this.to_id = to_id;
 	}
-    
+
+	public t_chatroominfoDTO(String croom_title, String user_id, String to_id) {
+		super();
+		this.croom_title = croom_title;
+		this.user_id = user_id;
+		this.to_id = to_id;
+	}
+
     
 }

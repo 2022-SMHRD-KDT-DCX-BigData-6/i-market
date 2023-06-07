@@ -21,6 +21,8 @@ request.setCharacterEncoding("UTF-8");
 <link rel="stylesheet" href="../assets/css/itemList_young.css" />
 </head>
 <body>
+<% String user_id = (String)session.getAttribute("user_id"); 
+	out.print(user_id);%>
 	<section>
 		<div class="row">
 			<div class="col-12" align="right">

@@ -15,7 +15,7 @@
 	width: 600px;
 	height: 500px;
 	position: absolute;
-    top: 45%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 20px;
@@ -172,7 +172,7 @@ background: #fff !important;
 		
 		
 		
-			<form action="Login" method="post">
+			<form action="../Login" method="post">
 			<div id="login_wrapper">
 				<div id="id">
 				<input type="text" name="user_id" id="user_id" placeholder="    ID을 입력하세요">

@@ -27,7 +27,7 @@
 	width: 600px;
 	height: 400px;
 	position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 20px;
@@ -143,7 +143,7 @@
 	</div>
 	<br><br>
 	<div id="goMain">
-		<a href="main.jsp"><input class="tomain" type="submit" id="button" value="메인페이지로"></a>
+		<a href="../main.jsp"><input class="tomain" type="submit" id="button" value="메인페이지로"></a>
 		</div>
 	<div id="gologin">
 		<a href="login.jsp"><input class="login" type="submit" id="button" value="Login"></a>

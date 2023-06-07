@@ -32,11 +32,11 @@ public class Login extends HttpServlet {
 					session.setAttribute("loginMember", loginMember);
 					session.setAttribute("user_id", user_id);
 					
-					response.sendRedirect("index.html");
+					response.sendRedirect("main.jsp");
 				} else {
 					// 2-2. 비회원일 경우  main.jsp로 이동
 					System.out.println("로그인 실패");
-					response.sendRedirect("index.html");
+					response.sendRedirect("main.jsp");
 				}
 				
 	}

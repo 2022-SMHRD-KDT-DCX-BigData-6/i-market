@@ -17,7 +17,7 @@
 	width: 800px;
 	height: 600px;
 	position: absolute;
-    top: 55%;
+    top: 57%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 20px;
@@ -96,7 +96,7 @@
 	}
 	
 	h1{
- line-height: 200px;
+ line-height: 150px;
 	 text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
 	 color: yellow;
 	 }
@@ -172,7 +172,7 @@
 			</div>
 		<fieldset>
 			<legend class="Join" style="font-family: 'Hi Melody', cursive;">Join</legend>
-			<form action="Join" method="post">
+			<form action="../Join" method="post">
 				<div id="join_wrapper">
 					<div id="idv">
 						<input type="text" name="user_id" id="user_id" placeholder="ID을 입력하세요">

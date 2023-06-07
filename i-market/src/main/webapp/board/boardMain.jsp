@@ -20,7 +20,185 @@
 <!-- CSS only -->
 
 <style type="text/css">
+input[type="submit"],
+	input[type="reset"],
+	button,
+	.button {
+		-webkit-appearance: none;
+		display: inline-block;
+		text-decoration: none;
+		cursor: pointer;
+		border: 0;
+		border-radius: 5px;
+		background:	#217214a3;
+		color: 	#FFf;
+		font-weight: 700;
+		outline: 0;
+		font-size: 1.1em;
+		padding: 0.4em 1em 0.4em 1em;
+		text-align: center;
+		-moz-transition: background-color .25s ease-in-out;
+		-webkit-transition: background-color .25s ease-in-out;
+		-ms-transition: background-color .25s ease-in-out;
+		transition: background-color .25s ease-in-out;
+	}
+	
+	input[type="button"]{
+	
+	-webkit-appearance: none;
+		display: inline-block;
+		text-decoration: none;
+		cursor: pointer;
+		border: 0;
+		border-radius: 5px;
+		background:	rgb(235, 225, 15);
+		color: 	#FFf;
+		font-weight: 700;
+		outline: 0;
+		font-size: 1.1em;
+		padding: 0.4em 1em 0.4em 1em;
+		text-align: center;
+		-moz-transition: background-color .25s ease-in-out;
+		-webkit-transition: background-color .25s ease-in-out;
+		-ms-transition: background-color .25s ease-in-out;
+		transition: background-color .25s ease-in-out;
+	
+	}
+	
+	
+	
+	button:hover,
+		.button:hover
+		{
+		
+		background: rgb(235, 225, 15);
+		}
 
+		input[type="button"]:hover,
+		input[type="submit"]:hover,
+		input[type="reset"]:hover
+		 {
+			background: #217214a3;
+		}
+
+		input[type="button"]:active,
+		input[type="submit"]:active,
+		input[type="reset"]:active,
+		button:active,
+		.button:active {
+			background: rgb(235, 225, 15);
+		}
+		
+		
+		input[type="button"].alt:hover,
+			input[type="submit"].alt:hover,
+			input[type="reset"].alt:hover{
+			
+			background: #217214a3;
+			
+			}
+		
+		
+
+		input[type="button"].alt,
+		input[type="submit"].alt,
+		input[type="reset"].alt,
+		button.alt,
+		.button.alt {
+			background:#f97777;
+		}
+
+			
+			
+			
+			
+			
+			
+			button.alt:hover,
+			.button.alt:hover {
+				background: rgb(235, 225, 15);
+			}
+
+
+		input[type="button"].icon:before,
+		input[type="submit"].icon:before,
+		input[type="reset"].icon:before,
+		button.icon:before,
+		.button.icon:before {
+			opacity: 0.35;
+			position: relative;
+			top: 0.05em;
+			margin-right: 0.75em;
+		}
+
+		input[type="button"].large,
+		input[type="submit"].large,
+		input[type="reset"].large,
+		button.large,
+		.button.large {
+			font-size: 1.5em;
+			padding: 0.5em 1em 0.5em 1em;
+		}
+
+
+
+
+/*@font-face {
+    font-family: 'Dovemayo_gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+@font-face {
+    font-family: 'Hi Melody', cursive;
+    src: url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body{
+  font-family: 'Hi Melody', cursive;
+  background: var(--background);
+  color: var(--color);
+}
+.index_01{
+
+	font-family: 'Hi Melody', cursive;
+	color:#f2ec1d;
+	font-size: 80px;
+	font-style: normal;
+	font-weight: 100;
+	text-shadow: 1px 0 10px #110f10;
+
+}
+
+#nav > ul > li {
+	position:relative; 
+	padding-left: 15px;
+	padding-right: 15px;
+	
+}
+
+
+#nav > ul > li.current > a {
+    background: #217214a3;
+    color: #fff !important;
+    font-weight: 700;
+}
+
+
+
+
+
+#footer a {
+			color: #fff;
+		}
+	
+	
+	
+	
 
 </style>
 </head>
