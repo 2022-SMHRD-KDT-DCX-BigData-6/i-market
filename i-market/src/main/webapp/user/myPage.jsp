@@ -17,7 +17,7 @@
 <title>Insert title here</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="../assets/css/main.css" />
 <style type="text/css">
 	.profile1 {
 		text-align:center; 
@@ -287,9 +287,9 @@ body{
 					<section>
 					<div class="profile1" style="float: left; margin-right:10px">
 					<%if(profile.getUser_profile() == null){ %>
-						<img src="images/basic_profile.jfif" class="profile3" alt=""/>
+						<img src="../images/basic_profile.png" class="profile3" alt=""/>
 					<%}else { %>
-						<img src= "file/<%=profile.getUser_profile() %>" class="profile3" alt="" style="width:350px; height:350px;"/>
+						<img src= "../file/<%=profile.getUser_profile() %>" class="profile3" alt="" style="width:350px; height:350px;"/>
 					<%} %>
 					</div>
 					</section>

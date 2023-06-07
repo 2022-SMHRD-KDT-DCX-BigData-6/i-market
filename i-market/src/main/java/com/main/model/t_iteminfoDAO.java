@@ -27,7 +27,23 @@ public class t_iteminfoDAO {
 
 		return item_list;
 	}
+	
+	public List<t_iteminfoDTO> showItemSearch(String itemSearchKey) {
+		List<t_iteminfoDTO> item_list = sqlSession.selectList("com.smhrd.database.hifiveMapper.searchItem", itemSearchKey);
 
+		sqlSession.close();
+
+		return item_list;
+	}
+	
+	public List<t_iteminfoDTO> showItemCategory(String itemCategoryKey) {
+		List<t_iteminfoDTO> item_list = sqlSession.selectList("com.smhrd.database.hifiveMapper.searchItemCategory", itemCategoryKey);
+
+		sqlSession.close();
+
+		return item_list;
+	}
+	
 	public List<t_iteminfoDTO> showItemDetail(t_iteminfoDTO item_idx) {
 		List<t_iteminfoDTO> item_list = sqlSession.selectList("com.smhrd.database.hifiveMapper.showItemDetail",
 				item_idx);

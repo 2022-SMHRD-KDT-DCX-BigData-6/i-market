@@ -139,7 +139,7 @@
 			</div>
 		<fieldset>
 			<legend class="click" style="font-family: 'Hi Melody', cursive;">회원정보수정</legend>
-			<form action="Update" method="post" enctype="multipart/form-data">
+			<form action="../Update" method="post" enctype="multipart/form-data">
 				<div id="join_wrapper">
 					<div id="id" style="padding: 5px;  font-size: 25px;">
 						접속한 ID : <%=loginMember.getUser_id() %>

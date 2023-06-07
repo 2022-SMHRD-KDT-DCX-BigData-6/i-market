@@ -5,6 +5,10 @@
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%
+request.setCharacterEncoding("UTF-8");
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -62,6 +66,7 @@
 									<li><a href="#">남아의류</a></li>
 									<li><a href="#">여아의류</a></li>
 
+<<<<<<< HEAD
 								</ul></li>
 							<li><a href="#">기타</a></li>
 						</ul></li>
@@ -96,10 +101,91 @@
 	</section>
 	<div id="page-wrapper">
 
+		<form action="itemListSearch.jsp" method="get">
+			<div class="sc-iqzUVk VEwtK" style="margin-top: 20px;">
+				<div class="sc-ipZHIp jNxiOc">
+					<a class="sc-dliRfk imEKSd" href="itemListMain.jsp">
+						<div class="sc-kLIISr kcDYue">전체보기</div>
+					</a>
+				</div>
+				<div>
+					<button class="sc-dliRfk imEKSd" type="submit"
+						name="itemCategoryKey" value="베이비의류(0-2세)"
+						href="itemListCategory.jsp">
+						<div class="sc-kLIISr kcDYue">베이비의류(0-2세)</div>
+					</button>
+				</div>
+				<div>
+					<button class="sc-dliRfk imEKSd" type="submit"
+						name="itemCategoryKey" value="여아의류(3-6세)"
+						href="itemListCategory.jsp">
+						<div class="sc-kLIISr kcDYue">여아의류(3-6세)</div>
+					</button>
+				</div>
+				<div>
+					<button class="sc-dliRfk imEKSd" type="submit"
+						name="itemCategoryKey" value="여주니어의류(7세~)"
+						href="itemListCategory.jsp">
+						<div class="sc-kLIISr kcDYue">여주니어의류(7세~)</div>
+					</button>
+				</div>
+				<div>
+					<button class="sc-dliRfk imEKSd" type="submit"
+						name="itemCategoryKey" value="남아의류(3-6세)"
+						href="itemListCategory.jsp">
+						<div class="sc-kLIISr kcDYue">남아의류(3-6세)</div>
+					</button>
+				</div>
+				<div>
+					<button class="sc-dliRfk imEKSd" type="submit"
+						name="itemCategoryKey" value="남주니어의류(7세~)"
+						href="itemListCategory.jsp">
+						<div class="sc-kLIISr kcDYue">남주니어의류(7세~)</div>
+					</button>
+				</div>
+				<div>
+					<button class="sc-dliRfk imEKSd" type="submit"
+						name="itemCategoryKey" value="유아동신발/잡화"
+						href="itemListCategory.jsp">
+						<div class="sc-kLIISr kcDYue">유아동신발/잡화</div>
+					</button>
+				</div>
+				<div>
+					<button class="sc-dliRfk imEKSd" type="submit"
+						name="itemCategoryKey" value="교육/완구/인형"
+						href="itemListCategory.jsp">
+						<div class="sc-kLIISr kcDYue">교육/완구/인형</div>
+					</button>
+				</div>
+				<div>
+					<button class="sc-dliRfk imEKSd" type="submit"
+						name="itemCategoryKey" value="유아동용품"
+						href="itemListCategory.jsp">
+						<div class="sc-kLIISr kcDYue">유아동용품</div>
+					</button>
+				</div>
+				<div>
+					<button class="sc-dliRfk imEKSd" type="submit"
+						name="itemCategoryKey" value="출산/임부용품"
+						href="itemListCategory.jsp">
+						<div class="sc-kLIISr kcDYue">출산/임부용품</div>
+					</button>
+				</div>
+				<div>
+					<button class="sc-dliRfk imEKSd" type="submit"
+						name="itemCategoryKey" value="이유용품/유아식기"
+						href="itemListCategory.jsp">
+						<div class="sc-kLIISr kcDYue">이유용품/유아식기</div>
+					</button>
+				</div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</form>
 		<%
 		List<t_iteminfoDTO> item_list = new t_iteminfoDAO().showItem();
 		%>
-
 		<section>
 			<div class="box container">
 				<div class="row">
@@ -175,23 +261,10 @@
 						</div>
 			</div>
 		</section>
-
 	</div>
 
 	<div class="sc-cZBZkQ dRROgx">
-		<div class="sc-fEUNkw iBxkck">
-			<a class="sc-dREXXX dlXzcb"><img
-				src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDEyIDEyIj4KICAgIDxwYXRoIGZpbGw9IiM5Qjk5QTkiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNiAxMmEuNTk2LjU5NiAwIDAgMCAuNDQ5LS4yMDJsNC44LTUuNGEuNi42IDAgMCAwIDAtLjc5N2wtNC44LTUuNGEuNi42IDAgMSAwLS44OTcuNzk3TDcuNTk4IDYgMy4xNTIgMTFBLjYuNiAwIDAgMCAzLjYgMTIiLz4KPC9zdmc+Cg=="
-				width="12" height="12" alt="페이징 아이콘" class="sc-kcbnda fganyk"></a><a
-				class="sc-dREXXX ihdOwP">1</a><a class="sc-dREXXX bmIYAP">2</a><a
-				class="sc-dREXXX bmIYAP">3</a><a class="sc-dREXXX bmIYAP">4</a><a
-				class="sc-dREXXX bmIYAP">5</a><a class="sc-dREXXX bmIYAP">6</a><a
-				class="sc-dREXXX bmIYAP">7</a><a class="sc-dREXXX bmIYAP">8</a><a
-				class="sc-dREXXX bmIYAP">9</a><a class="sc-dREXXX bmIYAP">10</a><a
-				class="sc-dREXXX bmIYAP"><img
-				src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDEyIDEyIj4KICAgIDxwYXRoIGZpbGw9IiM5Qjk5QTkiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNiAxMmEuNTk2LjU5NiAwIDAgMCAuNDQ5LS4yMDJsNC44LTUuNGEuNi42IDAgMCAwIDAtLjc5N2wtNC44LTUuNGEuNi42IDAgMSAwLS44OTcuNzk3TDcuNTk4IDYgMy4xNTIgMTFBLjYuNiAwIDAgMCAzLjYgMTIiLz4KPC9zdmc+Cg=="
-				width="12" height="12" alt="페이징 아이콘"></a>
-		</div>
+		<div class="sc-fEUNkw iBxkck"></div>
 	</div>
 
 </body>

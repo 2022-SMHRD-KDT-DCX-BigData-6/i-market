@@ -24,6 +24,13 @@
 	<select id="timeToUpload" resultType="com.main.model.t_iteminfoDTO">
 		select uploaded_at from t_iteminfo where item_idx=#{item_idx}
 	</select>
-
-
+	
+	<select id="searchItem" resultType="com.main.model.t_iteminfoDTO">
+		select * from t_iteminfo where item_name like '%'||#{item_name}||'%' order by item_idx
+	</select>
+	
+	<select id="searchItemCategory" resultType="com.main.model.t_iteminfoDTO">
+		select * from t_iteminfo where item_category like '%'||#{item_category}||'%' order by item_idx
+	</select>
+	
 </mapper>
