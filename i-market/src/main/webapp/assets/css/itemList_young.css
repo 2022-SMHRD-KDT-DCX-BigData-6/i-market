@@ -2284,6 +2284,10 @@ ul.social li a.fa-google-plus:hover {
 		-ms-transition: -ms-transform 0.5s ease;
 		transition: transform 0.5s ease;
 		padding-bottom: 1px;
+		display: flex;
+    	-webkit-box-pack: center;
+    	justify-content: center;
+    	padding-top: 30px;
 	}
 	#titleBar {
 		-moz-backface-visibility: hidden;
@@ -3688,7 +3692,175 @@ ul.social li a.fa-google-plus:hover {
     color: rgb(155, 153, 169);
 }
 
+.sc-dREXXX.ihdOwP{
+	text-size-adjust: 100%;
+    font-synthesis: none;
+    -webkit-font-smoothing: antialiased;
+    direction: ltr;
+    text-align: left;
+    letter-spacing: -0.5px;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+    cursor: pointer;
+    width: 33px;
+    height: 33px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-right: 12px;
+    border: 1px solid rgb(255, 80, 88);
+    border-radius: 2px;
+    color: rgb(255, 255, 255);
+    background: rgb(255, 80, 88);
+}
 
+.sc-iqzUVk.VEwtK{
+	text-size-adjust: 100%;
+    font-synthesis: none;
+    -webkit-font-smoothing: antialiased;
+    direction: ltr;
+    text-align: left;
+    color: rgb(33, 33, 33);
+    letter-spacing: -0.5px;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font: inherit;
+    vertical-align: baseline;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    transition: height 0.3s ease-in-out 0s;
+    margin-top: 20px;
+    justify-content: center;
+	
+}
+
+.VEwtK > div {
+    width: 203.8px;
+    height: 48px;
+    background: rgb(255, 255, 255);
+    margin: 0px 1px 1px 0px;
+    box-shadow: rgb(238, 238, 238) 0px 1px 1px 0px;
+}
+
+.sc-ipZHIp.jNxiOc{
+	text-size-adjust: 100%;
+    font-synthesis: none;
+    -webkit-font-smoothing: antialiased;
+    direction: ltr;
+    text-align: left;
+    color: rgb(33, 33, 33);
+    letter-spacing: -0.5px;
+    box-sizing: border-box;
+    border: 0px;
+    font: inherit;
+    vertical-align: baseline;
+    padding: 0px 20px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    width: 203.8px;
+    height: 48px;
+    background: rgb(255, 255, 255);
+    margin: 0px 1px 1px 0px;
+    box-shadow: rgb(238, 238, 238) 0px 1px 1px 0px;
+}
+
+.sc-dliRfk.imEKSd{
+	text-size-adjust: 100%;
+    font-synthesis: none;
+    -webkit-font-smoothing: antialiased;
+    direction: ltr;
+    text-align: left;
+    letter-spacing: -0.5px;
+    box-sizing: border-box;
+    margin: 0px;
+    border: 0px;
+    font: inherit;
+    vertical-align: baseline;
+    color: rgb(33, 33, 33);
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    font-size: 12px;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    padding: 0px 20px;
+    box-shadow: rgb(238, 238, 238) 0px 1px 0px 0px;
+}
+
+.sc-kLIISr.kcDYue{
+	text-size-adjust: 100%;
+    font-synthesis: none;
+    -webkit-font-smoothing: antialiased;
+    direction: ltr;
+    text-align: left;
+    letter-spacing: -0.5px;
+    color: rgb(33, 33, 33);
+    cursor: pointer;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font: inherit;
+    vertical-align: baseline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+	
+}
+
+.sc-dliRfk.imEKSd{
+	text-size-adjust: 100%;
+    font-synthesis: none;
+    -webkit-font-smoothing: antialiased;
+    direction: ltr;
+    text-align: left;
+    letter-spacing: -0.5px;
+    box-sizing: border-box;
+    margin: 0px;
+    border: 0px;
+    font: inherit;
+    vertical-align: baseline;
+    color: rgb(33, 33, 33);
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    font-size: 12px;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    padding: 0px 20px;
+    box-shadow: rgb(238, 238, 238) 0px 1px 0px 0px;
+}
+
+.sc-hMqMXs.cLfdog{
+	-webkit-font-smoothing: antialiased;
+    margin: 0;
+    outline: 0 !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    box-sizing: border-box;
+    height: 2rem;
+    padding: 0.9rem 1.2rem;
+    border-radius: 0.6rem;
+    line-height: 1.36;
+    width: 25%;
+}
 
 
 
