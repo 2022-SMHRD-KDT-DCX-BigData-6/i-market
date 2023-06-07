@@ -22,12 +22,12 @@
 				<section id="header">
 
 					<!-- Logo -->
-						<h1><a href="../index.html">BABY COMMUNITY</a></h1>
+						<h1><a href="../main.jsp">BABY COMMUNITY</a></h1>
 
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a href="../index.html">Home</a></li>
+								<li><a href="../main.jsp">Home</a></li>
 								<li>
 									<a href="#">Dropdown</a>
 									<ul>

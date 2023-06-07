@@ -244,7 +244,7 @@ body{
 			<!-- Logo -->
 			<div>
 			<h1 >
-				<a class="index_01" style="font-family: 'Hi Melody', cursive;" href="main.jsp">아이 i 마켓</a>
+				<a class="index_01" style="font-family: 'Hi Melody', cursive;" href="../main.jsp">아이 i 마켓</a>
 			</h1>
 			</div>
 			
@@ -255,8 +255,8 @@ body{
 			<!-- Nav -->
 			<nav id="nav">
 				<ul>
-					<li class="current"><a href="main.jsp">홈</a></li>
-					<li><a href="#">전체보기</a>
+					<li><a href="../main.jsp">홈</a></li>
+					<li><a href="../item/itemListMain.jsp">전체보기</a>
 						<ul>
 							<li><a href="#">유아동용품</a></li>
 							<li><a href="#">유아동잡화</a></li>
@@ -270,14 +270,15 @@ body{
 								</ul></li>
 							<li><a href="#">기타</a></li>
 						</ul></li>
-					<li><a href="left-sidebar.html">판매하기</a></li>
-					<li><a href="right-sidebar.html">게시판</a></li>
+				<li><a href="../item/uploadItemBoard.jsp">판매하기</a></li>
+					<li><a href="../boardController?pagebutton=1">게시판</a></li>
 					<li><a href="no-sidebar.html">NEWS</a></li>
-					<li><a href="myPage.jsp">마이페이지</a></li>
+					<li  class="current"><a href="myPage.jsp">마이페이지</a></li>
 						<input type="text" placeholder="search" maxlength="40" class="sc-hMqMXs cLfdog" value="">
 						<img src="./images/2be3c66fa47ccd5ece2a.png" class="sc-hMqMXs search" width="16" height="16" alt=" " />
 				</ul>
 			</nav>
+
 
 
 			<!-- Main -->
