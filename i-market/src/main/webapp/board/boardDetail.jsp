@@ -26,43 +26,53 @@
 	
 	</head>
 	<body class="right-sidebar is-preload">
+	<%   String user_id = (String)session.getAttribute("user_id"); %>
 		<div id="page-wrapper">
 
 			<!-- Header -->
 				<section id="header">
 
 					<!-- Logo -->
-						<h1><a href="../index.html">BABY COMMUNITY</a></h1>
+						<h1><a href="boardController?pagebutton=1">BABY COMMUNITY</a></h1>
 
 					<!-- Nav -->
 						<nav id="nav">
-							<ul>
-								<li><a href="../index.html">Home</a></li>
-								<li>
-									<a href="#">Dropdown</a>
-									<ul>
-										<li><a href="#">Lorem ipsum dolor</a></li>
-										<li><a href="#">Magna phasellus</a></li>
-										<li><a href="#">Etiam dolore nisl</a></li>
-										<li>
-											<a href="#">Phasellus consequat</a>
-											<ul>
-												<li><a href="#">Magna phasellus</a></li>
-												<li><a href="#">Etiam dolore nisl</a></li>
-												<li><a href="#">Veroeros feugiat</a></li>
-												<li><a href="#">Nisl sed aliquam</a></li>
-												<li><a href="#">Dolore adipiscing</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Veroeros feugiat</a></li>
-									</ul>
-								</li>
-								<li><a href="left-sidebar.html">Left Sidebar</a></li>
-								<li class="current"><a href="../boardController?pagebutton=1">게시판</a></li>
-								<li><a href="no-sidebar.html">No Sidebar</a></li>
-							</ul>
-						</nav>
+				<ul>
+					<li><a href="../main.jsp">홈</a></li>
+					<li><a href="../item/itemListMain.jsp">전체보기</a>
+						<ul>
+							<li><a href="#">유아동용품</a></li>
+							<li><a href="#">유아동잡화</a></li>
+							<li><a href="#">유아동도서</a></li>
+							<li><a href="#">완구/장난감/인형</a></li>
+							<li><a href="#">유아동의류</a>
+								<ul>
+									<li><a href="#">남아의류</a></li>
+									<li><a href="#">여아의류</a></li>
 
+								</ul></li>
+							<li><a href="#">기타</a></li>
+						</ul></li>
+				<li><a href=
+				<%if (user_id != null) {%>
+					<%="../item/uploadItemBoard.jsp"%>
+				<%}else {%>
+					<%= "../user/login.jsp"%>					
+				<% } %>
+					>판매하기</a></li>
+					<li class="current"><a href="boardController?pagebutton=1">게시판</a></li>
+					<li><a href="#">NEWS</a></li>
+					<li><a href=
+				<%if (user_id != null) {%>
+					<%="../user/myPage.jsp"%>
+				<%}else {%>
+					<%= "../user/login.jsp"%>					
+				<% } %>
+					>마이페이지</a></li>
+						<input type="text" placeholder="search" maxlength="40" class="sc-hMqMXs cLfdog" value="">
+						<img src="./images/2be3c66fa47ccd5ece2a.png" class="sc-hMqMXs search" width="16" height="16" alt=" " />
+				</ul>
+			</nav>
 				</section>
 
 			<!-- Main -->
@@ -154,10 +164,10 @@
 
 	<script type="text/javascript">
 	function button2_click() {
-		window.location.href="http://localhost:8081/i-market3/boardController?pagebutton=1";
+		window.location.href="../boardController?pagebutton=1";
 	}
 	function button1_click() {
-		window.location.href="http://localhost:8081/i-market3/BoardSuggest";
+		window.location.href="../BoardSuggest";
 	}
 	
 	

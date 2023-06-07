@@ -19,7 +19,6 @@ public class t_chatroominfoDAO {
 		
 		cnt = sqlSession.insert("com.smhrd.database.ChatMapper.createChat", dto);
 		
-		sqlSession.close();
 		
 		
 		return cnt;
@@ -30,7 +29,6 @@ public class t_chatroominfoDAO {
 		
 		chatRoom = sqlSession.selectOne("com.smhrd.database.ChatMapper.chatRoomIdx", dto);
 
-		sqlSession.close();
 		
 		return chatRoom;
 	}

@@ -39,11 +39,15 @@
 		})
 		AF('banners', 'showBanner')
   function openPop(){
-    var popup = window.open('http://localhost:8090/i-market/item/CreateChatService.do', '채팅', 'width=700px,height=800px,scrollbars=no,menubar=0,location=no');
+    var popup = window.open('CreateChatService.do', '채팅', 'width=700px,height=800px,scrollbars=no,menubar=0,location=no');
   }
+function gologin() {
+	window.location.href="../user/login.jsp";
+		}
 	</script>
 
 	<%
+	String user_id = (String)session.getAttribute("user_id");
 	int item_idx = Integer.parseInt(request.getParameter("item_idx"));
 	t_iteminfoDTO dto = new t_iteminfoDTO(item_idx);
 	t_iteminfoDAO dao = new t_iteminfoDAO();
@@ -135,9 +139,24 @@
 				<p><%=item_list.get(0).getItem_info()%></p>
 			</div>
 			<p id="article-counts">관심 5 ∙ 채팅 1 ∙ 조회 124</p>
+			<%
+			session.setAttribute("item_name", item_list.get(0).getItem_name());
+			session.setAttribute("item_info", item_list.get(0).getItem_info());
+			session.setAttribute("to_id", item_list.get(0).getUser_id());
+			%>
 			<tr>
-						<td colspan="2"><input type="reset" value="초기화">
-						 <input type="button" onclick="openPop()" value="채팅"></td>
+						 <td><input type="button" onclick=
+						 <%
+						 if (user_id == null){ %>
+							 "gologin()"
+						 <% }else {
+							 
+						 %>
+						 "openPop()"
+						 <%
+						 }
+						 %>
+						  value="채팅"></td>
 					</tr>
 		</section>
 	</article>

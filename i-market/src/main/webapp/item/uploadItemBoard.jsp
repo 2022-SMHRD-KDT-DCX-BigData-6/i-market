@@ -1,3 +1,4 @@
+<%@page import="com.main.model.WebMemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -14,27 +15,40 @@
 </script>
 </head>
 <body>
+<% 
+	String user_id = (String)session.getAttribute("user_id");
+	WebMemberDTO loginMember = (WebMemberDTO) session.getAttribute("loginMember");
+   %>
 	<section>
 		<div class="row">
 			<div class="col-12" align="right">
-				<a href="user/join.jsp"> <input type="button"
-					class="btn float-right" value="Join">
-				</a> <a href="user/login.jsp"> <input type="button"
-					class="btn float-right" value="Login">
-				</a>
+				<%if(loginMember==null) { %>
+					<a href="../user/join.jsp">
+						<input type="button" class="btn float-right" value="Join">
+					</a>
+					<a href="user/login.jsp">
+						<input type="button" class="btn float-right" value="Login">
+					</a>
+				<%} else { 
+					if(loginMember.getUser_id().equals("admin")){%>
+						<a href="select.jsp"><input type="button" class="btn float-right" value="전체회원정보"></a>
+					<%} %>
+						<a href="Logout"><input type="button" class="btn float-right" value="Logout"></a>
+				<%} %>
+			
 			</div>
 		</div>
 		<!-- Logo -->
 		<h1>
-			<a href="index.html">아이 i 마켓</a>
+			<a href="../main.jsp">아이 i 마켓</a>
 		</h1>
 		<span>유아용품전용 중고거래 플랫폼</span>
 
 		<!-- Nav -->
 		<nav id="nav">
 			<ul>
-				<li class="current"><a href="index.html">홈</a></li>
-				<li><a href="#">전체보기</a>
+				<li><a href="../main.jsp">홈</a></li>
+				<li><a href="itemListMain.jsp">전체보기</a>
 					<ul>
 						<li><a href="#">유아동용품</a></li>
 						<li><a href="#">유아동잡화</a></li>
@@ -48,18 +62,25 @@
 							</ul></li>
 						<li><a href="#">기타</a></li>
 					</ul></li>
-				<li><a href="left-sidebar.html">News</a></li>
-				<li><a href="right-sidebar.html">게시판</a></li>
-				<li><a href="uploadItemBoard.jsp">판매하기</a></li>
-				<li><a href="no-sidebar.html">마이페이지</a></li>
-				<div class="sc-eNQAEJ voMyM">
-					<input type="text" placeholder="검색" maxlength="40"
-						class="sc-hMqMXs cLfdog" value=""> <img
-						src="./images/2be3c66fa47ccd5ece2a.png" class="sc-hMqMXs search"
-						width="16" height="16" alt=" " />
-				</div>
-
-			</ul>
+				<li class="current"><a href=
+				<%if (user_id != null) {%>
+					<%="uploadItemBoard.jsp"%>
+				<%}else {%>
+					<%= "../user/login.jsp"%>					
+				<% } %>
+					>판매하기</a></li>
+					<li><a href="../boardController?pagebutton=1">게시판</a></li>
+					<li><a href="#">NEWS</a></li>
+					<li><a href=
+				<%if (user_id != null) {%>
+					<%="../user/myPage.jsp"%>
+				<%}else {%>
+					<%= "../user/login.jsp"%>					
+				<% } %>
+					>마이페이지</a></li>
+						<input type="text" placeholder="search" maxlength="40" class="sc-hMqMXs cLfdog" value="">
+						<img src="./images/2be3c66fa47ccd5ece2a.png" class="sc-hMqMXs search" width="16" height="16" alt=" " />
+				</ul>
 		</nav>
 
 		<!-- Banner -->

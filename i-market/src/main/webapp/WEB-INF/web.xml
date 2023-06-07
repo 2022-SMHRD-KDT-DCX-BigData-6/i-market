@@ -145,12 +145,17 @@
 		<servlet-class>com.item.controller.uploaditemService</servlet-class>
 	</servlet>
 	<servlet>
+		<servlet-name>MoveChatRoomService</servlet-name>
+		<display-name>MoveChatRoomService</display-name>
+		<description></description>
+		<servlet-class>com.smhrd.controller.MoveChatRoomService</servlet-class>
+	</servlet>
+	<servlet>
 		<servlet-name>itemSearchService</servlet-name>
 		<display-name>itemSearchService</display-name>
 		<description></description>
 		<servlet-class>com.item.controller.itemSearchService</servlet-class>
 	</servlet>
-	
 
 	<servlet-mapping>
 		<servlet-name>commentDeleteService</servlet-name>
@@ -197,57 +202,61 @@
 		<servlet-name>Frontcontroller</servlet-name>
 		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
-		<servlet-mapping>
-			<servlet-name>Delete</servlet-name>
-			<url-pattern>/Delete</url-pattern>
-		</servlet-mapping>
-		<servlet-mapping>
-			<servlet-name>Join</servlet-name>
-			<url-pattern>/Join</url-pattern>
-		</servlet-mapping>
-		<servlet-mapping>
-			<servlet-name>Login</servlet-name>
-			<url-pattern>/Login</url-pattern>
-		</servlet-mapping>
-		<servlet-mapping>
-			<servlet-name>Logout</servlet-name>
-			<url-pattern>/Logout</url-pattern>
-		</servlet-mapping>
-		<servlet-mapping>
-			<servlet-name>Update</servlet-name>
-			<url-pattern>/Update</url-pattern>
-		</servlet-mapping>
-		<servlet-mapping>
-			<servlet-name>ChatRoomService</servlet-name>
-			<url-pattern>/ChatRoomService</url-pattern>
-		</servlet-mapping>
-		<servlet-mapping>
-			<servlet-name>CreateChatService</servlet-name>
-			<url-pattern>/CreateChatService</url-pattern>
-		</servlet-mapping>
-		<servlet-mapping>
-			<servlet-name>JoinService</servlet-name>
-			<url-pattern>/JoinService</url-pattern>
-		</servlet-mapping>
-		<servlet-mapping>
-			<servlet-name>LoginService</servlet-name>
-			<url-pattern>/LoginService</url-pattern>
-		</servlet-mapping>
-		<servlet-mapping>
-			<servlet-name>LogoutService</servlet-name>
-			<url-pattern>/LogoutService</url-pattern>
-		</servlet-mapping>
-		<servlet-mapping>
-			<servlet-name>SendChatService</servlet-name>
-			<url-pattern>/SendChatService</url-pattern>
-		</servlet-mapping>
-		<servlet-mapping>
-			<servlet-name>uploaditemService</servlet-name>
-			<url-pattern>/uploaditemService</url-pattern>
-		</servlet-mapping>
-		<servlet-mapping>
-			<servlet-name>itemSearchService</servlet-name>
-			<url-pattern>/itemSearchService</url-pattern>
-		</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Delete</servlet-name>
+		<url-pattern>/Delete</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Join</servlet-name>
+		<url-pattern>/Join</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Logout</servlet-name>
+		<url-pattern>/Logout</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Update</servlet-name>
+		<url-pattern>/Update</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ChatRoomService</servlet-name>
+		<url-pattern>/ChatRoomService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CreateChatService</servlet-name>
+		<url-pattern>/CreateChatService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>JoinService</servlet-name>
+		<url-pattern>/JoinService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LoginService</servlet-name>
+		<url-pattern>/LoginService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LogoutService</servlet-name>
+		<url-pattern>/LogoutService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SendChatService</servlet-name>
+		<url-pattern>/SendChatService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>uploaditemService</servlet-name>
+		<url-pattern>/uploaditemService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MoveChatRoomService</servlet-name>
+		<url-pattern>/MoveChatRoomService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>itemSearchService</servlet-name>
+		<url-pattern>/itemSearchService</url-pattern>
+	</servlet-mapping>
 
 </web-app>

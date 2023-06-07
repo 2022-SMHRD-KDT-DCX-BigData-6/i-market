@@ -17,6 +17,7 @@ import com.smhrd.controller.CreateChatService;
 import com.smhrd.controller.JoinService;
 import com.smhrd.controller.LoginService;
 import com.smhrd.controller.LogoutService;
+import com.smhrd.controller.MoveChatRoomService;
 import com.smhrd.controller.SendChatService;
 
 public class Frontcontroller extends HttpServlet {
@@ -54,8 +55,10 @@ public class Frontcontroller extends HttpServlet {
 			service = new ChatRoomService();
 		} else if (result.equals("chat/SendChatService.do")) {
 			service = new SendChatService();
-		} else if (result.equals("chat/CreateChatService.do")) {
+		} else if (result.equals("item/CreateChatService.do")) {
 			service = new CreateChatService();
+		} else if (result.equals("item/MoveChatRoomService.do")) {
+			service = new MoveChatRoomService();
 		}
 		System.out.println(service);
 		moveURL = service.execute(request, response);

@@ -77,7 +77,7 @@ background: linear-gradient(to bottom left, #79C7C5 20%, #A1E2D9 100%);
     outline: 0 none;
     border: none;
     width: calc(100% - 60px);
-    color: white;
+    color: black;
     text-indent: 10px;
     font-size: 12pt;
     padding: 0;
@@ -143,7 +143,7 @@ background: linear-gradient(to bottom left, #79C7C5 20%, #A1E2D9 100%);
     display: inline-block;
     font-size: 11pt;
     line-height: 13pt;
-    color: rgba(255,255,255,.7);
+    color: rgba(0, 0, 0,.7);
     margin: 0 0 4px 0;
 }
 .msg:first-of-type {
@@ -248,6 +248,7 @@ background: linear-gradient(to bottom left, #79C7C5 20%, #A1E2D9 100%);
                 </button>
 		</form>
 	</section>
+
 
 </body>
 </html>

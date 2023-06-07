@@ -11,6 +11,10 @@
 		<!-- select * from t_chatroominfo a left join t_chattinginfo b on a.user_id = b.talker where b.user_nick = (select distinct user_nick  from t_userinfo  where user_id = #{user_id}) , jdbcType=VARCHAR --> 
 		<!-- select * from t_chatroominfo where user_id = #{user_id, jdbcType=VARCHAR} order by croom_at desc -->
 	</select>
+	<select id="chatRoomIdx" resultType="ChatRoom" parameterType="ChatRoom">
+	
+		select * from t_chatroominfo where user_id = #{user_id, jdbcType=VARCHAR} and to_id = #{to_id, jdbcType=VARCHAR} and croom_title = #{croom_title, jdbcType=VARCHAR}
+	</select>
 	<select id="showChat" resultType="Chatting" parameterType="Chatting">
 	
 		select * from t_chattinginfo where croom_idx = #{croom_idx}
