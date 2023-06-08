@@ -280,6 +280,11 @@ section, summary, time, mark, audio, video {
 </style>
 </head>
 <body class="no-sidebar is-preload" style="font-family: 'Hi Melody', cursive;">
+<script type="text/javascript">
+function openPop(){
+    var popup = window.open('../chat/Chat01.jsp', '채팅', 'width=700px,height=800px,scrollbars=no,menubar=0,location=no');
+  }
+</script>
 	<%
 		String user_id = (String)session.getAttribute("user_id");
 		WebMemberDTO dto = new WebMemberDTO(user_id);
@@ -372,7 +377,9 @@ section, summary, time, mark, audio, video {
 					<div style="padding-right: 410px;"><font size = 5>ID : <%=profile.getUser_id() %></font></div><br>
 					<div style="padding-right: 410px;"><font size = 5>닉네임 : <%=profile.getUser_nick() %></font></div><br>
 					<div style="padding-right: 360px;"> <font size = 5>전화번호 : <%=profile.getUser_phone() %></font></div><br>
-					<div><font size = 5>주소 : <%=profile.getUser_addr() %></font></div><br><br>
+					<div><font size = 5>주소 : <%=profile.getUser_addr() %></font></div><br>
+					<div><input type="button" value="내 채팅보기" onclick="openPop()"></div>
+					<br>
 					</section>
 					</div>
 					</div>
