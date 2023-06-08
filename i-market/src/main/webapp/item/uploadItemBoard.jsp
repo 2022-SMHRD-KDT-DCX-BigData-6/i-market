@@ -219,7 +219,7 @@ section, summary, time, mark, audio, video {
 	font-family:'Hi Melody', cursive;
 }
 
-.row {
+.row.login {
 	padding: 0  !important;
 	width: 80%  !important;
 	margin: 0 0 0 -30px !important;
@@ -240,7 +240,7 @@ section {
 	WebMemberDTO loginMember = (WebMemberDTO) session.getAttribute("loginMember");
 	%>
 	<section>
-		<div class="row">
+		<div class="row login">
 			<div class="col-12" align="right">
 				<%
 				if (loginMember == null) {
@@ -295,7 +295,6 @@ section {
 							</ul></li>
 						<li><a href="#">기타</a></li>
 					</ul></li>
-<<<<<<< HEAD
 				<li class="current"><a href=<%if (user_id != null) {%>
 					<%="uploadItemBoard.jsp"%> <%} else {%> <%="../user/login.jsp"%>
 					<%}%>>판매하기</a></li>
@@ -309,25 +308,6 @@ section {
 				<img src="./images/2be3c66fa47ccd5ece2a.png"
 					class="sc-hMqMXs search" width="16" height="16" alt=" " />
 			</ul>
-=======
-				<li class="current"><a href=
-				<%if (user_id != null) {%>
-					<%="uploadItemBoard.jsp"%>
-				<%}else {%>
-					<%= "../user/login.jsp"%>					
-				<% } %>
-					>판매하기</a></li>
-					<li><a href="../boardController?pagebutton=1">게시판</a></li>
-					<li><a href="#">NEWS</a></li>
-					<li><a href=
-				<%if (user_id != null) {%>
-					<%="../user/myPage.jsp"%>
-				<%}else {%>
-					<%= "../user/login.jsp"%>					
-				<% } %>
-					>마이페이지</a></li>
-				</ul>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-DCX-BigData-6/i-market.git
 		</nav>
 
 	</section>
