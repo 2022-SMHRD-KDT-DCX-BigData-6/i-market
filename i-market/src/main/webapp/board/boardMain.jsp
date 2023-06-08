@@ -1,3 +1,4 @@
+<%@page import="com.main.model.WebMemberDTO"%>
 <%@page import="com.smhrd.model.board.CommentInfoDTO"%>
 <%@page import="com.smhrd.model.board.CommentInfoDAO"%>
 <%@page import="java.util.ArrayList"%>
@@ -227,9 +228,29 @@ section, summary, time, mark, audio, video {
 </style>
 </head>
 <body class="right-sidebar is-preload">
-<%
-	String user_id = (String)session.getAttribute("user_id");
-%>
+<%   String user_id = (String)session.getAttribute("user_id");
+WebMemberDTO loginMember = (WebMemberDTO) session.getAttribute("loginMember");
+if (loginMember != null) {
+   System.out.print(loginMember.getUser_id());
+}%>
+   <div class="row">
+		<div class="col-12" align="right">
+		<%if(loginMember==null) { %>
+		<a href="user/join.jsp">
+				<input type="button" class="btn float-right" value="Join">
+		</a>
+		<a href="user/login.jsp">
+			<input type="button" class="btn float-right" value="Login">
+			</a>
+		<%} else { 
+				if(loginMember.getUser_id().equals("admin")){%>
+				<a href="select.jsp"><input type="button" class="btn float-right" value="전체회원정보"></a>
+				<%} %>
+			<a href="Logout"><input type="button" class="btn float-right" value="Logout"></a>
+			<%} %>
+			
+		</div>
+	</div>
 	<div id="page-wrapper">
 	
 	<!-- Header -->
@@ -272,7 +293,7 @@ section, summary, time, mark, audio, video {
 				<% } %>
 					>판매하기</a></li>
 					<li class="current"><a href="./boardController?pagebutton=1">게시판</a></li>
-					<li><a href="#">NEWS</a></li>
+					<li><a href="./ShowNewsService">NEWS</a></li>
 					<li><a href=
 				<%if (user_id != null) {%>
 					<%="user/myPage.jsp"%>

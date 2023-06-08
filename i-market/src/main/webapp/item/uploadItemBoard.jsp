@@ -245,7 +245,7 @@ section {
 					<a href="../user/join.jsp">
 						<input type="button" class="btn float-right" value="Join">
 					</a>
-					<a href="user/login.jsp">
+					<a href="../user/login.jsp">
 						<input type="button" class="btn float-right" value="Login">
 					</a>
 				<%} else { 
@@ -293,7 +293,7 @@ section {
 				<% } %>
 					>판매하기</a></li>
 					<li><a href="../boardController?pagebutton=1">게시판</a></li>
-					<li><a href="#">NEWS</a></li>
+					<li><a href="../ShowNewsService">NEWS</a></li>
 					<li><a href=
 				<%if (user_id != null) {%>
 					<%="../user/myPage.jsp"%>

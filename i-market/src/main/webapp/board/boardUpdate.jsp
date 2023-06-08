@@ -259,7 +259,7 @@ margin-left: 120px;
 				<% } %>
 					>판매하기</a></li>
 					<li class="current"><a href="boardController?pagebutton=1">게시판</a></li>
-					<li><a href="#">NEWS</a></li>
+					<li><a href="../ShowNewsService">NEWS</a></li>
 					<li><a href="myPage.jsp">마이페이지</a></li>
 				</ul>
 			</nav>

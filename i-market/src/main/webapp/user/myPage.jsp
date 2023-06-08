@@ -286,7 +286,29 @@ section, summary, time, mark, audio, video {
 		WebMemberDAO dao = new WebMemberDAO();
 		WebMemberDTO profile=  dao.selectMeMember(dto);
 		System.out.print(profile);
+		WebMemberDTO loginMember = (WebMemberDTO) session.getAttribute("loginMember");
+		   if (loginMember != null) {
+		      System.out.print(loginMember.getUser_id());
+		   }
 	%>
+		<div class="row">
+		<div class="col-12" align="right">
+		<%if(loginMember==null) { %>
+		<a href="user/join.jsp">
+				<input type="button" class="btn float-right" value="Join">
+		</a>
+		<a href="user/login.jsp">
+			<input type="button" class="btn float-right" value="Login">
+			</a>
+		<%} else { 
+				if(loginMember.getUser_id().equals("admin")){%>
+				<a href="select.jsp"><input type="button" class="btn float-right" value="전체회원정보"></a>
+				<%} %>
+			<a href="Logout"><input type="button" class="btn float-right" value="Logout"></a>
+			<%} %>
+			
+		</div>
+	</div>
 			<div id="page-wrapper">
 
 
@@ -309,8 +331,8 @@ section, summary, time, mark, audio, video {
 			<!-- Nav -->
 			<nav id="nav">
 				<ul>
-					<li class="current"><a href="main.jsp">홈</a></li>
-					<li><a href="#">전체보기</a>
+					<li class="current"><a href="../main.jsp">홈</a></li>
+					<li><a href="../item/itemListMain.jsp">전체보기</a>
 						<ul>
 							<li><a href="#">유아동용품</a></li>
 							<li><a href="#">유아동잡화</a></li>
@@ -326,7 +348,7 @@ section, summary, time, mark, audio, video {
 						</ul></li>
 				<li><a href="../item/uploadItemBoard.jsp">판매하기</a></li>
 					<li><a href="../boardController?pagebutton=1">게시판</a></li>
-					<li><a href="no-sidebar.html">NEWS</a></li>
+					<li><a href="../ShowNewsService">NEWS</a></li>
 					<li  class="current"><a href="myPage.jsp">마이페이지</a></li>
 				</ul>
 			</nav>
