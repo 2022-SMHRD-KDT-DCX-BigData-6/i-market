@@ -231,6 +231,13 @@ html, body, div, span, applet, object, iframe, h2, h3, h4, h5, h6, p,
 </head>
 <body class="no-sidebar is-preload"
 	style="font-family: 'Hi Melody', cursive;">
+	<script type="text/javascript">
+		function openPop() {
+			var popup = window
+					.open('../chat/Chat01.jsp', '채팅',
+							'width=700px,height=800px,scrollbars=no,menubar=0,location=no');
+		}
+	</script>
 	<%
 	String user_id = (String) session.getAttribute("user_id");
 	WebMemberDTO dto = new WebMemberDTO(user_id);
@@ -327,94 +334,123 @@ html, body, div, span, applet, object, iframe, h2, h3, h4, h5, h6, p,
 				%>
 			</div>
 			</section>
-			<div style="">
-				<section>
-				<div style="padding-right: 410px;">
-					<font size=5>ID : <%=profile.getUser_id()%></font>
-				</div>
-				<br>
-				<div style="padding-right: 410px;">
-					<font size=5>닉네임 : <%=profile.getUser_nick()%></font>
-				</div>
-				<br>
-				<div style="padding-right: 360px;">
-					<font size=5>전화번호 : <%=profile.getUser_phone()%></font>
-				</div>
-				<br>
-				<div>
-					<font size=5>주소 : <%=profile.getUser_addr()%></font>
-				</div>
-				<br>
-				<br>
-				</section>
-			</div>
-			<section id="main">
-			<div class="container">
-				<div class="col-12">
-
-					<!-- 판매중 상품 -->
-					<%
-					List<t_iteminfoDTO> item_list = new t_iteminfoDAO().showItemMy(user_id);
-					System.out.println("진입 성공 리스트 사이즈 : " + item_list.size());
-					%>
-					<section> <header class="major">
-					<h2>내 판매 상품</h2>
-					</header>
-					<div class="row">
+			
+				
+				<!-- Main --> <section id="main">
+				<div class="container">
+					<section>
+					<div class="profile1" style="float: left; margin-right: 10px">
 						<%
-						for (int i = 0; i < item_list.size(); i++) {
+						if (profile.getUser_profile() == null) {
 						%>
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box">
-							<div>
-								<a
-									href="../item/itemPhotoDetail.jsp?item_idx=<%=item_list.get(i).getItem_idx()%>"
-									class="image featured"><img
-									src="../photo/<%=item_list.get(i).getItem_photo()%>" alt="" /></a>
-							</div>
-							<header>
-							<h3><%=item_list.get(i).getItem_name()%></h3>
-							</header>
-							<p>
-								가격 :
-								<%
-							int upPrice = item_list.get(i).getItem_price();
-							DecimalFormat decimalFormat = new DecimalFormat("#,###");
-							String formattedPrice = decimalFormat.format(upPrice);
-							%>
-								<%=formattedPrice%>
-								원<br> 조회수 :
-								<%=item_list.get(i).getItem_view()%></p>
-							<footer>
-							<ul class="actions">
-								<li><a
-									href="../itemViewUpService?item_idx=<%=item_list.get(i).getItem_idx()%>"
-									class="button alt">상품보기</a></li>
-							</ul>
-							</footer> </section>
-						</div>
+						<img src="../images/basic_profile.png" class="profile3" alt="" />
+						<%
+						} else {
+						%>
+						<img src="../file/<%=profile.getUser_profile()%>"
+							class="profile3" alt="" style="width: 350px; height: 350px;" />
 						<%
 						}
 						%>
 					</div>
 					</section>
+					<div style="">
+						<section>
+						<div style="padding-right: 410px;">
+							<font size=5>ID : <%=profile.getUser_id()%></font>
+						</div>
+						<br>
+						<div style="padding-right: 410px;">
+							<font size=5>닉네임 : <%=profile.getUser_nick()%></font>
+						</div>
+						<br>
+						<div style="padding-right: 360px;">
+							<font size=5>전화번호 : <%=profile.getUser_phone()%></font>
+						</div>
+						<br>
+						<div>
+							<font size=5>주소 : <%=profile.getUser_addr()%></font>
+						</div>
+						<br>
+						<section id="main">
+						<div class="container">
+							<div class="col-12">
+
+								<!-- 판매중 상품 -->
+								<%
+								List<t_iteminfoDTO> item_list = new t_iteminfoDAO().showItemMy(user_id);
+								System.out.println("진입 성공 리스트 사이즈 : " + item_list.size());
+								%>
+								<section> <header class="major">
+								<h2>내 판매 상품</h2>
+								</header>
+								<div class="row">
+									<%
+									for (int i = 0; i < item_list.size(); i++) {
+									%>
+									<div class="col-4 col-6-medium col-12-small">
+										<section class="box">
+										<div>
+											<a
+												href="../item/itemPhotoDetail.jsp?item_idx=<%=item_list.get(i).getItem_idx()%>"
+												class="image featured"><img
+												src="../photo/<%=item_list.get(i).getItem_photo()%>" alt="" /></a>
+										</div>
+										<header>
+										<h3><%=item_list.get(i).getItem_name()%></h3>
+										</header>
+										<p>
+											가격 :
+											<%
+										int upPrice = item_list.get(i).getItem_price();
+										DecimalFormat decimalFormat = new DecimalFormat("#,###");
+										String formattedPrice = decimalFormat.format(upPrice);
+										%>
+											<%=formattedPrice%>
+											원<br> 조회수 :
+											<%=item_list.get(i).getItem_view()%></p>
+										<footer>
+										<ul class="actions">
+											<li><a
+												href="../itemViewUpService?item_idx=<%=item_list.get(i).getItem_idx()%>"
+												class="button alt">상품보기</a></li>
+										</ul>
+										</footer> </section>
+									</div>
+									<%
+									}
+									%>
+								</div>
+								</section>
+							</div>
+						</div>
+						</section>
+						<div>
+							<input type="button" value="내 채팅보기" onclick="openPop()">
+						</div>
+						<br>
+						</section>
+					</div>
 				</div>
+				<div style="float: left; margin-left: 630px;">
+					<!-- 쿼리스트링 방식 : url?name=value&name=value -->
+					<a href="update.jsp?id=<%=profile.getUser_id()%>"> <input
+						type="button" id="button1" value="개인정보수정" class="button fit"
+						style="font-family: 'Hi Melody', cursive;">
+					</a>
+				</div>
+				<div>
+					<a href="main.jsp" style="padding-right: 600px;"> <input
+						type="button" id="button2" value="되돌아가기" class="button fit"
+						style="font-family: 'Hi Melody', cursive;">
+					</a>
+				</div>
+				<div style="clear: both"></div>
+				</section>
 			</div>
-			</section>
+
 		</div>
-		<div style="float: left; margin-left: 630px;">
-			<!-- 쿼리스트링 방식 : url?name=value&name=value -->
-			<a href="update.jsp?id=<%=profile.getUser_id()%>"> <input
-				type="button" id="button1" value="개인정보수정" class="button fit"
-				style="font-family: 'Hi Melody', cursive;">
-			</a>
-		</div>
-		<div>
-			<a href="main.jsp" style="padding-right: 600px;"> <input
-				type="button" id="button2" value="되돌아가기" class="button fit"
-				style="font-family: 'Hi Melody', cursive;">
-			</a>
-		</div>
+		
 		<div style="clear: both"></div>
 		</section> <!-- Copyright -->
 		<div id="copyright">
