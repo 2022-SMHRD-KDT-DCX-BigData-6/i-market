@@ -264,8 +264,6 @@ section, summary, time, mark, audio, video {
 					<%= "../user/login.jsp"%>					
 				<% } %>
 					>마이페이지</a></li>
-						<input type="text" placeholder="search" maxlength="40" class="sc-hMqMXs cLfdog" value="">
-						<img src="./images/2be3c66fa47ccd5ece2a.png" class="sc-hMqMXs search" width="16" height="16" alt=" " />
 				</ul>
 			</nav>
 
