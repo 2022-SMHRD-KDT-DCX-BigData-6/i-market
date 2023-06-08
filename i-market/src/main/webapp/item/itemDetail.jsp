@@ -231,7 +231,9 @@ section, summary, time, mark, audio, video {
 .row > .col-12 {
 	width: 80%  !important;
 }
-
+.bargain :hover {
+	background-color: yellow !important;
+}
 
 
 </style>
@@ -250,17 +252,17 @@ section, summary, time, mark, audio, video {
    <div class="row">
 		<div class="col-12" align="right">
 		<%if(loginMember==null) { %>
-		<a href="user/join.jsp">
+		<a href="../user/join.jsp">
 				<input type="button" class="btn float-right" value="Join">
 		</a>
-		<a href="user/login.jsp">
+		<a href="../user/login.jsp">
 			<input type="button" class="btn float-right" value="Login">
 			</a>
 		<%} else { 
 				if(loginMember.getUser_id().equals("admin")){%>
 				<a href="select.jsp"><input type="button" class="btn float-right" value="전체회원정보"></a>
 				<%} %>
-			<a href="Logout"><input type="button" class="btn float-right" value="Logout"></a>
+			<a href="../Logout"><input type="button" class="btn float-right" value="Logout"></a>
 			<%} %>
 			
 		</div>
@@ -303,16 +305,16 @@ section, summary, time, mark, audio, video {
 				<%if (user_id != null) {%>
 					<%="uploadItemBoard.jsp"%>
 				<%}else {%>
-					<%= "user/login.jsp"%>					
+					<%= "../user/login.jsp"%>					
 				<% } %>
 					>판매하기</a></li>
 					<li><a href="../boardController?pagebutton=1">게시판</a></li>
-					<li><a href="#">NEWS</a></li>
+					<li><a href="../ShowNewsService">NEWS</a></li>
 					<li><a href=
 				<%if (user_id != null) {%>
-					<%="user/myPage.jsp"%>
+					<%="../user/myPage.jsp"%>
 				<%}else {%>
-					<%= "user/login.jsp"%>					
+					<%= "../user/login.jsp"%>					
 				<% } %>
 					>마이페이지</a></li>
 				</ul>
@@ -346,6 +348,9 @@ section, summary, time, mark, audio, video {
   function openPop(){
     var popup = window.open('CreateChatService.do', '채팅', 'width=700px,height=800px,scrollbars=no,menubar=0,location=no');
   }
+  function openPop2(){
+    var popup = window.open('CreateChatService2.do', '채팅', 'width=700px,height=800px,scrollbars=no,menubar=0,location=no');
+  }
 function gologin() {
 	window.location.href="../user/login.jsp";
 		}
@@ -369,7 +374,7 @@ function gologin() {
 							<div class="slick-track"
 								style="opacity: 1; width: 729px; transform: translate3d(0px, 0px, 0px);">
 								<div class="	" data-slick-index="0" aria-hidden="false"
-									style="width: 729px;">
+									style="width: center;">
 									<div>
 										<a href="itemPhotoDetail.jsp?item_idx=<%=item_idx%>"
 											style="width: 100%; display: inline-block;" tabindex="0">
@@ -468,12 +473,20 @@ function gologin() {
 						value="채팅"></td>
 				</tr>
 			</section>
+			<% if (loginMember==null) {
+			}else{
+			%>
 			<aside class="article-description right">
+				<%
+					if ((!loginMember.getUser_id().equals(item_list.get(0).getUser_id())) && !loginMember.getUser_id().equals(null) ){
+				%>
 				<form action="../uploadBargainService" method="post">
 					<input type="number" placeholder="숫자만 입력해주세요."
 						class="ProductNewstyle__PriceInput-sc-7fge4a-16 eAhDI"
 						name="bar_price"> 원 <input type="submit" value="흥정하기">
 				</form>
+					<%} 
+					if (loginMember.getUser_id().equals(item_list.get(0).getUser_id())){%>
 				<div>
 					<%
 				itemBargainDTO dto2 = new itemBargainDTO();
@@ -482,14 +495,17 @@ function gologin() {
 				%>
 					<h4>제시된 가격</h4>
 					<%for(int i = 0; i<(bar_list.size()); i++){
+						session.setAttribute("to_id_2", bar_list.get(i).getUser_id());
 					%>
-					<br>제시된 가격 : <%=bar_list.get(i).getBar_price() %> 원
-				<%}; %>
+					<br><a class="bargain" onclick="openPop2()" style="cursor:pointer">제시된 가격 : <%=bar_list.get(i).getBar_price() %> 원 - <%=bar_list.get(i).getUser_id() %></a>
+				<%} %>
 				</div>
+				<% }%>
 			</aside>
 		</div>
 		<%
-		} else {
+			}
+			} else {
 		%>
 
 		<section id="article-description">
@@ -517,7 +533,7 @@ function gologin() {
 			<div property="schema:description" id="article-detail">
 				<p><%=item_list.get(0).getItem_info()%></p>
 			</div>
-			<p id="article-counts">조회 124</p>
+			<p id="article-counts">조회 <%=item_list.get(0).getItem_view() %></p>
 			<%
 			session.setAttribute("item_name", item_list.get(0).getItem_name());
 			session.setAttribute("item_info", item_list.get(0).getItem_info());

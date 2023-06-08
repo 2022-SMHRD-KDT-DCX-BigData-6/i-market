@@ -18,7 +18,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background: linear-gradient(to bottom left, #79C7C5 40%, #F9FBFF 100%);
+    background: #FDF5E6
 }
 body {
 	display: flex;
@@ -41,8 +41,9 @@ body {
 #writer {
 height: 50px;
 width: 50px;
+background: #f97777;
+border-radius: 10px;
 
-background: linear-gradient(to bottom left, #79C7C5 20%, #A1E2D9 100%);
 }
 .fa-arrow-left {
 	font-size: 150%;
@@ -78,7 +79,8 @@ background: linear-gradient(to bottom left, #79C7C5 20%, #A1E2D9 100%);
     border: none;
     width: calc(100% - 60px);
     color: black;
-    text-indent: 10px;
+    text-indent: 10px;lf
+    
     font-size: 12pt;
     padding: 0;
     background: #F9FBFF;
@@ -114,7 +116,7 @@ background: linear-gradient(to bottom left, #79C7C5 20%, #A1E2D9 100%);
 }
 .msg-box {
     display: flex;
-    background: #b2b2b2;
+    background: #217214a3;
     padding: 10px 10px 0 10px;
     border-radius: 0 6px 6px 0;
     max-width: 80%;
@@ -162,7 +164,7 @@ background: linear-gradient(to bottom left, #79C7C5 20%, #A1E2D9 100%);
 }
 .msg-self .msg-box {
     border-radius: 6px 0 0 6px;
-    background: #79C7C5;
+    background: rgb(235, 225, 15);
     float: right;
 }
 .msg-self .user-img {
@@ -199,7 +201,7 @@ background: linear-gradient(to bottom left, #79C7C5 20%, #A1E2D9 100%);
         <div class="dots"></div>
       </div>
     </div>
-		<section class="chat-window">
+		<section class="chat-window"><br>
 			<%
 				for (int i = 0; i < detail_list.size(); i++) {
 					if (user_id.equals(detail_list.get(i).getTalker())) {

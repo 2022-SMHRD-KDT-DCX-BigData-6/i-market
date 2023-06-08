@@ -34,7 +34,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background: linear-gradient(to bottom left, #79C7C5 40%, #F9FBFF 100%);
+   background: #FDF5E6;
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -77,11 +77,13 @@ table{
  	border-radius: 10px 10px 0 0;
 }
 #writer {
-height: 50px;
-width: 150px;
+margin-top: 20px;
+height: 40px;
+width: 120px;
     font-family: 'Hi Melody', cursive;
 
-background: linear-gradient(to bottom left, #79C7C5 20%, #A1E2D9 100%);
+background: #f97777;
+border-radius: 10px 10px 10px 10px;
 }
 .fa-arrow-left {
 	font-size: 150%;
@@ -226,10 +228,10 @@ table tbody tr:hover {
 	opacity: 0.7;
 }
 table tbody tr:nth-child(odd) {
-   background: linear-gradient(to bottom left, pink 40%, #F9FBFF 100%);
+   background: linear-gradient(to bottom left, rgb(235, 225, 15) 40%, #F9FBFF 100%);
 }
 table tbody tr:nth-child(even) {
-   background: linear-gradient(to bottom left, #94c9e4 40%, #F9FBFF 100%);
+   background: linear-gradient(to bottom left, #217214a3 40%, #F9FBFF 100%);
 }
 hr{
 	margin: 0;

@@ -195,9 +195,7 @@ html, body, div, span, applet, object, iframe, h2, h3, h4, h5, h6, p,
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="../assets/css/itemList_young.css" />
 <link rel="stylesheet" href="assets/css/main.css" />
-
-
-
+</head>
 <style type="text/css">
 
 

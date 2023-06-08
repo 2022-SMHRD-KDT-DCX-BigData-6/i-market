@@ -22,7 +22,7 @@
 	</select>
 	
 	<select id="showBargain" resultType="com.main.model.itemBargainDTO">
-		select bar_price from t_bargain where item_idx=#{item_idx} order by bar_price
+		select * from t_bargain where item_idx=#{item_idx} order by bar_price
 	</select>
 	
 	<select id="showItemDetail" resultType="com.main.model.t_iteminfoDTO">
@@ -40,5 +40,8 @@
 	<select id="searchItemCategory" resultType="com.main.model.t_iteminfoDTO">
 		select * from t_iteminfo where item_category like '%'||#{item_category}||'%' order by item_idx
 	</select>
+	<update id="ViewUp" parameterType="com.main.model.t_iteminfoDTO">
+		update t_iteminfo set item_view = #{item_view} where item_idx = #{item_idx}
+	</update>
 	
 </mapper>
