@@ -11,6 +11,7 @@
 	<typeAlias type="com.smhrd.model.user.t_userinfoDTO" alias="User"/>
 	<typeAlias type="com.smhrd.model.board.BoardInfoDTO" alias="BoardInfo"/>
 	<typeAlias type="com.smhrd.model.board.CommentInfoDTO" alias="CommentInfo"/>
+	<typeAlias type="com.smhrd.model.news.NewsInfoDTO" alias="NewsInfo"/>
 </typeAliases>
   <environments default="development">
     <environment id="development">

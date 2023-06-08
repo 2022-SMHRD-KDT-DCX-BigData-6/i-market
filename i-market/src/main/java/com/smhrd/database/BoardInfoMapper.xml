@@ -17,6 +17,10 @@
 		select * from t_userinfo where user_id = #{user_id} and user_pw = #{user_pw}
 	</select> -->
 
+	<select id="showNews" resultType="NewsInfo">
+		select * from t_news order by n_date desc
+	</select>
+
 	<select id="showBoard" resultType="BoardInfo">
 		select * from t_boardinfo order by uploaded_at desc
 	</select>

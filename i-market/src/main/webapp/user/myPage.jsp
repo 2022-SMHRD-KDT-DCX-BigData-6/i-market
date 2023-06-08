@@ -328,8 +328,6 @@ section, summary, time, mark, audio, video {
 					<li><a href="../boardController?pagebutton=1">게시판</a></li>
 					<li><a href="no-sidebar.html">NEWS</a></li>
 					<li  class="current"><a href="myPage.jsp">마이페이지</a></li>
-						<input type="text" placeholder="search" maxlength="40" class="sc-hMqMXs cLfdog" value="">
-						<img src="./images/2be3c66fa47ccd5ece2a.png" class="sc-hMqMXs search" width="16" height="16" alt=" " />
 				</ul>
 			</nav>
 
@@ -349,50 +347,26 @@ section, summary, time, mark, audio, video {
 					</section>
 					<div style="">
 					<section>
-					<div style="padding-bottom: 45px;padding-left:190px;"><font size = 10><%=profile.getUser_id() %></font></div>
-					<div style="padding-bottom: 45px;padding-left:190px;"><font size = 10><%=profile.getUser_nick() %></font></div>
-					<div style="padding-bottom: 45px;padding-left: 190px;"><font size = 10><%=profile.getUser_phone() %></font></div>
-					<div style="padding-bottom: 45px; padding-left: 190px;"><font size = 10><%=profile.getUser_addr() %></font></div>
+					<div style="padding-bottom: 45px; padding-right: 700px;"><font size = 10><%=profile.getUser_id() %></font></div>
+					<div style="padding-bottom: 45px; padding-right: 700px;"><font size = 10><%=profile.getUser_nick() %></font></div>
+					<div style="padding-bottom: 45px; padding-right: 420px;"><font size = 10><%=profile.getUser_phone() %></font></div>
+					<div style="padding-bottom: 45px; padding-right: 420px;"><font size = 10><%=profile.getUser_addr() %></font></div>
 					</section>
 					</div>
 					</div>
 					<div style="float: left; margin-left: 600px;">
 						<!-- 쿼리스트링 방식 : url?name=value&name=value -->
-						<a href="update.jsp?id=<%=profile.getUser_id()  %>" class="button next scrolly">
-						<input type="submit"  id="button1" value="개인정보수정" class="button fit">
+						<a href="update.jsp?id=<%=profile.getUser_id()  %>">
+						<input type="button"  id="button1" value="개인정보수정" class="button fit"  style="font-family: 'Hi Melody', cursive;">
 						</a>
 					</div>
-					<div style=" padding-left: 900px;">	
-						<a href="main.jsp" class="button next scrolly">
-						<input type="submit"  id="button2" value="되돌아가기" class="button fit">
+					<div>	
+						<a href="main.jsp" style="padding-right: 650px;">
+						<input type="button"  id="button2" value="되돌아가기" class="button fit"  style="font-family: 'Hi Melody', cursive;">
 						</a>
 					</div>
 					<div style="clear:both"></div>
 				</section>
-
-		
-								
-									<ul class="contact">
-										<li>
-											<h3>Address</h3>
-											<p>
-												Untitled Incorporated<br />
-												1234 Somewhere Road Suite<br />
-												Nashville, TN 00000-0000
-											</p>
-										</li>
-										<li>
-											<h3>Mail</h3>
-											<p><a href="#">someone@untitled.tld</a></p>
-										</li>
-										<li>
-											<h3>Phone</h3>
-											<p>(800) 000-0000</p>
-										</li>
-									</ul>
-								</section>
-							</div>
-							<div class="col-12">
 
 								<!-- Copyright -->
 									<div id="copyright">
@@ -402,11 +376,8 @@ section, summary, time, mark, audio, video {
 									</div>
 
 							</div>
-						</div>
-					</div>
 				</section>
 
-		</div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>

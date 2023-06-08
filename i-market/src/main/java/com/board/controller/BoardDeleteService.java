@@ -45,12 +45,12 @@ public class BoardDeleteService extends HttpServlet {
 				response.sendRedirect("boardController?pagebutton=1");
 			} else {
 				System.out.println("삭제 실패");
-				response.sendRedirect("boardDetail.jsp");
+				response.sendRedirect("board/boardDetail.jsp");
 			}
 			
 		} else {
 			System.out.println("조회실패");
-			response.sendRedirect("boardDelete.jsp");
+			response.sendRedirect("board/boardDelete.jsp");
 		}
 	}
 
