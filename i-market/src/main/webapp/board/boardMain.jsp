@@ -44,6 +44,7 @@ input[type="submit"],
 		-webkit-transition: background-color .25s ease-in-out;
 		-ms-transition: background-color .25s ease-in-out;
 		transition: background-color .25s ease-in-out;
+		font-family:'Hi Melody', cursive;
 	}
 	
 	input[type="button"]{
@@ -65,6 +66,7 @@ input[type="submit"],
 		-webkit-transition: background-color .25s ease-in-out;
 		-ms-transition: background-color .25s ease-in-out;
 		transition: background-color .25s ease-in-out;
+		font-family:'Hi Melody', cursive;
 	
 	}
 	
@@ -217,10 +219,10 @@ section, summary, time, mark, audio, video {
 #footer a {
 			color: #fff;
 		}
-	
-	
-	
-	
+.boardMain, .click {
+	width: 80%;
+	margin-left: 120px;
+}
 
 </style>
 </head>
@@ -278,8 +280,6 @@ section, summary, time, mark, audio, video {
 					<%= "user/login.jsp"%>					
 				<% } %>
 					>마이페이지</a></li>
-						<input type="text" placeholder="search" maxlength="40" class="sc-hMqMXs cLfdog" value="">
-						<img src="./images/2be3c66fa47ccd5ece2a.png" class="sc-hMqMXs search" width="16" height="16" alt=" " />
 				</ul>
 			</nav>
 
@@ -314,9 +314,8 @@ section, summary, time, mark, audio, video {
 												&emsp;&emsp;<button type="button" class="btn" id="buttonSearch">검색</button>
 												&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 												&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-												&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 												<%if(user_id != null){ %>
-												<a href="board/boardInput.jsp"><button>글작성하러가기</button></a></p><br>
+												<a href="board/boardInput.jsp"><button>글작성</button></a></p><br>
 												<%} %>
 						
 										
@@ -423,47 +422,6 @@ section, summary, time, mark, audio, video {
 					</div>
 				</section>		
 		
-		
-		<!-- Footer -->
-				<section id="footer">
-					<div class="container" align="center">
-						<div class="row">
-							<div class="col-4 col-12-medium">
-							<section>
-								<header>
-									<h2>Vitae tempor lorem</h2>
-								</header>
-								<ul class="social">
-									<li><a class="fa fa-facebook-f" href="#"><span
-											class="label"></span></a></li>
-									<li><a class="fa fa-twitter" href="#"><span
-											class="label"></span></a></li>
-									<li><a class="fa fa-instagram" href="#"><span
-											class="label"></span></a></li>
-									<li><a class="fa fa-google" href="#"><span
-											class="label"></span></a></li>
-								</ul>
-								<ul class="contact">
-									<li>
-										<h3>Address</h3>
-										<p>
-											광주 서구 경열로 20 3,4층
-										</p>
-									</li>
-									<li>
-										<h3>Mail</h3>
-										<p>
-											<p>smhrd@smhrd.or.kr</p>
-										</p>
-									</li>
-									<li>
-										<h3>Phone</h3>
-										<p>062)655-3510</p>
-									</li>
-								</ul>
-							</section>
-						</div>
-							<div class="col-12">
 
 								<!-- Copyright -->
 									<div id="copyright">
@@ -473,14 +431,6 @@ section, summary, time, mark, audio, video {
 									</div>
 
 							</div>
-						</div>
-					</div>
-				</section>
-		
-		
-	</div>
-	
-	
 	
 <script type="text/javascript" src="assets/js/jquery-3.7.0.js"></script>
 
