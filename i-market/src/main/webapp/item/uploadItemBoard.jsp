@@ -233,11 +233,12 @@ section {
 
 </style>
 </head>
+<body>
 <body class="homepage is-preload" style="font-family: 'Hi Melody', cursive;">
-<% 
-	String user_id = (String)session.getAttribute("user_id");
+	<%
+	String user_id = (String) session.getAttribute("user_id");
 	WebMemberDTO loginMember = (WebMemberDTO) session.getAttribute("loginMember");
-   %>
+	%>
 	<section>
 		<div class="row">
 			<div class="col-12" align="right">
@@ -254,7 +255,6 @@ section {
 					<%} %>
 						<a href="Logout"><input type="button" class="btn float-right" value="Logout"></a>
 				<%} %>
-			
 			</div>
 		</div>
 		<!-- Header -->
@@ -317,8 +317,7 @@ section {
 						<ul class="ProductNewstyle__Groups-sc-7fge4a-3 fSSAPi">
 							<li class="ProductNewstyle__Group-sc-7fge4a-4 UPAMp">
 								<div class="ProductNewstyle__Label-sc-7fge4a-5 bFQfPj">
-									상품이미지
-								</div>
+									상품이미지</div>
 								<div class="ProductNewstyle__Content-sc-7fge4a-6 gxpNmH image">
 									<ul class="sc-eEieub ljAqnv">
 										<li class="sc-RbTVP dOJAXa"><img src="" class="thumb"
@@ -342,51 +341,34 @@ section {
 								</div>
 							</li>
 							<li class="ProductNewstyle__Group-sc-7fge4a-4 UPAMp"><div
-									class="ProductNewstyle__Label-sc-7fge4a-5 knwJIa">
-									카테고리
-								</div>
+									class="ProductNewstyle__Label-sc-7fge4a-5 knwJIa">카테고리</div>
 								<div class="ProductNewstyle__Content-sc-7fge4a-6 gxpNmH">
-									<div class="CategoryBoxstyle__CategoryGroup-sc-r1u93i-0 kwaHYe">
-										<div
-											class="CategoryBoxstyle__CategoryListWrapper-sc-r1u93i-1 cSzUJd">
-											<ul class="CategoryBoxstyle__CategoryList-sc-r1u93i-2 fAfkpF">
-												<li class="CategoryBoxstyle__Category-sc-r1u93i-3 btyiVm">
-													<button type="button" class="CategoryBoxstyle__CategoryButton-sc-r1u93i-4 kulsCh" name="item_category" value="베이비의류(0-2세)">베이비의류(0-2세)</button></li>
-												<li class="CategoryBoxstyle__Category-sc-r1u93i-3 btyiVm">
-													<button type="button" class="CategoryBoxstyle__CategoryButton-sc-r1u93i-4 kulsCh" name="item_category" value="여아의류(3-6세)">여아의류(3-6세)</button></li>
-												<li class="CategoryBoxstyle__Category-sc-r1u93i-3 btyiVm">
-													<button type="button" class="CategoryBoxstyle__CategoryButton-sc-r1u93i-4 kulsCh" name="item_category" value="여주니어의류(7세~)">여주니어의류(7세~)</button></li>
-												<li class="CategoryBoxstyle__Category-sc-r1u93i-3 btyiVm">
-													<button type="button" class="CategoryBoxstyle__CategoryButton-sc-r1u93i-4 kulsCh" name="item_category" value="남아의류(3-6세)">남아의류(3-6세)</button></li>
-												<li class="CategoryBoxstyle__Category-sc-r1u93i-3 btyiVm">
-													<button type="button" class="CategoryBoxstyle__CategoryButton-sc-r1u93i-4 kulsCh" name="item_category" value="남주니어의류(7세~)">남주니어의류(7세~)</button></li>
-												<li class="CategoryBoxstyle__Category-sc-r1u93i-3 btyiVm">
-													<button type="button" class="CategoryBoxstyle__CategoryButton-sc-r1u93i-4 kulsCh" name="item_category" value="유아동신발/잡화">유아동신발/잡화</button></li>
-												<li class="CategoryBoxstyle__Category-sc-r1u93i-3 btyiVm">
-													<button type="button" class="CategoryBoxstyle__CategoryButton-sc-r1u93i-4 kulsCh" name="item_category" value="교육/완구/인형">교육/완구/인형</button></li>
-												<li class="CategoryBoxstyle__Category-sc-r1u93i-3 btyiVm">
-													<button type="button" class="CategoryBoxstyle__CategoryButton-sc-r1u93i-4 kulsCh" name="item_category" value="유아동용품">유아동용품</button></li>
-												<li class="CategoryBoxstyle__Category-sc-r1u93i-3 btyiVm">
-													<button type="button" class="CategoryBoxstyle__CategoryButton-sc-r1u93i-4 kulsCh" name="item_category" value="출산/임부용품">출산/임부용품</button></li>
-												<li class="CategoryBoxstyle__Category-sc-r1u93i-3 btyiVm">
-													<button type="button" class="CategoryBoxstyle__CategoryButton-sc-r1u93i-4 kulsCh" name="item_category" value="이유용품/유아식기">이유용품/유아식기</button></li>
-											</ul>
-										</div>
-									</div>
+									<select name="item_category">
+										<option name="item_category" value="베이비의류(0-2세)">베이비의류(0-2세)</option>
+										<option name="item_category" value="여아의류(3-6세)">여아의류(3-6세)
+										</option>
+										<option name="item_category" value="여주니어의류(7세~)">여주니어의류(7세~)
+										</option>
+										<option name="item_category" value="남아의류(3-6세)">남아의류(3-6세)
+										</option>
+										<option name="item_category" value="남주니어의류(7세~)">남주니어의류(7세~)
+										</option>
+										<option name="item_category" value="유아동신발/잡화">유아동신발/잡화</option>
+										<option name="item_category" value="교육/완구/인형">교육/완구/인형</option>
+										<option name="item_category" value="유아동용품">유아동용품</option>
+										<option name="item_category" value="출산/임부용품">출산/임부용품</option>
+										<option name="item_category" value="이유용품/유아식기">이유용품/유아식기</option>
+									</select>
 								</div></li>
 							<li class="ProductNewstyle__Group-sc-7fge4a-4 UPAMp"><div
-									class="ProductNewstyle__Label-sc-7fge4a-5 gvWKtv">
-									거래지역
-								</div>
+									class="ProductNewstyle__Label-sc-7fge4a-5 gvWKtv">거래지역</div>
 								<div class="ProductNewstyle__Content-sc-7fge4a-6 gxpNmH">
-									<input placeholder="거래 지역을 입력해주세요." type="text" name="user_addr_at"
-										class="ProductNewstyle__LocationInput-sc-7fge4a-14 GEuoA"
-										>
+									<input placeholder="거래 지역을 입력해주세요." type="text"
+										name="user_addr_at"
+										class="ProductNewstyle__LocationInput-sc-7fge4a-14 GEuoA">
 								</div></li>
 							<li class="ProductNewstyle__Group-sc-7fge4a-4 UPAMp"><div
-									class="ProductNewstyle__Label-sc-7fge4a-5 gGpLyz">
-									흥정
-								</div>
+									class="ProductNewstyle__Label-sc-7fge4a-5 gGpLyz">흥정</div>
 								<div class="ProductNewstyle__Content-sc-7fge4a-6 gxpNmH">
 									<div class="sc-ciodno gjftID">
 										<label class="sc-gGCbJM iBQgZV"> <input
@@ -398,19 +380,17 @@ section {
 									</div>
 								</div></li>
 							<li class="ProductNewstyle__Group-sc-7fge4a-4 UPAMp"><div
-									class="ProductNewstyle__Label-sc-7fge4a-5 gvWKtv"> 가격
-								</div>
+									class="ProductNewstyle__Label-sc-7fge4a-5 gvWKtv">가격</div>
 								<div class="ProductNewstyle__Content-sc-7fge4a-6 gxpNmH">
 									<div
 										class="ProductNewstyle__PriceInputWrapper-sc-7fge4a-15 fDlSqf">
-										<input type="number" placeholder="숫자만 입력해주세요." 	class="ProductNewstyle__PriceInput-sc-7fge4a-16 eAhDI"
+										<input type="number" placeholder="숫자만 입력해주세요."
+											class="ProductNewstyle__PriceInput-sc-7fge4a-16 eAhDI"
 											name="item_price"> 원
 									</div>
 								</div></li>
 							<li class="ProductNewstyle__Group-sc-7fge4a-4 UPAMp"><div
-									class="ProductNewstyle__Label-sc-7fge4a-5 iqSfRn">
-									설명
-								</div>
+									class="ProductNewstyle__Label-sc-7fge4a-5 iqSfRn">설명</div>
 								<div class="ProductNewstyle__Content-sc-7fge4a-6 gxpNmH">
 									<textarea rows="6" name="item_info"
 										class="ProductNewstyle__Description-sc-7fge4a-21 gQnFKF"

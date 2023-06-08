@@ -14,6 +14,7 @@ import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 import com.smhrd.command.Command;
 import com.smhrd.controller.ChatRoomService;
 import com.smhrd.controller.CreateChatService;
+import com.smhrd.controller.CreateChatService2;
 import com.smhrd.controller.MoveChatRoomService;
 import com.smhrd.controller.SendChatService;
 
@@ -48,6 +49,8 @@ public class Frontcontroller extends HttpServlet {
 			service = new SendChatService();
 		} else if (result.equals("item/CreateChatService.do")) {
 			service = new CreateChatService();
+		} else if (result.equals("item/CreateChatService2.do")) {
+			service = new CreateChatService2();
 		} else if (result.equals("item/MoveChatRoomService.do")) {
 			service = new MoveChatRoomService();
 		}

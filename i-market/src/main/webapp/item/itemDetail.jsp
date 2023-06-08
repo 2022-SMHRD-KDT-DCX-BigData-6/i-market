@@ -1,9 +1,14 @@
+<%@page import="com.main.model.itemBargainDAO"%>
+<%@page import="com.main.model.itemBargainDTO"%>
 <%@page import="com.main.model.WebMemberDTO"%>
 <%@page import="java.util.List"%>
 <%@page import="com.main.model.t_iteminfoDAO"%>
 <%@page import="com.main.model.t_iteminfoDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%
+request.setCharacterEncoding("UTF-8");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -254,7 +259,7 @@ section, summary, time, mark, audio, video {
 				if(loginMember.getUser_id().equals("admin")){%>
 				<a href="select.jsp"><input type="button" class="btn float-right" value="전체회원정보"></a>
 				<%} %>
-			<a href="Logout"><input type="button" class="btn float-right" value="Logout"></a>
+			<a href="../Logout"><input type="button" class="btn float-right" value="Logout"></a>
 			<%} %>
 			
 		</div>
@@ -340,6 +345,9 @@ section, summary, time, mark, audio, video {
   function openPop(){
     var popup = window.open('CreateChatService.do', '채팅', 'width=700px,height=800px,scrollbars=no,menubar=0,location=no');
   }
+  function openPop2(){
+    var popup = window.open('CreateChatService2.do', '채팅', 'width=700px,height=800px,scrollbars=no,menubar=0,location=no');
+  }
 function gologin() {
 	window.location.href="../user/login.jsp";
 		}
@@ -365,7 +373,7 @@ function gologin() {
 								<div class="	" data-slick-index="0" aria-hidden="false"
 									style="width: 729px;">
 									<div>
-										<a href="itemPhotoDetail.jsp?item_idx=<%=item_idx %>"
+										<a href="itemPhotoDetail.jsp?item_idx=<%=item_idx%>"
 											style="width: 100%; display: inline-block;" tabindex="0">
 											<div>
 												<div class="image-wrap" data-image-id="-2063102816"
@@ -391,9 +399,6 @@ function gologin() {
 				<h3 class="hide">프로필</h3>
 				<div class="space-between">
 					<div style="display: flex;">
-						<div id="article-profile-image">
-							<img alt="프로필이미지">
-						</div>
 						<div id="article-profile-left">
 							<div id="nickname"><%=item_list.get(0).getUser_id()%></div>
 							<div id="region-name"><%=item_list.get(0).getUser_addr_at()%></div>
@@ -418,6 +423,83 @@ function gologin() {
 				</div>
 			</a>
 		</section>
+		<%
+		if (item_list.get(0).getItem_bargain_YN().equals("1")) {
+		%>
+
+		<div class="container">
+			<section class="article-description left">
+				<h1 property="schema:name" id="article-title"
+					style="margin-top: 0px;"><%=item_list.get(0).getItem_name()%></h1>
+				<p id="article-category">
+					<%=item_list.get(0).getItem_category()%>
+					∙
+					<time>
+						<%=item_list.get(0).getUploaded_at()%>
+					</time>
+				</p>
+				<p property="schema:priceValidUntil" datatype="xsd:date"
+					content="2025-06-02"></p>
+				<p rel="schema:url" resource="https://www.daangn.com/556391615"></p>
+				<p property="schema:priceCurrency" content="KRW"></p>
+				<p id="article-price" property="schema:price" content="5000.0"
+					style="font-size: 18px; font-weight: bold;"><%=item_list.get(0).getItem_price()%>원
+				</p>
+				<div property="schema:description" id="article-detail">
+					<p><%=item_list.get(0).getItem_info()%></p>
+				</div>
+				<p id="article-counts">조회 124</p>
+				<%
+				session.setAttribute("item_name", item_list.get(0).getItem_name());
+				session.setAttribute("item_info", item_list.get(0).getItem_info());
+				session.setAttribute("item_idx", item_list.get(0).getItem_idx());
+				session.setAttribute("bar_id", user_id);
+				session.setAttribute("to_id", item_list.get(0).getUser_id());
+				%>
+				<tr>
+					<td><input type="button" onclick=<%if (user_id == null) {%>
+						"gologin()"
+						 <%} else {%>
+						 "openPop()"
+						 <%}%>
+						value="채팅"></td>
+				</tr>
+			</section>
+			<% if (loginMember==null) {
+			}else{
+			%>
+			<aside class="article-description right">
+				<%
+					if ((!loginMember.getUser_id().equals(item_list.get(0).getUser_id())) && !loginMember.getUser_id().equals(null) ){
+				%>
+				<form action="../uploadBargainService" method="post">
+					<input type="number" placeholder="숫자만 입력해주세요."
+						class="ProductNewstyle__PriceInput-sc-7fge4a-16 eAhDI"
+						name="bar_price"> 원 <input type="submit" value="흥정하기">
+				</form>
+					<%} 
+					if (loginMember.getUser_id().equals(item_list.get(0).getUser_id())){%>
+				<div>
+					<%
+				itemBargainDTO dto2 = new itemBargainDTO();
+				itemBargainDAO dao2 = new itemBargainDAO();
+				List<itemBargainDTO> bar_list = new itemBargainDAO().showBargain(item_idx);
+				%>
+					<h4>제시된 가격</h4>
+					<%for(int i = 0; i<(bar_list.size()); i++){
+						session.setAttribute("to_id_2", bar_list.get(i).getUser_id());
+					%>
+					<br>제시된 가격 : <%=bar_list.get(i).getBar_price() %> 원
+					<input type="button" onclick="openPop2()" value="흥정수락">
+				<%} %>
+				</div>
+				<% }%>
+			</aside>
+		</div>
+		<%
+			}
+			} else {
+		%>
 
 		<section id="article-description">
 			<h1 property="schema:name" id="article-title"
@@ -439,27 +521,24 @@ function gologin() {
 			<div property="schema:description" id="article-detail">
 				<p><%=item_list.get(0).getItem_info()%></p>
 			</div>
-			<p id="article-counts">관심 5 ∙ 채팅 1 ∙ 조회 124</p>
+			<p id="article-counts">조회 124</p>
 			<%
 			session.setAttribute("item_name", item_list.get(0).getItem_name());
 			session.setAttribute("item_info", item_list.get(0).getItem_info());
 			session.setAttribute("to_id", item_list.get(0).getUser_id());
 			%>
 			<tr>
-						 <td><input type="button" onclick=
-						 <%
-						 if (user_id == null){ %>
-							 "gologin()"
-						 <% }else {
-							 
-						 %>
+				<td><input type="button" onclick=<%if (user_id == null) {%>
+					"gologin()"
+						 <%} else {%>
 						 "openPop()"
-						 <%
-						 }
-						 %>
-						  value="채팅"></td>
-					</tr>
+						 <%}%>
+					value="채팅"></td>
+			</tr>
 		</section>
+		<%
+		}
+		%>
 	</article>
 
 	<!-- Scripts -->

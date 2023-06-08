@@ -74,10 +74,10 @@ request.setCharacterEncoding("UTF-8");
 						<div class="filter_finder_filter__tysdn">
 							<div class="filter_finder_col__k6BKF filter_finder_price__dQExh">
 								<div class="finder_price_inner">
-									<input type="number" title="최소가격 입력" name="priceSearchKey1"
+									<input type="number" title="최소가격 입력" name="itemPriceSearchKey1"
 										placeholder="0" class="sc-hMqMXs cLfdog">원 ~ <input
 										type="number" placeholder="#" title="최대가격 입력"
-										name="priceSearchKey2" class="sc-hMqMXs cLfdog">원
+										name="itemPriceSearchKey2" class="sc-hMqMXs cLfdog">원
 									<button type="submit">가격대 검색</button>
 								</div>
 							</div>
@@ -134,7 +134,6 @@ request.setCharacterEncoding("UTF-8");
 			itemPriceSearchKey2 = (int) session.getAttribute("itemPriceSearchKey2");
 			System.out.println("searchword from session is :" + itemPriceSearchKey2);
 		}
-
 		t_iteminfoDTO dto = new t_iteminfoDTO();
 		%>
 
@@ -149,68 +148,68 @@ request.setCharacterEncoding("UTF-8");
 				<div>
 					<button class="sc-dliRfk imEKSd" type="submit"
 						name="itemCategoryKey" value="베이비의류(0-2세)"
-						href="itemListCategory.jsp">
+						href="itemListSearch.jsp">
 						<div class="sc-kLIISr kcDYue">베이비의류(0-2세)</div>
 					</button>
 				</div>
 				<div>
 					<button class="sc-dliRfk imEKSd" type="submit"
 						name="itemCategoryKey" value="여아의류(3-6세)"
-						href="itemListCategory.jsp">
+						href="itemListSearch.jsp">
 						<div class="sc-kLIISr kcDYue">여아의류(3-6세)</div>
 					</button>
 				</div>
 				<div>
 					<button class="sc-dliRfk imEKSd" type="submit"
 						name="itemCategoryKey" value="여주니어의류(7세~)"
-						href="itemListCategory.jsp">
+						href="itemListSearch.jsp">
 						<div class="sc-kLIISr kcDYue">여주니어의류(7세~)</div>
 					</button>
 				</div>
 				<div>
 					<button class="sc-dliRfk imEKSd" type="submit"
 						name="itemCategoryKey" value="남아의류(3-6세)"
-						href="itemListCategory.jsp">
+						href="itemListSearch.jsp">
 						<div class="sc-kLIISr kcDYue">남아의류(3-6세)</div>
 					</button>
 				</div>
 				<div>
 					<button class="sc-dliRfk imEKSd" type="submit"
 						name="itemCategoryKey" value="남주니어의류(7세~)"
-						href="itemListCategory.jsp">
+						href="itemListSearch.jsp">
 						<div class="sc-kLIISr kcDYue">남주니어의류(7세~)</div>
 					</button>
 				</div>
 				<div>
 					<button class="sc-dliRfk imEKSd" type="submit"
 						name="itemCategoryKey" value="유아동신발/잡화"
-						href="itemListCategory.jsp">
+						href="itemListSearch.jsp">
 						<div class="sc-kLIISr kcDYue">유아동신발/잡화</div>
 					</button>
 				</div>
 				<div>
 					<button class="sc-dliRfk imEKSd" type="submit"
 						name="itemCategoryKey" value="교육/완구/인형"
-						href="itemListCategory.jsp">
+						href="itemListSearch.jsp">
 						<div class="sc-kLIISr kcDYue">교육/완구/인형</div>
 					</button>
 				</div>
 				<div>
 					<button class="sc-dliRfk imEKSd" type="submit"
-						name="itemCategoryKey" value="유아동용품" href="itemListCategory.jsp">
+						name="itemCategoryKey" value="유아동용품" href="itemListSearch.jsp">
 						<div class="sc-kLIISr kcDYue">유아동용품</div>
 					</button>
 				</div>
 				<div>
 					<button class="sc-dliRfk imEKSd" type="submit"
-						name="itemCategoryKey" value="출산/임부용품" href="itemListCategory.jsp">
+						name="itemCategoryKey" value="출산/임부용품" href="itemListSearch.jsp">
 						<div class="sc-kLIISr kcDYue">출산/임부용품</div>
 					</button>
 				</div>
 				<div>
 					<button class="sc-dliRfk imEKSd" type="submit"
 						name="itemCategoryKey" value="이유용품/유아식기"
-						href="itemListCategory.jsp">
+						href="itemListSearch.jsp">
 						<div class="sc-kLIISr kcDYue">이유용품/유아식기</div>
 					</button>
 				</div>
@@ -227,6 +226,7 @@ request.setCharacterEncoding("UTF-8");
 			session.setAttribute("item_list", item_list);
 		} else if (request.getParameter("itemCategoryKey") != null) {
 			item_list = new t_iteminfoDAO().showItemCategory(itemCategoryKey);
+			session.setAttribute("item_list", item_list);
 		}
 		item_list = (List<t_iteminfoDTO>)session.getAttribute("item_list");
 		int price = 0;
@@ -289,7 +289,9 @@ request.setCharacterEncoding("UTF-8");
 			<div class="box container">
 				<div class="row">
 					<%
+					
 					if (itemPriceSearchKey1 != 0 && itemPriceSearchKey2 != 0) {
+						System.out.println("가격값 진입한 채로 리스트포문 진입");
 					%>
 					<%
 					for (int i = (item_list.size() - 1); i >= 0; i--) {
@@ -328,6 +330,8 @@ request.setCharacterEncoding("UTF-8");
 					<%
 					}}
 					} else{
+						System.out.println("가격값 없이 리스트포문 진입");
+						System.out.println("최소값 : " + itemPriceSearchKey1 +"최대값 : "+ itemPriceSearchKey2);
 					%>
 
 					<%
