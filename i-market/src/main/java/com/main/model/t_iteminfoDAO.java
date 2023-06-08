@@ -52,6 +52,14 @@ public class t_iteminfoDAO {
 
 		return item_list;
 	}
+	
+	public int ViewUp(t_iteminfoDTO dto) {
+		int cnt = 0;
+		
+		cnt = sqlSession.update("com.smhrd.database.hifiveMapper.ViewUp", dto);
+	
+		return cnt;
+	}
 
 
 }

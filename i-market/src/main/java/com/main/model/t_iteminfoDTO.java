@@ -56,6 +56,11 @@ public class t_iteminfoDTO {
 	// 조회수
 	
 	private int item_view;
-
+	
+	public t_iteminfoDTO(int item_idx, int item_view) {
+		super();
+		this.item_idx = item_idx;
+		this.item_view = item_view;
+	}
 
 }

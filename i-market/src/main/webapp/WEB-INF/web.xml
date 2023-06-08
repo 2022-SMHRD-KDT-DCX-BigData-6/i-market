@@ -143,19 +143,25 @@
 		<display-name>uploadBargainService</display-name>
 		<description></description>
 		<servlet-class>com.item.controller.uploadBargainService</servlet-class>
-		</servlet>
-		<servlet>
+	</servlet>
+	<servlet>
 		<servlet-name>ShowNewsService</servlet-name>
 		<display-name>ShowNewsService</display-name>
 		<description></description>
 		<servlet-class>com.news.controller.ShowNewsService</servlet-class>
 	</servlet>
-		<servlet>
-			<servlet-name>CreateChatService2</servlet-name>
-			<display-name>CreateChatService2</display-name>
-			<description></description>
-			<servlet-class>com.smhrd.controller.CreateChatService2</servlet-class>
-		</servlet>
+	<servlet>
+		<servlet-name>CreateChatService2</servlet-name>
+		<display-name>CreateChatService2</display-name>
+		<description></description>
+		<servlet-class>com.smhrd.controller.CreateChatService2</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>itemViewUpService</servlet-name>
+		<display-name>itemViewUpService</display-name>
+		<description></description>
+		<servlet-class>com.item.controller.itemViewUpService</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>commentDeleteService</servlet-name>
@@ -249,7 +255,7 @@
 	<servlet-mapping>
 		<servlet-name>uploadBargainService</servlet-name>
 		<url-pattern>/uploadBargainService</url-pattern>
-			</servlet-mapping>
+	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>ShowNewsService</servlet-name>
 		<url-pattern>/ShowNewsService</url-pattern>
@@ -257,6 +263,10 @@
 	<servlet-mapping>
 		<servlet-name>CreateChatService2</servlet-name>
 		<url-pattern>/CreateChatService2</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>itemViewUpService</servlet-name>
+		<url-pattern>/itemViewUpService</url-pattern>
 	</servlet-mapping>
 
 </web-app>
