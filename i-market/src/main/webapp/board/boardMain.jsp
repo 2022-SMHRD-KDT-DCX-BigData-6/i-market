@@ -213,7 +213,7 @@ section, summary, time, mark, audio, video {
 }
 
 #pagebutton {
-	margin-left: 500px;
+	margin-left: 20px;
 }
 
 
@@ -223,6 +223,9 @@ section, summary, time, mark, audio, video {
 .boardMain, .click {
 	width: 80%;
 	margin-left: 120px;
+}
+.tap {
+	margin-left: 450px;
 }
 
 </style>
@@ -408,7 +411,7 @@ if (loginMember != null) {
 								
 								
 								<% int totalPage = ((board_list.size()-1) / 10) + 1; %>
-								
+								<a class="tap"></a>
 								<%if (totalPage<= 5){ %>
 									<%for(int i=1;i<=totalPage;i++){ %>
 									<a href="boardController?pagebutton=<%=i %>"><button type="button" id="pagebutton"><%=i %></button></a>

@@ -369,21 +369,21 @@ section, summary, time, mark, audio, video {
 					</section>
 					<div style="">
 					<section>
-					<div style="padding-bottom: 45px; padding-right: 700px;"><font size = 10><%=profile.getUser_id() %></font></div>
-					<div style="padding-bottom: 45px; padding-right: 700px;"><font size = 10><%=profile.getUser_nick() %></font></div>
-					<div style="padding-bottom: 45px; padding-right: 420px;"><font size = 10><%=profile.getUser_phone() %></font></div>
-					<div style="padding-bottom: 45px; padding-right: 420px;"><font size = 10><%=profile.getUser_addr() %></font></div>
+					<div style="padding-right: 410px;"><font size = 5>ID : <%=profile.getUser_id() %></font></div><br>
+					<div style="padding-right: 410px;"><font size = 5>닉네임 : <%=profile.getUser_nick() %></font></div><br>
+					<div style="padding-right: 360px;"> <font size = 5>전화번호 : <%=profile.getUser_phone() %></font></div><br>
+					<div><font size = 5>주소 : <%=profile.getUser_addr() %></font></div><br><br>
 					</section>
 					</div>
 					</div>
-					<div style="float: left; margin-left: 600px;">
+					<div style="float: left; margin-left: 630px;">
 						<!-- 쿼리스트링 방식 : url?name=value&name=value -->
 						<a href="update.jsp?id=<%=profile.getUser_id()  %>">
 						<input type="button"  id="button1" value="개인정보수정" class="button fit"  style="font-family: 'Hi Melody', cursive;">
 						</a>
 					</div>
 					<div>	
-						<a href="main.jsp" style="padding-right: 650px;">
+						<a href="main.jsp" style="padding-right: 600px;">
 						<input type="button"  id="button2" value="되돌아가기" class="button fit"  style="font-family: 'Hi Melody', cursive;">
 						</a>
 					</div>
