@@ -107,7 +107,15 @@ public int comment_count(BoardInfoDTO bdto) {
 		 return cnt;
 	 }
 	 
-	 
+	 public List<BoardInfoDTO> showBoardMain(){
+			
+			List<BoardInfoDTO> board_listMain = sqlSession.selectList("com.smhrd.database.BoardInfoMapper.showBoardMain");
+		
+			sqlSession.close();
+			
+			return board_listMain;
+		
+		}
 }
 
 

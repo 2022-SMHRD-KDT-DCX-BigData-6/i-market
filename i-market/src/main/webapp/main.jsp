@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@page import="com.main.model.WebMemberDTO" %>
+<%@page import="com.smhrd.model.board.BoardInfoDAO"%>
+<%@page import="com.smhrd.model.board.BoardInfoDTO"%>
 <%@page import="java.util.List"%>
 <%@page import="com.smhrd.model.news.NewsInfoDAO"%>
 <%@page import="com.smhrd.model.news.NewsInfoDTO"%>
@@ -331,7 +333,7 @@ section, summary, time, mark, audio, video {
 					>마이페이지</a></li>
 				</ul>
 			</nav>
-			</section>
+
 			<!-- Banner -->
 			
 			
@@ -380,7 +382,7 @@ section, summary, time, mark, audio, video {
 				</div>
 				<footer>
 					<ul class="actions">
-						<li><a href="#" class="button large">전체상품보기</a></li>
+						<li><a href="item/itemListMain.jsp" class="button large">전체상품보기</a></li>
 					</ul>
 				</footer>
 			</section>
@@ -500,6 +502,9 @@ section, summary, time, mark, audio, video {
 									</div>
 								</div>
 							</section>
+							</div>
+							</div>
+							</section>
 
 						</div>
 						<div class="col-12">
@@ -510,51 +515,27 @@ section, summary, time, mark, audio, video {
 									<h2>추천 게시글</h2>
 								</header>
 								<div class="row">
-									<div class="col-6 col-12-small">
+								
+							<% BoardInfoDAO b_dao = new BoardInfoDAO();
+							List<BoardInfoDTO> listMain = (List<BoardInfoDTO>)b_dao.showBoardMain();%>
+													<%for(int i = 0; i < 2; i++){ %>
+									<div class="col-6 col-12-small" style="text-align: center; width:35%;  margin-left: 155px;">
 										<section class="box">
 											<a href="#" class="image featured"><img
-												src="images/pic08.jpg" alt="" /></a>
+												src="images/pic08.jpg" alt="" style=" display : block; margin : auto;"></a>
 											<header>
-												<h3>Magna tempus consequat</h3>
-												<p>Posted 45 minutes ago</p>
+												<h3><%=listMain.get(i).getB_title() %></h3>
+												<p><%=listMain.get(i).getUser_nick() %></p>
 											</header>
-											<p>Lorem ipsum dolor sit amet sit veroeros sed et blandit
-												consequat sed veroeros lorem et blandit adipiscing feugiat
-												phasellus tempus hendrerit, tortor vitae mattis tempor,
-												sapien sem feugiat sapien, id suscipit magna felis nec elit.
-												Class aptent taciti sociosqu ad litora torquent per conubia
-												nostra, per inceptos lorem ipsum dolor sit amet.</p>
+											<p><%=listMain.get(i).getB_content() %></p>
 											<footer>
 												<ul class="actions">
-													<li><a href="#" class="button icon solid">게시글보기</a></li>
-													<li><a href="#" class="button icon alt solid ">추천</a></li>
+													<li><a href="board/boardDetail.jsp?board_idx=<%=listMain.get(i).getB_idx() %>" class="button icon solid">게시글보기</a></li>
 												</ul>
 											</footer>
 										</section>
 									</div>
-									<div class="col-6 col-12-small">
-										<section class="box">
-											<a href="#" class="image featured"><img
-												src="images/pic09.jpg" alt="" /></a>
-											<header>
-												<h3>Aptent veroeros aliquam</h3>
-												<p>Posted 45 minutes ago</p>
-											</header>
-											<p>Lorem ipsum dolor sit amet sit veroeros sed et blandit
-												consequat sed veroeros lorem et blandit adipiscing feugiat
-												phasellus tempus hendrerit, tortor vitae mattis tempor,
-												sapien sem feugiat sapien, id suscipit magna felis nec elit.
-												Class aptent taciti sociosqu ad litora torquent per conubia
-												nostra, per inceptos lorem ipsum dolor sit amet.</p>
-											<footer>
-												<ul class="actions">
-													<li><a href="#" class="button icon solid ">게시글보기</a></li>
-													<li><a href="#"
-														class="button alt icon solid ">추천</a></li>
-												</ul>
-											</footer>
-										</section>
-									</div>
+											 <%} %> 
 								</div>
 							</section>
 
@@ -594,7 +575,7 @@ section, summary, time, mark, audio, video {
 								<header>
 									<h2>What's this all about?</h2>
 								</header>
-								<a href="board/boardDetail.jsp?board_idx=65"><img
+								<a href="#" class="image featured"><img
 									src="images/pic10.jpg" alt="" /></a>
 								<p>
 									This is <strong>Dopetrope</strong> a free, fully responsive
@@ -607,7 +588,7 @@ section, summary, time, mark, audio, video {
 								</p>
 								<footer>
 									<ul class="actions">
-										<li><a href="#" class="button">NEWS 전체보기</a></li>
+										<li><a href="ShowNewsService" class="button">NEWS 전체보기</a></li>
 									</ul>
 								</footer>
 							</section>
