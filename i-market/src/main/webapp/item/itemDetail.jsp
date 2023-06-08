@@ -1,3 +1,4 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@page import="java.text.DecimalFormat"%>
 <%@page import="com.main.model.itemBargainDAO"%>
 <%@page import="com.main.model.itemBargainDTO"%>
@@ -404,7 +405,7 @@ function gologin() {
 					<div style="display: flex;">
 						<div id="article-profile-left">
 							<div id="nickname"><%=item_list.get(0).getUser_id()%></div>
-							<div id="region-name"><%=item_list.get(0).getUser_addr_at()%></div>
+							<div id="region-name"><%=item_list.get(0).getUser_addr_at()%>
 						</div>
 					</div>
 					<div id="article-profile-right">
