@@ -62,6 +62,7 @@
 		-webkit-transition: background-color .25s ease-in-out;
 		-ms-transition: background-color .25s ease-in-out;
 		transition: background-color .25s ease-in-out;
+		font-family: 'Hi Melody', cursive;
 	
 	}
 	
