@@ -74,10 +74,10 @@ request.setCharacterEncoding("UTF-8");
 						<div class="filter_finder_filter__tysdn">
 							<div class="filter_finder_col__k6BKF filter_finder_price__dQExh">
 								<div class="finder_price_inner">
-									<input type="number" title="최소가격 입력" name="priceSearchKey1"
+									<input type="number" title="최소가격 입력" name="itemPriceSearchKey1"
 										placeholder="0" class="sc-hMqMXs cLfdog">원 ~ <input
 										type="number" placeholder="#" title="최대가격 입력"
-										name="priceSearchKey2" class="sc-hMqMXs cLfdog">원
+										name="itemPriceSearchKey2" class="sc-hMqMXs cLfdog">원
 									<button type="submit">가격대 검색</button>
 								</div>
 							</div>

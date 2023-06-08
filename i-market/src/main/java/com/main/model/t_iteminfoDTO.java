@@ -52,6 +52,10 @@ public class t_iteminfoDTO {
 
 	// 흥정 여부
 	private String item_bargain_YN;
+	
+	// 조회수
+	
+	private int item_view;
 
 
 }

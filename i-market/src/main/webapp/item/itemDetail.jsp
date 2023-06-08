@@ -1,8 +1,13 @@
+<%@page import="com.main.model.itemBargainDAO"%>
+<%@page import="com.main.model.itemBargainDTO"%>
 <%@page import="java.util.List"%>
 <%@page import="com.main.model.t_iteminfoDAO"%>
 <%@page import="com.main.model.t_iteminfoDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%
+request.setCharacterEncoding("UTF-8");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,7 +52,7 @@ function gologin() {
 	</script>
 
 	<%
-	String user_id = (String)session.getAttribute("user_id");
+	String user_id = (String) session.getAttribute("user_id");
 	int item_idx = Integer.parseInt(request.getParameter("item_idx"));
 	t_iteminfoDTO dto = new t_iteminfoDTO(item_idx);
 	t_iteminfoDAO dao = new t_iteminfoDAO();
@@ -67,7 +72,7 @@ function gologin() {
 								<div class="	" data-slick-index="0" aria-hidden="false"
 									style="width: 729px;">
 									<div>
-										<a href="itemPhotoDetail.jsp?item_idx=<%=item_idx %>"
+										<a href="itemPhotoDetail.jsp?item_idx=<%=item_idx%>"
 											style="width: 100%; display: inline-block;" tabindex="0">
 											<div>
 												<div class="image-wrap" data-image-id="-2063102816"
@@ -117,6 +122,71 @@ function gologin() {
 				</div>
 			</a>
 		</section>
+		<%
+		if (item_list.get(0).getItem_bargain_YN().equals("1")) {
+		%>
+
+		<div class="container">
+			<section class="article-description left">
+				<h1 property="schema:name" id="article-title"
+					style="margin-top: 0px;"><%=item_list.get(0).getItem_name()%></h1>
+				<p id="article-category">
+					<%=item_list.get(0).getItem_category()%>
+					∙
+					<time>
+						<%=item_list.get(0).getUploaded_at()%>
+					</time>
+				</p>
+				<p property="schema:priceValidUntil" datatype="xsd:date"
+					content="2025-06-02"></p>
+				<p rel="schema:url" resource="https://www.daangn.com/556391615"></p>
+				<p property="schema:priceCurrency" content="KRW"></p>
+				<p id="article-price" property="schema:price" content="5000.0"
+					style="font-size: 18px; font-weight: bold;"><%=item_list.get(0).getItem_price()%>원
+				</p>
+				<div property="schema:description" id="article-detail">
+					<p><%=item_list.get(0).getItem_info()%></p>
+				</div>
+				<p id="article-counts">조회 124</p>
+				<%
+				session.setAttribute("item_name", item_list.get(0).getItem_name());
+				session.setAttribute("item_info", item_list.get(0).getItem_info());
+				session.setAttribute("item_idx", item_list.get(0).getItem_idx());
+				session.setAttribute("bar_id", user_id);
+				session.setAttribute("to_id", item_list.get(0).getUser_id());
+				%>
+				<tr>
+					<td><input type="button" onclick=<%if (user_id == null) {%>
+						"gologin()"
+						 <%} else {%>
+						 "openPop()"
+						 <%}%>
+						value="채팅"></td>
+				</tr>
+			</section>
+			<aside class="article-description right">
+				<form action="../uploadBargainService" method="post">
+					<input type="number" placeholder="숫자만 입력해주세요."
+						class="ProductNewstyle__PriceInput-sc-7fge4a-16 eAhDI"
+						name="bar_price"> 원 <input type="submit" value="흥정하기">
+				</form>
+				<div>
+					<%
+				itemBargainDTO dto2 = new itemBargainDTO();
+				itemBargainDAO dao2 = new itemBargainDAO();
+				List<itemBargainDTO> bar_list = new itemBargainDAO().showBargain(item_idx);
+				%>
+					<h4>제시된 가격</h4>
+					<%for(int i = 0; i<(bar_list.size()); i++){
+					%>
+					<br>제시된 가격 : <%=bar_list.get(i).getBar_price() %> 원
+				<%}; %>
+				</div>
+			</aside>
+		</div>
+		<%
+		} else {
+		%>
 
 		<section id="article-description">
 			<h1 property="schema:name" id="article-title"
@@ -138,27 +208,24 @@ function gologin() {
 			<div property="schema:description" id="article-detail">
 				<p><%=item_list.get(0).getItem_info()%></p>
 			</div>
-			<p id="article-counts">관심 5 ∙ 채팅 1 ∙ 조회 124</p>
+			<p id="article-counts">조회 124</p>
 			<%
 			session.setAttribute("item_name", item_list.get(0).getItem_name());
 			session.setAttribute("item_info", item_list.get(0).getItem_info());
 			session.setAttribute("to_id", item_list.get(0).getUser_id());
 			%>
 			<tr>
-						 <td><input type="button" onclick=
-						 <%
-						 if (user_id == null){ %>
-							 "gologin()"
-						 <% }else {
-							 
-						 %>
+				<td><input type="button" onclick=<%if (user_id == null) {%>
+					"gologin()"
+						 <%} else {%>
 						 "openPop()"
-						 <%
-						 }
-						 %>
-						  value="채팅"></td>
-					</tr>
+						 <%}%>
+					value="채팅"></td>
+			</tr>
 		</section>
+		<%
+		}
+		%>
 	</article>
 
 </body>

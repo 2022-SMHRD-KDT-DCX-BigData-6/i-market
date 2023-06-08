@@ -156,6 +156,12 @@
 		<description></description>
 		<servlet-class>com.item.controller.itemSearchService</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>uploadBargainService</servlet-name>
+		<display-name>uploadBargainService</display-name>
+		<description></description>
+		<servlet-class>com.item.controller.uploadBargainService</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>commentDeleteService</servlet-name>
@@ -257,6 +263,10 @@
 	<servlet-mapping>
 		<servlet-name>itemSearchService</servlet-name>
 		<url-pattern>/itemSearchService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>uploadBargainService</servlet-name>
+		<url-pattern>/uploadBargainService</url-pattern>
 	</servlet-mapping>
 
 </web-app>
