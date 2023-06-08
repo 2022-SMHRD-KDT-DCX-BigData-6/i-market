@@ -227,6 +227,7 @@ section, summary, time, mark, audio, video {
    if (loginMember != null) {
       System.out.print(loginMember.getUser_id());
    }
+   String user_id = (String)session.getAttribute("user_id");
    %>
 
 
@@ -290,12 +291,17 @@ section, summary, time, mark, audio, video {
 								</ul></li>
 							<li><a href="#">기타</a></li>
 						</ul></li>
-					<li><a href="left-sidebar.html">판매하기</a></li>
+					<li><a href=
+				<%if (user_id != null) {%>
+					<%="item/uploadItemBoard.jsp"%>
+				<%}else {%>
+					<%= "user/login.jsp"%>					
+				<% } %>
+					>판매하기</a></li>
 					<li><a href="boardController?pagebutton=1">게시판</a></li>
 					<li><a href="ShowNewsService">NEWS</a></li>
 					<li><a href="user/myPage.jsp">마이페이지</a></li>
-						<input type="text" placeholder="search" maxlength="40" class="sc-hMqMXs cLfdog" value="">
-						<img src="./images/2be3c66fa47ccd5ece2a.png" class="sc-hMqMXs search" width="16" height="16" alt=" " />
+						
 				</ul>
 			</nav>
 		</section>
