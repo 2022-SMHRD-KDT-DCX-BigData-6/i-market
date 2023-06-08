@@ -150,6 +150,12 @@
 		<description></description>
 		<servlet-class>com.news.controller.ShowNewsService</servlet-class>
 	</servlet>
+		<servlet>
+			<servlet-name>itemViewUpService</servlet-name>
+			<display-name>itemViewUpService</display-name>
+			<description></description>
+			<servlet-class>com.item.controller.itemViewUpService</servlet-class>
+		</servlet>
 
 	<servlet-mapping>
 		<servlet-name>commentDeleteService</servlet-name>
@@ -247,6 +253,10 @@
 	<servlet-mapping>
 		<servlet-name>ShowNewsService</servlet-name>
 		<url-pattern>/ShowNewsService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>itemViewUpService</servlet-name>
+		<url-pattern>/itemViewUpService</url-pattern>
 	</servlet-mapping>
 
 </web-app>

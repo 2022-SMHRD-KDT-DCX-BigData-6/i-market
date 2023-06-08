@@ -427,7 +427,7 @@ section, summary, time, mark, audio, video {
 					%>
 					<div class="col-4 col-6-medium col-12-small">
 						<a
-							href="itemDetail.jsp?item_idx=<%=item_list.get(i).getItem_idx()%>">
+							href="../itemViewUpService?item_idx=<%=item_list.get(i).getItem_idx()%>">
 							<div class="box list">
 								<div class="image featured">
 									<img src="../photo/<%=item_list.get(i).getItem_photo()%>" />

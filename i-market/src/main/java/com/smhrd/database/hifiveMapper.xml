@@ -40,5 +40,8 @@
 	<select id="searchItemCategory" resultType="com.main.model.t_iteminfoDTO">
 		select * from t_iteminfo where item_category like '%'||#{item_category}||'%' order by item_idx
 	</select>
+	<update id="ViewUp" parameterType="com.main.model.t_iteminfoDTO">
+		update t_iteminfo set item_view = #{item_view} where item_idx = #{item_idx}
+	</update>
 	
 </mapper>

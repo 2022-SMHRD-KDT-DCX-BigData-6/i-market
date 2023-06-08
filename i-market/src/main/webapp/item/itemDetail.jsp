@@ -506,7 +506,7 @@ function gologin() {
 			<div property="schema:description" id="article-detail">
 				<p><%=item_list.get(0).getItem_info()%></p>
 			</div>
-			<p id="article-counts">조회 124</p>
+			<p id="article-counts">조회 <%=item_list.get(0).getItem_view() %></p>
 			<%
 			session.setAttribute("item_name", item_list.get(0).getItem_name());
 			session.setAttribute("item_info", item_list.get(0).getItem_info());
