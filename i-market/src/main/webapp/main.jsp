@@ -34,7 +34,7 @@
 	input[type="reset"],
 	button,
 	.button {
-		-webkit-appearance: none;
+		-webkit-appearance: none !important;
 		display: inline-block;
 		text-decoration: none;
 		cursor: pointer;
@@ -174,29 +174,29 @@ body{
 }
 .index_01{
 
-	font-family:'Hi Melody', cursive;
-	color:#f2ec1d;
-	font-size: 80px;
-	font-style: normal;
-	font-weight: 100;
-	text-shadow: 1px 0 10px #110f10;
+	font-family:'Hi Melody', cursive !important;
+	color:#f2ec1d !important;
+	font-size: 80px !important;
+	font-style: normal !important;
+	font-weight: 100 !important;
+	text-shadow: 1px 0 10px #110f10 !important;
 
 }
 
 
 
 #nav > ul > li {
-	position:relative; 
-	padding-left: 15px;
-	padding-right: 15px;
+	position:relative !important; 
+	padding-left: 15px !important;
+	padding-right: 15px !important;
 	
 }
 
 
 #nav > ul > li.current > a {
-    background: #217214a3;
-    color: #fff !important;
-    font-weight: 700;
+    background: #217214a3 !important;
+    color: #fff !important !important;
+    font-weight: 700 !important;
 }
 
 
@@ -204,7 +204,7 @@ body{
 
 
 #footer a {
-			color: #fff;
+			color: #fff !important;
 		}
 
 html, body, div, span, applet, object,
@@ -219,7 +219,7 @@ canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video {
 
-	font-family:'Hi Melody', cursive;
+	font-family:'Hi Melody', cursive !important;
 }
 
 
@@ -274,7 +274,6 @@ section, summary, time, mark, audio, video {
 
 
  
-	<div id="page-wrapper">
 
 
 
@@ -331,7 +330,7 @@ section, summary, time, mark, audio, video {
 						<img src="./images/2be3c66fa47ccd5ece2a.png" class="sc-hMqMXs search" width="16" height="16" alt=" " />
 				</ul>
 			</nav>
-
+			</section>
 			<!-- Banner -->
 			
 			
@@ -613,7 +612,7 @@ section, summary, time, mark, audio, video {
 								<header>
 									<h2>What's this all about?</h2>
 								</header>
-								<a href="#" class="image featured"><img
+								<a href="board/boardDetail.jsp?board_idx=65"><img
 									src="images/pic10.jpg" alt="" /></a>
 								<p>
 									This is <strong>Dopetrope</strong> a free, fully responsive

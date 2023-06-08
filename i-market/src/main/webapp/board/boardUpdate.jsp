@@ -1,5 +1,4 @@
 <%@page import="com.main.model.WebMemberDTO"%>
-<%@page import="com.smhrd.controller.LoginService"%>
 <%@page import="com.smhrd.model.board.BoardInfoDTO"%>
 <%@page import="java.util.List"%>
 <%@page import="com.smhrd.model.board.BoardInfoDAO"%>

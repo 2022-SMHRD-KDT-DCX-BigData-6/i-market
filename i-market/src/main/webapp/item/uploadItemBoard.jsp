@@ -4,17 +4,236 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
+
 <title>Insert title here</title>
+<script src="https://kit.fontawesome.com/7b42c1f2dd.js" ></script>
 <meta charset="utf-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="../assets/css/itemList_young.css" />
 <script type="text/javascript" src="upload.js"></script>
-<script type="../assets/js/jquery.min.js">
-</script>
+<script type="../assets/js/jquery.min.js"></script>
+<link rel="stylesheet" href="assets/css/main.css" />
+
+
+
+<style type="text/css">
+
+
+
+/* Button */
+
+	
+	input[type="submit"],
+	input[type="reset"],
+	button,
+	.button {
+		-webkit-appearance: none;
+		display: inline-block;
+		text-decoration: none;
+		cursor: pointer;
+		border: 0;
+		border-radius: 5px;
+		background:	#217214a3;
+		color: 	#FFf;
+		font-weight: 700;
+		outline: 0;
+		font-size: 1.1em;
+		padding: 0.4em 1em 0.4em 1em;
+		text-align: center;
+		-moz-transition: background-color .25s ease-in-out;
+		-webkit-transition: background-color .25s ease-in-out;
+		-ms-transition: background-color .25s ease-in-out;
+		transition: background-color .25s ease-in-out;
+	}
+	
+	input[type="button"]{
+	
+	-webkit-appearance: none;
+		display: inline-block;
+		text-decoration: none;
+		cursor: pointer;
+		border: 0;
+		border-radius: 5px;
+		background:	rgb(235, 225, 15);
+		color: 	#FFf;
+		font-weight: 700;
+		outline: 0;
+		font-size: 1.1em;
+		padding: 0.4em 1em 0.4em 1em;
+		text-align: center;
+		-moz-transition: background-color .25s ease-in-out;
+		-webkit-transition: background-color .25s ease-in-out;
+		-ms-transition: background-color .25s ease-in-out;
+		transition: background-color .25s ease-in-out;
+	
+	}
+	
+	
+	
+	button:hover,
+		.button:hover
+		{
+		
+		background: rgb(235, 225, 15);
+		}
+
+		input[type="button"]:hover,
+		input[type="submit"]:hover,
+		input[type="reset"]:hover
+		 {
+			background: #217214a3;
+		}
+
+		input[type="button"]:active,
+		input[type="submit"]:active,
+		input[type="reset"]:active,
+		button:active,
+		.button:active {
+			background: rgb(235, 225, 15);
+		}
+		
+		
+		input[type="button"].alt:hover,
+			input[type="submit"].alt:hover,
+			input[type="reset"].alt:hover{
+			
+			background: #217214a3;
+			
+			}
+		
+		
+
+		input[type="button"].alt,
+		input[type="submit"].alt,
+		input[type="reset"].alt,
+		button.alt,
+		.button.alt {
+			background:#f97777;
+		}
+
+			button.alt:hover,
+			.button.alt:hover {
+				background: rgb(235, 225, 15);
+			}
+
+
+		input[type="button"].icon:before,
+		input[type="submit"].icon:before,
+		input[type="reset"].icon:before,
+		button.icon:before,
+		.button.icon:before {
+			opacity: 0.35;
+			position: relative;
+			top: 0.05em;
+			margin-right: 0.75em;
+		}
+
+		input[type="button"].large,
+		input[type="submit"].large,
+		input[type="reset"].large,
+		button.large,
+		.button.large {
+			font-size: 1.5em;
+			padding: 0.5em 1em 0.5em 1em;
+		}
+
+
+
+
+/*@font-face {
+    font-family: 'Dovemayo_gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+@font-face {
+    font-family: 'Hi Melody', cursive;
+    src: url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+    font-weight: normal;
+    font-style: normal;
+
+
+
+}
+
+body{
+
+
+
+/* font-family: 'Hi Melody', cursive;*/
+  background: var(--background);
+  color: var(--color);
+}
+.index_01{
+
+	font-family:'Hi Melody', cursive;
+	color:#f2ec1d;
+	font-size: 80px;
+	font-style: normal;
+	font-weight: 100;
+	text-shadow: 1px 0 10px #110f10;
+
+}
+
+
+
+#nav > ul > li {
+	position:relative; 
+	padding-left: 15px;
+	padding-right: 15px;
+	
+}
+
+
+#nav > ul > li.current > a {
+    background: #217214a3;
+    color: #fff !important;
+    font-weight: 700;
+}
+
+
+
+
+
+#footer a {
+			color: #fff;
+		}
+
+html, body, div, span, applet, object,
+iframe, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video {
+
+	font-family:'Hi Melody', cursive;
+}
+
+.row {
+	padding: 0  !important;
+	width: 80%  !important;
+	margin: 0 0 0 -30px !important;
+}
+.row > .col-12 {
+	padding: 0  !important;
+}
+section {
+	margin-top: 0 !important;
+}
+
+</style>
 </head>
-<body>
+<body class="homepage is-preload" style="font-family: 'Hi Melody', cursive;">
 <% 
 	String user_id = (String)session.getAttribute("user_id");
 	WebMemberDTO loginMember = (WebMemberDTO) session.getAttribute("loginMember");
@@ -38,9 +257,13 @@
 			
 			</div>
 		</div>
+		<!-- Header -->
+		<section id="header">
+		
+		
 		<!-- Logo -->
 		<h1>
-			<a href="../main.jsp">아이 i 마켓</a>
+			<a class="index_01" href="../main.jsp">아이 i 마켓</a>
 		</h1>
 		<span>유아용품전용 중고거래 플랫폼</span>
 
@@ -78,35 +301,13 @@
 					<%= "../user/login.jsp"%>					
 				<% } %>
 					>마이페이지</a></li>
-						<input type="text" placeholder="search" maxlength="40" class="sc-hMqMXs cLfdog" value="">
-						<img src="./images/2be3c66fa47ccd5ece2a.png" class="sc-hMqMXs search" width="16" height="16" alt=" " />
 				</ul>
 		</nav>
 
-		<!-- Banner -->
-		<section id="banner">
-			<header>
-				<h2>우리아이 중고 직거래 마켓</h2>
-				<p>중고 거래부터 동네 정보까지, 이웃과 함께해요. 가깝고 따뜻한 당신의 근처를 만들어요.</p>
-			</header>
-		</section>
 	</section>
-
+	
+	
 	<div class="sc-fHSTwm jSFmce">
-		<div class="sc-hdPSEv hMuHZN">
-			<nav class="sc-gbzWSY fzWxfF">
-				<div class="sc-jGxEUC ROGwk">
-					<a class="sc-jqIZGH iQbNXO" href="/products/new">상품등록</a>
-				</div>
-				<div class="sc-jGxEUC ezuxFa">
-					<a class="sc-jqIZGH iQbNXO" href="/products/manage">상품관리</a>
-				</div>
-				<div class="sc-jGxEUC ezuxFa">
-					<a href="https://pay2.bunjang.co.kr?tab=purchases" target="_blank"
-						rel="noopener noreferrer" class="sc-jMMfwr yLxso">구매/판매 내역</a>
-				</div>
-			</nav>
-		</div>
 		<div class="ProductNewstyle__Wrapper-sc-7fge4a-0 hvgCyR">
 			<form action="../uploaditemService" method="post"
 				enctype="multipart/form-data">
