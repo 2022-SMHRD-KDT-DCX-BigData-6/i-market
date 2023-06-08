@@ -484,7 +484,7 @@ function gologin() {
 				<form action="../uploadBargainService" method="post">
 					<input type="number" placeholder="숫자만 입력해주세요."
 						class="ProductNewstyle__PriceInput-sc-7fge4a-16 eAhDI"
-						name="bar_price"> 원 <input type="submit" value="흥정하기">
+						name="bar_price"> 원 <br><br><input style="background: rgb(235, 225, 15);" type="submit" value="흥정하기">
 				</form>
 					<%} 
 					if (loginMember.getUser_id().equals(item_list.get(0).getUser_id())){%>

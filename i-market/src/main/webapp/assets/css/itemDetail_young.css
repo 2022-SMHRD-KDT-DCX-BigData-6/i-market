@@ -1201,7 +1201,7 @@ body.global #article-description {
 .article-description.left {
 	padding: 32px 0;
 	width: 70%;
-	margin: 0 auto;
+	margin: 0;
 	border-bottom: 1px solid #e9ecef;
 }
 
@@ -1210,4 +1210,15 @@ body.global #article-description {
 	width: 30%;
 	margin: 0 auto;
 	border-bottom: 1px solid #e9ecef;
+}
+.ProductNewstyle__PriceInput-sc-7fge4a-16.eAhDI{
+	-webkit-font-smoothing: antialiased;
+    margin: 0;
+    outline: 0 !important;
+    box-sizing: border-box;
+    height: 2rem;
+    padding: 0.9rem 1.2rem;
+    border-radius: 0.6rem;
+    line-height: 1.36;
+    display: inline;
 }
