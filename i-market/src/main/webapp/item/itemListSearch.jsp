@@ -20,7 +20,7 @@ request.setCharacterEncoding("UTF-8");
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="../assets/css/itemList_young.css" />
 </head>
-<body>
+<bodyz>
 
 	<section>
 		<div class="row">

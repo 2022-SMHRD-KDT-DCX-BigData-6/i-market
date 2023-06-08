@@ -230,7 +230,9 @@ section, summary, time, mark, audio, video {
 .row > .col-12 {
 	width: 80%  !important;
 }
-
+.bargain :hover {
+	background-color: yellow !important;
+}
 
 
 </style>
@@ -371,7 +373,7 @@ function gologin() {
 							<div class="slick-track"
 								style="opacity: 1; width: 729px; transform: translate3d(0px, 0px, 0px);">
 								<div class="	" data-slick-index="0" aria-hidden="false"
-									style="width: 729px;">
+									style="width: center;">
 									<div>
 										<a href="itemPhotoDetail.jsp?item_idx=<%=item_idx%>"
 											style="width: 100%; display: inline-block;" tabindex="0">
@@ -489,8 +491,7 @@ function gologin() {
 					<%for(int i = 0; i<(bar_list.size()); i++){
 						session.setAttribute("to_id_2", bar_list.get(i).getUser_id());
 					%>
-					<br>제시된 가격 : <%=bar_list.get(i).getBar_price() %> 원
-					<input type="button" onclick="openPop2()" value="흥정수락">
+					<br><a class="bargain" onclick="openPop2()" style="cursor:pointer">제시된 가격 : <%=bar_list.get(i).getBar_price() %> 원 - <%=bar_list.get(i).getUser_id() %></a>
 				<%} %>
 				</div>
 				<% }%>

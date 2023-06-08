@@ -305,7 +305,7 @@ section, summary, time, mark, audio, video {
 							<li><a href="#">유아동잡화</a></li>
 							<li><a href="#">유아동도서</a></li>
 							<li><a href="#">완구/장난감/인형</a></li>
-							<li><a href="#">유아동의류</a>
+							<li><a href="item/itemListSearch.jsp?itemCategoryKey=베이비의류%280-2세%29">유아동의류</a>
 								<ul>
 									<li><a href="#">남아의류</a></li>
 									<li><a href="#">여아의류</a></li>
