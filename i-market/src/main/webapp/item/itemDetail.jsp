@@ -1,3 +1,4 @@
+<%@page import="java.text.DecimalFormat"%>
 <%@page import="com.main.model.itemBargainDAO"%>
 <%@page import="com.main.model.itemBargainDTO"%>
 <%@page import="com.main.model.WebMemberDTO"%>
@@ -230,7 +231,9 @@ section, summary, time, mark, audio, video {
 .row > .col-12 {
 	width: 80%  !important;
 }
-
+.bargain :hover {
+	background-color: yellow !important;
+}
 
 
 </style>
@@ -371,7 +374,7 @@ function gologin() {
 							<div class="slick-track"
 								style="opacity: 1; width: 729px; transform: translate3d(0px, 0px, 0px);">
 								<div class="	" data-slick-index="0" aria-hidden="false"
-									style="width: 729px;">
+									style="width: center;">
 									<div>
 										<a href="itemPhotoDetail.jsp?item_idx=<%=item_idx%>"
 											style="width: 100%; display: inline-block;" tabindex="0">
@@ -443,7 +446,12 @@ function gologin() {
 				<p rel="schema:url" resource="https://www.daangn.com/556391615"></p>
 				<p property="schema:priceCurrency" content="KRW"></p>
 				<p id="article-price" property="schema:price" content="5000.0"
-					style="font-size: 18px; font-weight: bold;"><%=item_list.get(0).getItem_price()%>원
+					style="font-size: 18px; font-weight: bold;"><%
+										int upPrice = item_list.get(0).getItem_price();
+										DecimalFormat decimalFormat = new DecimalFormat("#,###");
+										String formattedPrice = decimalFormat.format(upPrice);
+										%>
+										<%=formattedPrice %>원
 				</p>
 				<div property="schema:description" id="article-detail">
 					<p><%=item_list.get(0).getItem_info()%></p>
@@ -489,8 +497,7 @@ function gologin() {
 					<%for(int i = 0; i<(bar_list.size()); i++){
 						session.setAttribute("to_id_2", bar_list.get(i).getUser_id());
 					%>
-					<br>제시된 가격 : <%=bar_list.get(i).getBar_price() %> 원
-					<input type="button" onclick="openPop2()" value="흥정수락">
+					<br><a class="bargain" onclick="openPop2()" style="cursor:pointer">제시된 가격 : <%=bar_list.get(i).getBar_price() %> 원 - <%=bar_list.get(i).getUser_id() %></a>
 				<%} %>
 				</div>
 				<% }%>
@@ -516,7 +523,12 @@ function gologin() {
 			<p rel="schema:url" resource="https://www.daangn.com/556391615"></p>
 			<p property="schema:priceCurrency" content="KRW"></p>
 			<p id="article-price" property="schema:price" content="5000.0"
-				style="font-size: 18px; font-weight: bold;"><%=item_list.get(0).getItem_price()%>원
+				style="font-size: 18px; font-weight: bold;"><%
+										int upPrice = item_list.get(0).getItem_price();
+										DecimalFormat decimalFormat = new DecimalFormat("#,###");
+										String formattedPrice = decimalFormat.format(upPrice);
+										%>
+										<%=formattedPrice %>원
 			</p>
 			<div property="schema:description" id="article-detail">
 				<p><%=item_list.get(0).getItem_info()%></p>

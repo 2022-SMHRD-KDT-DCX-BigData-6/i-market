@@ -1,3 +1,4 @@
+<%@page import="java.text.DecimalFormat"%>
 <%@page import="java.security.Timestamp"%>
 <%@page import="com.main.model.WebMemberDTO"%>
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
@@ -234,7 +235,7 @@ section, summary, time, mark, audio, video {
 #header {
 	margin: 0px;
 }
-.row{
+.row.login{
 	color: #000000 !important;
 	margin: -20px 0 0 -30px !important;
 	width: 80% !important;
@@ -258,7 +259,7 @@ section, summary, time, mark, audio, video {
 	WebMemberDTO loginMember = (WebMemberDTO) session.getAttribute("loginMember");
    %>
 		<section class="head_01">
-		<div class="row">
+		<div class="row login">
 			<div class="col-12" align="right">
 				<%if(loginMember==null) { %>
 		<a href="../user/join.jsp">
@@ -437,7 +438,12 @@ section, summary, time, mark, audio, video {
 								</div>
 								<div class="box itemPriceTime">
 									<div class="box itemPrice">
-										<%=item_list.get(i).getItem_price()%>
+										<%
+										int upPrice = item_list.get(i).getItem_price();
+										DecimalFormat decimalFormat = new DecimalFormat("#,###");
+										String formattedPrice = decimalFormat.format(upPrice);
+										%>
+										<%=formattedPrice %>
 										원
 									</div>
 									<div class="box itemTime">
