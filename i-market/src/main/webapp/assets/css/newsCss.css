@@ -25297,7 +25297,7 @@ html[data-useragent*='Trident'] .comp_series_subscribe .css_reporter_card .css_m
 
 @media(min-width: 1025px) {
     .comp_common,.comp_journal_subscribe,.comp_series_subscribe,.comp_news_ad,.comp_twenty_news,.comp_news_subscribe {
-        margin:30px 30px
+        margin:30px 200px
     }
 }
 

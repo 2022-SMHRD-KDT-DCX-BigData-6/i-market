@@ -447,7 +447,8 @@ function gologin() {
 				<p rel="schema:url" resource="https://www.daangn.com/556391615"></p>
 				<p property="schema:priceCurrency" content="KRW"></p>
 				<p id="article-price" property="schema:price" content="5000.0"
-					style="font-size: 18px; font-weight: bold;"><%
+					style="font-size: 18px; font-weight: bold;">
+					<%
 										int upPrice = item_list.get(0).getItem_price();
 										DecimalFormat decimalFormat = new DecimalFormat("#,###");
 										String formattedPrice = decimalFormat.format(upPrice);
@@ -457,7 +458,7 @@ function gologin() {
 				<div property="schema:description" id="article-detail">
 					<p><%=item_list.get(0).getItem_info()%></p>
 				</div>
-				<p id="article-counts">조회 124</p>
+				<p id="article-counts">조회 <%=item_list.get(0).getItem_view() %></p>
 				<%
 				session.setAttribute("item_name", item_list.get(0).getItem_name());
 				session.setAttribute("item_info", item_list.get(0).getItem_info());
@@ -498,7 +499,13 @@ function gologin() {
 					<%for(int i = 0; i<(bar_list.size()); i++){
 						session.setAttribute("to_id_2", bar_list.get(i).getUser_id());
 					%>
-					<br><a class="bargain" onclick="openPop2()" style="cursor:pointer">제시된 가격 : <%=bar_list.get(i).getBar_price() %> 원 - <%=bar_list.get(i).getUser_id() %></a>
+					<br><a class="bargain" onclick="openPop2()" style="cursor:pointer">제시된 가격 :
+					<%
+										int upPrice1 = bar_list.get(i).getBar_price();
+										
+										String formattedPrice1 = decimalFormat.format(upPrice1);
+										%>
+										<%=formattedPrice1 %>원 - <%=bar_list.get(i).getUser_id() %></a>
 				<%} %>
 				</div>
 				<% }%>
