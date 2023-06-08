@@ -145,16 +145,17 @@
 	-webkit-appearance: none;
 		display: block;
 		border: 0;
-		padding: 0.75em 1em;
+		padding: 0.2em 1em;
 		font-size: 1em;
 		border-radius: 5px;
 		border: solid 1px #dddddd;
 		background: #fff;
-		width: 90%;
+		width: 78%;
+		margin-left: 100px;
 	}
 	
 	.title, .content, .file, .back {
-		padding-left: 130px;
+		padding-left: 100px;
 	}
 /*@font-face {
     font-family: 'Dovemayo_gothic';
@@ -281,16 +282,17 @@ section, summary, time, mark, audio, video {
 
 							<form action="../BoardWriteService" method="post" enctype="multipart/form-data">
 								
-								<h1>제목 <input type="text" name="b_title" maxlength="30"></h1><br>
+								<h1>&emsp;&emsp;&emsp;&emsp;&emsp;제목 <input type="text" name="b_title" id="b_title" maxlength="30" placeholder="제목을 입력해주세요"></h1><br>
 								</div>
 								<div class="content">
-								<h1>내용 <textarea rows="50" cols="10" name="b_content" maxlength="3000"></textarea><br>
+								<h1>&nbsp;내용</h1> 
+								<textarea rows="20" cols="120" id="b_content" name="b_content" maxlength="3000" placeholder="1000자까지 입력가능"></textarea><br>
 								</div>
 								<!-- <h1>내용 <input type="text" name="b_content"></h1> -->
 								<div class="file">
 								<br><h1>첨부자료 <input type="file" name="b_file"></h1><br>
 								<input type="reset" value="초기화">&nbsp;&nbsp;
-								<input type="submit" value="작성하기">
+								<input type="submit" value="작성하기" class="btn" id="buttonSearch">
 								</div>
 								
 								</form>
@@ -439,6 +441,26 @@ section, summary, time, mark, audio, video {
 		</div>
 
 		<!-- Scripts -->
+		<script type="text/javascript" src="assets/js/jquery-3.7.0.js"></script>
+
+		<script type="text/javascript">
+		   
+		   const $form = document.querySelector('form');
+		
+		   $form.addEventListener("submit", (event) => {
+		      var b_title = document.getElementById("b_title").value;
+		      var b_content = document.getElementById("b_content").value;
+		     // 동작(이벤트)을 실행하지 못하게 막는 메서드입니다.
+		      if(b_title=="" || b_content==""){
+		        alert("제목과 내용은 필수 입력사항입니다.");
+		        /*  $('#cmt_content').focus();  */
+		        event.preventDefault();
+		      }else{
+		         $(form).unbind("submit");
+		      }
+		   });
+		 </script>
+		   
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>

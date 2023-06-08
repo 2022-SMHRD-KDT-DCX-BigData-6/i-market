@@ -282,10 +282,10 @@ section, summary, time, mark, audio, video {
 				<td>본인확인</td>
 			</tr>
 			<tr>
-				<td>아이디</td><td><input type="text" name="user_id"></td>
+				<td>아이디</td><td><input type="text" id="user_id" name="user_id"></td>
 			</tr>
 			<tr>
-				<td>비밀번호</td><td><input type="text" name="user_pw"></td>
+				<td>비밀번호</td><td><input type="text" id="user_pw" name="user_pw"></td>
 			</tr>
 			
 		</table>
@@ -433,6 +433,27 @@ section, summary, time, mark, audio, video {
 		</div>
 
 		<!-- Scripts -->
+		<script type="text/javascript" src="assets/js/jquery-3.7.0.js"></script>
+
+		   <script type="text/javascript">
+		   
+		   const $form = document.querySelector('form');
+		
+		   $form.addEventListener("submit", (event) => {
+			   
+		      var user_id = document.getElementById("user_id").value;
+		      var user_pw = document.getElementById("user_pw").value;
+		     // 동작(이벤트)을 실행하지 못하게 막는 메서드입니다.
+		      if(user_id=="" || user_pw==""){
+		        alert("아이디 비밀번호를 확인해주세요");
+		        /*  $('#cmt_content').focus();  */
+		        event.preventDefault();
+		      }else{
+		         $(form).unbind("submit");
+		      }
+		   });
+		   </script>
+		
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>

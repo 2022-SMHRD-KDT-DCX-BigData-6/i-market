@@ -313,7 +313,7 @@ section, summary, time, mark, audio, video {
 		
 		</tr>
 		<tr>
-			<td><%=dtail_list.get(0).getUser_id() %></td><td><%=dtail_list.get(0).getUser_nick() %></td><td><%=dtail_list.get(0).getUploaded_at() %></td><td><%=dtail_list.get(0).getB_file() %></td>
+			<td><%=dtail_list.get(0).getUser_id() %></td><td><%=dtail_list.get(0).getUser_nick() %></td><td><%=dtail_list.get(0).getUploaded_at() %></td><td><%=dtail_list.get(0).getB_file() %>&emsp;&emsp;<a href="../file/<%=dtail_list.get(0).getB_file() %>" download><button>다운로드</button></a></td>
 		
 		</tr>
 		<tr>
@@ -342,6 +342,8 @@ section, summary, time, mark, audio, video {
 	<%if (loginMember.getUser_id().equals(dtail_list.get(0).getUser_id())){ %>
 	<a href="boardUpdate.jsp"><button>게시글 수정</button></a>
 	<a href="boardDelete.jsp"><button>게시글 삭제</button></a>
+<!-- 	<a href="BoardSuggest"><button id="like" >게시글 추천</button></a> -->
+	<%} else { %>
 	<%if(cnt>0){%>
 		<input type="button" id="like" value="게시글 추천" disabled="disabled" onclick="button1_click();" >
 	
@@ -349,7 +351,6 @@ section, summary, time, mark, audio, video {
 		<input type="button" id="like" value="게시글 추천" onclick="button1_click();" >
 	
 	<%} %>
-<!-- 	<a href="BoardSuggest"><button id="like" >게시글 추천</button></a> -->
 	<%} %>
 	<%} %>
 	<a href="../boardController?pagebutton=1"><button onclick="button2_click();">뒤로가기</button></a><br><br><br>
@@ -406,12 +407,12 @@ section, summary, time, mark, audio, video {
 			<td><%=loginMember.getUser_nick() %></td>
 		</tr>
 		<tr>
-			<td><input type="text" placeholder="댓글을 작성해 주세요!" value="" name="cmt_content"></td>
+			<td><input type="text" placeholder="댓글을 작성해 주세요!" value="" id="cmt_content" name="cmt_content"></td>
 		</tr>
 		
 		
 	</table>
-			<input type="submit" value="등록">
+			<button type="submit"  class="btn">등록</button>
 	</form>
 	</div>
 	<%} %>
@@ -556,6 +557,27 @@ section, summary, time, mark, audio, video {
 		</div>
 
 		<!-- Scripts -->
+		<script type="text/javascript" src="assets/js/jquery-3.7.0.js"></script>
+
+		   <script type="text/javascript">
+		   
+		   const $form = document.querySelector('form');
+		
+		   $form.addEventListener("submit", (event) => {
+		      var content = document.getElementById("cmt_content").value;
+		     // 동작(이벤트)을 실행하지 못하게 막는 메서드입니다.
+		      if(content==""){
+		        alert("댓글내용은 필수 사항입니다!");
+		        /*  $('#cmt_content').focus();  */
+		        event.preventDefault();
+		      }else{
+		         $(form).unbind("submit");
+		      }
+		   });
+		   </script>
+		
+		
+		
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>

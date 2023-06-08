@@ -311,12 +311,13 @@ section, summary, time, mark, audio, video {
 												</select>
 												&emsp;&emsp;키워드 &nbsp;&nbsp;&#160;<input type="text" class="form-control" id="search"
 													placeholder="검색어 입력" name="searchText" maxlength="100">
-												&emsp;&emsp;<button type="button" class="btn">검색</button>
+												&emsp;&emsp;<button type="button" class="btn" id="buttonSearch">검색</button>
 												&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 												&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 												&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+												<%if(user_id != null){ %>
 												<a href="board/boardInput.jsp"><button>글작성하러가기</button></a></p><br>
-											
+												<%} %>
 						
 										
 									<!-- </form> -->
@@ -482,6 +483,8 @@ section, summary, time, mark, audio, video {
 	
 	
 <script type="text/javascript" src="assets/js/jquery-3.7.0.js"></script>
+
+
 <script type="text/javascript">
 $(".btn").on("click",function(){
 var search = $("#search").val();
@@ -489,12 +492,21 @@ var field = $("select[name=searchField]").val();
 console.log(search);
  if(search==="" || field==="0"){
 	window.location.href='boardController?pagebutton=1';
-}else{
+}else{ 
 /* window.location.href=http://localhost:8081/i-market/boardController?pagebutton=1; */
-window.location.href='http://localhost:8081/i-market3/BoardSearchService?searchText='+search+'&searchField='+field;
+window.location.href='http://localhost:8081/i-market/BoardSearchService?searchText='+search+'&searchField='+field;
 }
 });
-</script>	
+</script>
+<script>
+var search = document.getElementById("search");
+    search.addEventListener("keyup", function (event) {
+      if (event.keyCode === 13) {
+        event.preventDefault(); 
+       document.getElementById("buttonSearch").click();
+      }
+    });
+</script>
 							
 
 	
