@@ -25,6 +25,7 @@
     	height:120px;
 		border-radius: 70%;
 		overflow: hidden;
+		margin-left: 150px;
 	}
 	 .profile3 {
 	 
@@ -84,11 +85,50 @@
 		-webkit-transition: background-color .25s ease-in-out;
 		-ms-transition: background-color .25s ease-in-out;
 		transition: background-color .25s ease-in-out;
-	
 	}
 	
+	#button1, #button2 {
+		-webkit-appearance: none;
+		display: inline-block;
+		text-decoration: none;
+		cursor: pointer;
+		border: 0;
+		border-radius: 5px;
+		background:	#217214a3;
+		color: 	#FFf;
+		font-weight: 700;
+		outline: 0;
+		font-size: 1.1em;
+		padding: 0.4em 1em 0.4em 1em;
+		text-align: center;
+		-moz-transition: background-color .25s ease-in-out;
+		-webkit-transition: background-color .25s ease-in-out;
+		-ms-transition: background-color .25s ease-in-out;
+		transition: background-color .25s ease-in-out;
+	}
 	
-	
+	#button1, #button2 {
+		-webkit-appearance: none;
+		display: inline-block;
+		text-decoration: none;
+		cursor: pointer;
+		border: 0;
+		border-radius: 5px;
+		background:	#217214a3;
+		color: 	#FFf;
+		font-weight: 700;
+		outline: 0;
+		font-size: 1.1em;
+		padding: 0.4em 1em 0.4em 1em;
+		text-align: center;
+		-moz-transition: background-color .25s ease-in-out;
+		-webkit-transition: background-color .25s ease-in-out;
+		-ms-transition: background-color .25s ease-in-out;
+		transition: background-color .25s ease-in-out;
+	}
+	#button1:hover, #button2:hover{
+		background:	rgb(235, 225, 15);
+	}
 	button:hover,
 		.button:hover
 		{
@@ -219,13 +259,27 @@ body{
 #footer a {
 			color: #fff;
 		}
+html, body, div, span, applet, object,
+iframe, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video {
+
+	font-family:'Hi Melody', cursive;
+}
 	
 	
 	
 	
 </style>
 </head>
-<body class="no-sidebar is-preload">
+<body class="no-sidebar is-preload" style="font-family: 'Hi Melody', cursive;">
 	<%
 		String user_id = (String)session.getAttribute("user_id");
 		WebMemberDTO dto = new WebMemberDTO(user_id);
@@ -255,8 +309,8 @@ body{
 			<!-- Nav -->
 			<nav id="nav">
 				<ul>
-					<li><a href="../main.jsp">홈</a></li>
-					<li><a href="../item/itemListMain.jsp">전체보기</a>
+					<li class="current"><a href="main.jsp">홈</a></li>
+					<li><a href="#">전체보기</a>
 						<ul>
 							<li><a href="#">유아동용품</a></li>
 							<li><a href="#">유아동잡화</a></li>
@@ -274,8 +328,6 @@ body{
 					<li><a href="../boardController?pagebutton=1">게시판</a></li>
 					<li><a href="no-sidebar.html">NEWS</a></li>
 					<li  class="current"><a href="myPage.jsp">마이페이지</a></li>
-						<input type="text" placeholder="search" maxlength="40" class="sc-hMqMXs cLfdog" value="">
-						<img src="./images/2be3c66fa47ccd5ece2a.png" class="sc-hMqMXs search" width="16" height="16" alt=" " />
 				</ul>
 			</nav>
 
@@ -295,50 +347,26 @@ body{
 					</section>
 					<div style="">
 					<section>
-					<div style="padding-bottom: 45px;padding-left:190px;"><font size = 10><%=profile.getUser_id() %></font></div>
-					<div style="padding-bottom: 45px;padding-left:190px;"><font size = 10><%=profile.getUser_nick() %></font></div>
-					<div style="padding-bottom: 45px;padding-left: 190px;"><font size = 10><%=profile.getUser_phone() %></font></div>
-					<div style="padding-bottom: 45px; padding-left: 190px;"><font size = 10><%=profile.getUser_addr() %></font></div>
+					<div style="padding-bottom: 45px; padding-right: 700px;"><font size = 10><%=profile.getUser_id() %></font></div>
+					<div style="padding-bottom: 45px; padding-right: 700px;"><font size = 10><%=profile.getUser_nick() %></font></div>
+					<div style="padding-bottom: 45px; padding-right: 420px;"><font size = 10><%=profile.getUser_phone() %></font></div>
+					<div style="padding-bottom: 45px; padding-right: 420px;"><font size = 10><%=profile.getUser_addr() %></font></div>
 					</section>
 					</div>
 					</div>
 					<div style="float: left; margin-left: 600px;">
 						<!-- 쿼리스트링 방식 : url?name=value&name=value -->
-						<a href="update.jsp?id=<%=profile.getUser_id()  %>" class="button next scrolly">
-						<input type="submit"  id="button1" value="개인정보수정" class="button fit">
+						<a href="update.jsp?id=<%=profile.getUser_id()  %>">
+						<input type="button"  id="button1" value="개인정보수정" class="button fit"  style="font-family: 'Hi Melody', cursive;">
 						</a>
 					</div>
-					<div style=" padding-left: 900px;">	
-						<a href="main.jsp" class="button next scrolly">
-						<input type="submit"  id="button2" value="되돌아가기" class="button fit">
+					<div>	
+						<a href="main.jsp" style="padding-right: 650px;">
+						<input type="button"  id="button2" value="되돌아가기" class="button fit"  style="font-family: 'Hi Melody', cursive;">
 						</a>
 					</div>
 					<div style="clear:both"></div>
 				</section>
-
-		
-								
-									<ul class="contact">
-										<li>
-											<h3>Address</h3>
-											<p>
-												Untitled Incorporated<br />
-												1234 Somewhere Road Suite<br />
-												Nashville, TN 00000-0000
-											</p>
-										</li>
-										<li>
-											<h3>Mail</h3>
-											<p><a href="#">someone@untitled.tld</a></p>
-										</li>
-										<li>
-											<h3>Phone</h3>
-											<p>(800) 000-0000</p>
-										</li>
-									</ul>
-								</section>
-							</div>
-							<div class="col-12">
 
 								<!-- Copyright -->
 									<div id="copyright">
@@ -348,11 +376,8 @@ body{
 									</div>
 
 							</div>
-						</div>
-					</div>
 				</section>
 
-		</div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>

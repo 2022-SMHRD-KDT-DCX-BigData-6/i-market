@@ -115,24 +115,6 @@
 		<servlet-class>com.smhrd.controller.CreateChatService</servlet-class>
 	</servlet>
 	<servlet>
-		<servlet-name>JoinService</servlet-name>
-		<display-name>JoinService</display-name>
-		<description></description>
-		<servlet-class>com.smhrd.controller.JoinService</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>LoginService</servlet-name>
-		<display-name>LoginService</display-name>
-		<description></description>
-		<servlet-class>com.smhrd.controller.LoginService</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>LogoutService</servlet-name>
-		<display-name>LogoutService</display-name>
-		<description></description>
-		<servlet-class>com.smhrd.controller.LogoutService</servlet-class>
-	</servlet>
-	<servlet>
 		<servlet-name>SendChatService</servlet-name>
 		<display-name>SendChatService</display-name>
 		<description></description>
@@ -161,6 +143,12 @@
 		<display-name>uploadBargainService</display-name>
 		<description></description>
 		<servlet-class>com.item.controller.uploadBargainService</servlet-class>
+		</servlet>
+		<servlet>
+		<servlet-name>ShowNewsService</servlet-name>
+		<display-name>ShowNewsService</display-name>
+		<description></description>
+		<servlet-class>com.news.controller.ShowNewsService</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -237,18 +225,6 @@
 		<url-pattern>/CreateChatService</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
-		<servlet-name>JoinService</servlet-name>
-		<url-pattern>/JoinService</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>LoginService</servlet-name>
-		<url-pattern>/LoginService</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>LogoutService</servlet-name>
-		<url-pattern>/LogoutService</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
 		<servlet-name>SendChatService</servlet-name>
 		<url-pattern>/SendChatService</url-pattern>
 	</servlet-mapping>
@@ -267,6 +243,10 @@
 	<servlet-mapping>
 		<servlet-name>uploadBargainService</servlet-name>
 		<url-pattern>/uploadBargainService</url-pattern>
+			</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ShowNewsService</servlet-name>
+		<url-pattern>/ShowNewsService</url-pattern>
 	</servlet-mapping>
 
 </web-app>

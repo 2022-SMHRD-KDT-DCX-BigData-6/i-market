@@ -1,29 +1,24 @@
-<%@page import="java.util.List"%>
-<%@page import="com.smhrd.model.board.CommentInfoDAO"%>
-<%@page import="com.smhrd.model.board.CommentInfoDTO"%>
+<%@page import="com.smhrd.model.news.NewsInfoDTO"%>
 <%@page import="com.main.model.WebMemberDTO" %>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-
-
-<!DOCTYPE HTML>
-<!--
-	Dopetrope by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
-	<head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
-		<title>Dopetrope by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../assets/css/main.css" />
+<link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="assets/css/newsCss.css" />
+
 <style type="text/css">
 
+
+
 /* Button */
+
 	
 	input[type="submit"],
 	input[type="reset"],
@@ -46,11 +41,6 @@
 		-webkit-transition: background-color .25s ease-in-out;
 		-ms-transition: background-color .25s ease-in-out;
 		transition: background-color .25s ease-in-out;
-		font-family:'Hi Melody', cursive;
-	}
-	
-	input[type="reset"] {
-		line-height: 1.25em;
 	}
 	
 	input[type="button"]{
@@ -72,8 +62,10 @@
 		-webkit-transition: background-color .25s ease-in-out;
 		-ms-transition: background-color .25s ease-in-out;
 		transition: background-color .25s ease-in-out;
-		font-family:'Hi Melody', cursive;
+	
 	}
+	
+	
 	
 	button:hover,
 		.button:hover
@@ -86,7 +78,7 @@
 		input[type="submit"]:hover,
 		input[type="reset"]:hover
 		 {
-			background: rgb(235, 225, 15);
+			background: #217214a3;
 		}
 
 		input[type="button"]:active,
@@ -97,6 +89,7 @@
 			background: rgb(235, 225, 15);
 		}
 		
+		
 		input[type="button"].alt:hover,
 			input[type="submit"].alt:hover,
 			input[type="reset"].alt:hover{
@@ -104,6 +97,8 @@
 			background: #217214a3;
 			
 			}
+		
+		
 
 		input[type="button"].alt,
 		input[type="submit"].alt,
@@ -112,10 +107,12 @@
 		.button.alt {
 			background:#f97777;
 		}
+
 			button.alt:hover,
 			.button.alt:hover {
 				background: rgb(235, 225, 15);
 			}
+
 
 		input[type="button"].icon:before,
 		input[type="submit"].icon:before,
@@ -137,6 +134,9 @@
 			padding: 0.5em 1em 0.5em 1em;
 		}
 
+
+
+
 /*@font-face {
     font-family: 'Dovemayo_gothic';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
@@ -149,9 +149,14 @@
     src: url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
     font-weight: normal;
     font-style: normal;
+
+
+
 }
 
 body{
+
+
 
 /* font-family: 'Hi Melody', cursive;*/
   background: var(--background);
@@ -160,13 +165,15 @@ body{
 .index_01{
 
 	font-family:'Hi Melody', cursive;
-	color:#f2ec1d;
+	 color:#f2ec1d !important;
 	font-size: 80px;
 	font-style: normal;
 	font-weight: 100;
 	text-shadow: 1px 0 10px #110f10;
 
 }
+
+
 
 #nav > ul > li {
 	position:relative; 
@@ -175,11 +182,16 @@ body{
 	
 }
 
+
 #nav > ul > li.current > a {
     background: #217214a3;
     color: #fff !important;
     font-weight: 700;
 }
+
+
+
+
 
 #footer a {
 			color: #fff;
@@ -200,21 +212,22 @@ section, summary, time, mark, audio, video {
 	font-family:'Hi Melody', cursive;
 }
 
-.cmt {
-margin-left: 120px;
-}
-.cmt_update {
-margin-left: 120px;
+
+
+
+
 </style>
-	</head>
-	<body class="right-sidebar is-preload">
-		<%
+
+</head>
+<body>
+	
+	<%
    // session값 가져오기
-   String user_id = (String)session.getAttribute("user_id");
    WebMemberDTO loginMember = (WebMemberDTO) session.getAttribute("loginMember");
    if (loginMember != null) {
       System.out.print(loginMember.getUser_id());
    }
+   String user_id = (String)session.getAttribute("user_id");
    %>
 
 
@@ -240,14 +253,13 @@ margin-left: 120px;
 			
 		</div>
 	</div>
-
-
-
- 
+	
 	<div id="page-wrapper">
 
 
-			<!-- Header -->
+
+
+		<!-- Header -->
 		<section id="header">
 
 			<!-- Logo -->
@@ -265,7 +277,7 @@ margin-left: 120px;
 			<nav id="nav">
 				<ul>
 					<li class="current"><a href="main.jsp">홈</a></li>
-					<li><a href="item/itemListMain.jsp">전체보기</a>
+					<li><a href="#">전체보기</a>
 						<ul>
 							<li><a href="#">유아동용품</a></li>
 							<li><a href="#">유아동잡화</a></li>
@@ -279,7 +291,7 @@ margin-left: 120px;
 								</ul></li>
 							<li><a href="#">기타</a></li>
 						</ul></li>
-				<li><a href=
+					<li><a href=
 				<%if (user_id != null) {%>
 					<%="item/uploadItemBoard.jsp"%>
 				<%}else {%>
@@ -288,66 +300,114 @@ margin-left: 120px;
 					>판매하기</a></li>
 					<li><a href="boardController?pagebutton=1">게시판</a></li>
 					<li><a href="ShowNewsService">NEWS</a></li>
-					<li><a href=
-				<%if (user_id != null) {%>
-					<%="user/myPage.jsp"%>
-				<%}else {%>
-					<%= "user/login.jsp"%>					
-				<% } %>
-					>마이페이지</a></li>
+					<li><a href="user/myPage.jsp">마이페이지</a></li>
+						
 				</ul>
 			</nav>
-
-				</section>
-
-			<!-- Main -->
-				<section id="main">
-					<div class="container">
-						<div class="row">
-							<div class="col-8 col-12-medium">
-
-							<% int cmt_idx = Integer.parseInt(request.getParameter("cmt_idx")); 
-		   CommentInfoDTO dto = new CommentInfoDTO(cmt_idx,0);
-		   CommentInfoDAO dao = new CommentInfoDAO();
-		   List<CommentInfoDTO> updateComment = dao.showUpdateComment(dto);
-		   int b_idx = updateComment.get(0).getB_idx();
-		   session.setAttribute("b_idx", b_idx);
-	%>
+		</section>
+	</div>		
 	
-	<form action="../CommentUpdateService?cmt_idx=<%=updateComment.get(0).getCmt_idx()%>" method="post">
-		<table border="1" class="cmt">
-			<tr>
-				<td>내용</td>
-			</tr>
-			<tr>
-				<td><input type="text" value="<%=updateComment.get(0).getCmt_content() %>" name="cmt_content"></td>
-			</tr>
+	<div class="row">
+	
+	<%ArrayList<NewsInfoDTO> news_list = (ArrayList<NewsInfoDTO>)request.getAttribute("news_list"); %>
+	<div class="main_brick_item _channel_news_preview_wrapper"
+		data-max-page="16">
+
+
+
+
+		<div class="comp_journal_subscribe _preview_card_page" style="">
+			<div class="cjs_channel_card">
+
+
 			
-		</table>
-		<div class="cmt_update">
-		<a href="../CommentUpdateService?cmt_idx=<%=updateComment.get(0).getCmt_idx()%>"></a><button>수정하기</button>
-	</form>
-		</div>
-							</div>
+			<%for(int i=0;i<news_list.size();i++){ %>	
+			<div class="col-4 col-12-medium">
+			  <div class="first">	
+				<div class="cjs_ctitle _item_title">
+					<a href="<%=news_list.get(i).getN_url() %>" class="cjs_ctitle_a"
+						onclick="nclk(event, 'home.editnfmedia', '', '')">
+						<div class="cjs_cmw small">
+							
 						</div>
+						<div class="cjs_ctw">
+							<h4 class="channel">
+								<%=news_list.get(i).getN_newspaper() %><span class="datetime"><%=news_list.get(i).getN_date() %></span>
+							</h4>
+						</div>
+					</a>
+					<div class="cjs_ctitle_right">
+						<button type="button" class="cjs_btn_subscribe _subscribe_btn"
+							data-office_id="660" data-office_name="kbc광주방송"
+							onclick="nclk(event, 'home.editnfset', '', '')">구독</button>
 					</div>
-				</section>
+				</div>
+				<div class="cjs_journal_wrap _item_contents">
+					<a
+						href="<%=news_list.get(i).getN_url() %>"
+						class="cjs_news_a _cds_link _editn_link"
+						onclick="nclk(event, 'home.editnfimg', '', '')">
+						<div class="cjs_news_mw">
+							<img loading="lazy"
+								src="<%=news_list.get(i).getN_file() %>"
+								width="100%" alt="" onerror="showNoImage(this)">
+						</div>
+						<div class="cjs_news_tw">
+							<div class="cjs_t"><%=news_list.get(i).getN_title() %></div>
+							<p class="cjs_d"><%=news_list.get(i).getN_content() %>...</p>
+
+						</div>
+					</a>
+				</div>
+			   </div>	
+			</div>
+			
+			<%} %>
 
 
-								<!-- Copyright -->
-									<div id="copyright">
-										<ul class="links">
-											<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-										</ul>
-									</div>
+				<div class="cjs_info">
+					<button type="button" class="cjs_btn_refresh _refresh_btn"
+						card_type="preview" size="5" data-page="0" data-max-page=""
+						onclick="nclk(event, 'home.editnfnew', '', '')">새로보기</button>
+				</div>
+			</div>
+		</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
 
-	</body>
+
+	</div>
+	</div>
+	
+	<!-- Footer -->
+			<section id="footer">
+				<div class="container">
+					<div class="row">
+						
+						<div class="col-12">
+
+							<!-- Copyright -->
+							<div id="copyright">
+								<ul class="links">
+									<li>&copy; Untitled. All rights reserved.</li>
+									<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								</ul>
+							</div>
+
+						</div>
+					</div>	
+				</div>
+			</section>
+						
+	
+	
+	
+<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
 </html>

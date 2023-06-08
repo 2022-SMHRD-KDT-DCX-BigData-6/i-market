@@ -9,6 +9,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
 <title>Dopetrope by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -41,6 +44,7 @@ input[type="submit"],
 		-webkit-transition: background-color .25s ease-in-out;
 		-ms-transition: background-color .25s ease-in-out;
 		transition: background-color .25s ease-in-out;
+		font-family:'Hi Melody', cursive;
 	}
 	
 	input[type="button"]{
@@ -62,6 +66,7 @@ input[type="submit"],
 		-webkit-transition: background-color .25s ease-in-out;
 		-ms-transition: background-color .25s ease-in-out;
 		transition: background-color .25s ease-in-out;
+		font-family:'Hi Melody', cursive;
 	
 	}
 	
@@ -187,18 +192,37 @@ body{
     color: #fff !important;
     font-weight: 700;
 }
+#footer a {
+			color: #fff;
+		}
 
+html, body, div, span, applet, object,
+iframe, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video {
 
+	font-family:'Hi Melody', cursive;
+}
 
+#pagebutton {
+	margin-left: 500px;
+}
 
 
 #footer a {
 			color: #fff;
 		}
-	
-	
-	
-	
+.boardMain, .click {
+	width: 80%;
+	margin-left: 120px;
+}
 
 </style>
 </head>
@@ -211,8 +235,16 @@ body{
 	<!-- Header -->
 				<section id="header">
 
-					<!-- Logo -->
-						<h1><a href="#">BABY COMMUNITY</a></h1>
+			<!-- Logo -->
+			<div>
+			<h1 >
+				<a class="index_01" href="main.jsp">아이 i 마켓</a>
+			</h1>
+			</div>
+			
+			<div>
+			<span>유아용품전용 중고거래 플랫폼</span>
+			</div>
 
 					<!-- Nav -->
 						<nav id="nav">
@@ -248,8 +280,6 @@ body{
 					<%= "user/login.jsp"%>					
 				<% } %>
 					>마이페이지</a></li>
-						<input type="text" placeholder="search" maxlength="40" class="sc-hMqMXs cLfdog" value="">
-						<img src="./images/2be3c66fa47ccd5ece2a.png" class="sc-hMqMXs search" width="16" height="16" alt=" " />
 				</ul>
 			</nav>
 
@@ -269,8 +299,8 @@ body{
 							
 						
 						<!-- 검색기능 -->
-						<div >
-								<div >
+						<div class="click">
+								<div>
 									<!-- <form method="post" name="search" action="BoardSearchService"> -->
 										
 											
@@ -281,12 +311,12 @@ body{
 												</select>
 												&emsp;&emsp;키워드 &nbsp;&nbsp;&#160;<input type="text" class="form-control" id="search"
 													placeholder="검색어 입력" name="searchText" maxlength="100">
-												&emsp;&emsp;<button type="button" class="btn">검색</button>
+												&emsp;&emsp;<button type="button" class="btn" id="buttonSearch">검색</button>
 												&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 												&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-												&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-												<a href="board/boardInput.jsp"><button>글작성하러가기</button></a></p><br>
-											
+												<%if(user_id != null){ %>
+												<a href="board/boardInput.jsp"><button>글작성</button></a></p><br>
+												<%} %>
 						
 										
 									<!-- </form> -->
@@ -296,7 +326,7 @@ body{
 								
 						
 						<!-- 메인기능 -->
-							<table border="1">
+							<table border="1" class="boardMain">
 								<tr>
 									<td style="color:blue">글번호</td>
 									<td>제목(댓글수)</td>
@@ -392,47 +422,6 @@ body{
 					</div>
 				</section>		
 		
-		
-		<!-- Footer -->
-				<section id="footer">
-					<div class="container" align="center">
-						<div class="row">
-							<div class="col-4 col-12-medium">
-							<section>
-								<header>
-									<h2>Vitae tempor lorem</h2>
-								</header>
-								<ul class="social">
-									<li><a class="fa fa-facebook-f" href="#"><span
-											class="label"></span></a></li>
-									<li><a class="fa fa-twitter" href="#"><span
-											class="label"></span></a></li>
-									<li><a class="fa fa-instagram" href="#"><span
-											class="label"></span></a></li>
-									<li><a class="fa fa-google" href="#"><span
-											class="label"></span></a></li>
-								</ul>
-								<ul class="contact">
-									<li>
-										<h3>Address</h3>
-										<p>
-											광주 서구 경열로 20 3,4층
-										</p>
-									</li>
-									<li>
-										<h3>Mail</h3>
-										<p>
-											<p>smhrd@smhrd.or.kr</p>
-										</p>
-									</li>
-									<li>
-										<h3>Phone</h3>
-										<p>062)655-3510</p>
-									</li>
-								</ul>
-							</section>
-						</div>
-							<div class="col-12">
 
 								<!-- Copyright -->
 									<div id="copyright">
@@ -442,16 +431,10 @@ body{
 									</div>
 
 							</div>
-						</div>
-					</div>
-				</section>
-		
-		
-	</div>
-	
-	
 	
 <script type="text/javascript" src="assets/js/jquery-3.7.0.js"></script>
+
+
 <script type="text/javascript">
 $(".btn").on("click",function(){
 var search = $("#search").val();
@@ -459,12 +442,21 @@ var field = $("select[name=searchField]").val();
 console.log(search);
  if(search==="" || field==="0"){
 	window.location.href='boardController?pagebutton=1';
-}else{
+}else{ 
 /* window.location.href=http://localhost:8081/i-market/boardController?pagebutton=1; */
-window.location.href='http://localhost:8081/i-market3/BoardSearchService?searchText='+search+'&searchField='+field;
+window.location.href='http://localhost:8081/i-market/BoardSearchService?searchText='+search+'&searchField='+field;
 }
 });
-</script>	
+</script>
+<script>
+var search = document.getElementById("search");
+    search.addEventListener("keyup", function (event) {
+      if (event.keyCode === 13) {
+        event.preventDefault(); 
+       document.getElementById("buttonSearch").click();
+      }
+    });
+</script>
 							
 
 	

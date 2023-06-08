@@ -1,7 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@page import="com.main.model.WebMemberDTO" %>
-
+<%@page import="java.util.List"%>
+<%@page import="com.smhrd.model.news.NewsInfoDAO"%>
+<%@page import="com.smhrd.model.news.NewsInfoDTO"%>
+<%@page import="java.util.ArrayList"%>
 
 <!DOCTYPE html>
 
@@ -34,7 +37,7 @@
 	input[type="reset"],
 	button,
 	.button {
-		-webkit-appearance: none;
+		-webkit-appearance: none !important;
 		display: inline-block;
 		text-decoration: none;
 		cursor: pointer;
@@ -174,29 +177,29 @@ body{
 }
 .index_01{
 
-	font-family:'Hi Melody', cursive;
-	color:#f2ec1d;
-	font-size: 80px;
-	font-style: normal;
-	font-weight: 100;
-	text-shadow: 1px 0 10px #110f10;
+	font-family:'Hi Melody', cursive !important;
+	color:#f2ec1d !important;
+	font-size: 80px !important;
+	font-style: normal !important;
+	font-weight: 100 !important;
+	text-shadow: 1px 0 10px #110f10 !important;
 
 }
 
 
 
 #nav > ul > li {
-	position:relative; 
-	padding-left: 15px;
-	padding-right: 15px;
+	position:relative !important; 
+	padding-left: 15px !important;
+	padding-right: 15px !important;
 	
 }
 
 
 #nav > ul > li.current > a {
-    background: #217214a3;
-    color: #fff !important;
-    font-weight: 700;
+    background: #217214a3 !important;
+    color: #fff !important !important;
+    font-weight: 700 !important;
 }
 
 
@@ -204,7 +207,7 @@ body{
 
 
 #footer a {
-			color: #fff;
+			color: #fff !important;
 		}
 
 html, body, div, span, applet, object,
@@ -219,7 +222,7 @@ canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video {
 
-	font-family:'Hi Melody', cursive;
+	font-family:'Hi Melody', cursive !important;
 }
 
 
@@ -274,7 +277,6 @@ section, summary, time, mark, audio, video {
 
 
  
-	<div id="page-wrapper">
 
 
 
@@ -319,7 +321,7 @@ section, summary, time, mark, audio, video {
 				<% } %>
 					>판매하기</a></li>
 					<li><a href="boardController?pagebutton=1">게시판</a></li>
-					<li><a href="#">NEWS</a></li>
+					<li><a href="ShowNewsService">NEWS</a></li>
 					<li><a href=
 				<%if (user_id != null) {%>
 					<%="user/myPage.jsp"%>
@@ -327,11 +329,9 @@ section, summary, time, mark, audio, video {
 					<%= "user/login.jsp"%>					
 				<% } %>
 					>마이페이지</a></li>
-						<input type="text" placeholder="search" maxlength="40" class="sc-hMqMXs cLfdog" value="">
-						<img src="./images/2be3c66fa47ccd5ece2a.png" class="sc-hMqMXs search" width="16" height="16" alt=" " />
 				</ul>
 			</nav>
-
+			</section>
 			<!-- Banner -->
 			
 			
@@ -574,37 +574,18 @@ section, summary, time, mark, audio, video {
 									<h2>최신뉴스</h2>
 								</header>
 								<ul class="dates">
-						
-									<li><span class="date">Jan <strong>27</strong></span>
+								<%NewsInfoDAO dao = new NewsInfoDAO();
+								List<NewsInfoDTO> list_news = dao.showNews();
+								%>
+								
+								<%for(int i=0;i<5;i++){ %>
+									<li><span class="date"><%=list_news.get(i).getN_date().substring(0, 10) %><strong><%=list_news.get(i).getN_date().substring(10,16) %></strong></span>
 										<h3>
-											<a href="#">Lorem dolor sit amet veroeros</a>
+											<a href="<%=list_news.get(i).getN_url()%>"><%=list_news.get(i).getN_title() %></a>
 										</h3>
-										<p>Ipsum dolor sit amet veroeros consequat blandit ipsum
-											phasellus lorem consequat etiam.</p></li>
-									<li><span class="date">Jan <strong>23</strong></span>
-										<h3>
-											<a href="#">Ipsum sed blandit nisl consequat</a>
-										</h3>
-										<p>Blandit phasellus lorem ipsum dolor tempor sapien
-											tortor hendrerit adipiscing feugiat lorem.</p></li>
-									<li><span class="date">Jan <strong>15</strong></span>
-										<h3>
-											<a href="#">Magna tempus lorem feugiat</a>
-										</h3>
-										<p>Dolore consequat sed phasellus lorem sed etiam nullam
-											dolor etiam sed amet sit consequat.</p></li>
-									<li><span class="date">Jan <strong>12</strong></span>
-										<h3>
-											<a href="#">Dolore tempus ipsum feugiat nulla</a>
-										</h3>
-										<p>Feugiat lorem dolor sed nullam tempus lorem ipsum dolor
-											sit amet nullam consequat.</p></li>
-									<li><span class="date">Jan <strong>10</strong></span>
-										<h3>
-											<a href="#">Blandit tempus aliquam?</a>
-										</h3>
-										<p>Feugiat sed tempus blandit tempus adipiscing nisl lorem
-											ipsum dolor sit amet dolore.</p></li>
+										<p><%=list_news.get(i).getN_content() %></p></li>
+								<%} %>	
+									
 								</ul>
 							</section>
 						</div>
@@ -613,7 +594,7 @@ section, summary, time, mark, audio, video {
 								<header>
 									<h2>What's this all about?</h2>
 								</header>
-								<a href="#" class="image featured"><img
+								<a href="board/boardDetail.jsp?board_idx=65"><img
 									src="images/pic10.jpg" alt="" /></a>
 								<p>
 									This is <strong>Dopetrope</strong> a free, fully responsive
