@@ -303,17 +303,20 @@ section, summary, time, mark, audio, video {
 					<li class="current"><a href="main.jsp">홈</a></li>
 					<li><a href="item/itemListMain.jsp">전체보기</a>
 						<ul>
-							<li><a href="#">유아동용품</a></li>
-							<li><a href="#">유아동잡화</a></li>
-							<li><a href="#">유아동도서</a></li>
-							<li><a href="#">완구/장난감/인형</a></li>
+							<li><a href="item/itemListSearch.jsp?itemCategoryKey=유아동용품">유아동용품</a></li>
+							<li><a href="item/itemListSearch.jsp?itemCategoryKey=유아동신발%2F잡화">유아동 신발/잡화</a></li>
+							<li><a href="item/itemListSearch.jsp?itemCategoryKey=교육%2F완구%2F인형">교육/완구/인형</a></li>
 							<li><a href="item/itemListSearch.jsp?itemCategoryKey=베이비의류%280-2세%29">유아동의류</a>
 								<ul>
-									<li><a href="#">남아의류</a></li>
-									<li><a href="#">여아의류</a></li>
+									<li><a href="item/itemListSearch.jsp?itemCategoryKey=베이비의류%280-2세%29">베이비의류(0-2세)</a></li>
+									<li><a href="item/itemListSearch.jsp?itemCategoryKey=여아의류%283-6세%29">여아의류(3-6세)</a></li>
+									<li><a href="item/itemListSearch.jsp?itemCategoryKey=여주니어의류%287세~%29">여주니어의류(7세~)</a></li>
+									<li><a href="item/itemListSearch.jsp?itemCategoryKey=남아의류%283-6세%29">남아의류(3-6세)</a></li>
+									<li><a href="item/itemListSearch.jsp?itemCategoryKey=남주니어의류%287세~%29">남주니어의류(7세~)</a></li>
 
 								</ul></li>
-							<li><a href="#">기타</a></li>
+							<li><a href="item/itemListSearch.jsp?itemCategoryKey=출산%2F임부용품">출산/임부용품</a></li>
+							<li><a href="item/itemListSearch.jsp?itemCategoryKey=이유용품%2F유아식기">이유용품/유아식기</a></li>
 						</ul></li>
 				<li><a href=
 				<%if (user_id != null) {%>

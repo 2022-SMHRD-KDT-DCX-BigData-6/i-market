@@ -219,7 +219,7 @@ section, summary, time, mark, audio, video {
 	font-family:'Hi Melody', cursive;
 }
 
-.row {
+.row.login {
 	padding: 0  !important;
 	width: 80%  !important;
 	margin: 0 0 0 -30px !important;
@@ -240,7 +240,7 @@ section {
 	WebMemberDTO loginMember = (WebMemberDTO) session.getAttribute("loginMember");
 	%>
 	<section>
-		<div class="row">
+		<div class="row login">
 			<div class="col-12" align="right">
 				<%if(loginMember==null) { %>
 					<a href="../user/join.jsp">

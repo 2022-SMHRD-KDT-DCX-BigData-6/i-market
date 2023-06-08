@@ -1,3 +1,4 @@
+<%@page import="java.text.DecimalFormat"%>
 <%@page import="com.main.model.itemBargainDAO"%>
 <%@page import="com.main.model.itemBargainDTO"%>
 <%@page import="com.main.model.WebMemberDTO"%>
@@ -445,7 +446,12 @@ function gologin() {
 				<p rel="schema:url" resource="https://www.daangn.com/556391615"></p>
 				<p property="schema:priceCurrency" content="KRW"></p>
 				<p id="article-price" property="schema:price" content="5000.0"
-					style="font-size: 18px; font-weight: bold;"><%=item_list.get(0).getItem_price()%>원
+					style="font-size: 18px; font-weight: bold;"><%
+										int upPrice = item_list.get(0).getItem_price();
+										DecimalFormat decimalFormat = new DecimalFormat("#,###");
+										String formattedPrice = decimalFormat.format(upPrice);
+										%>
+										<%=formattedPrice %>원
 				</p>
 				<div property="schema:description" id="article-detail">
 					<p><%=item_list.get(0).getItem_info()%></p>
@@ -517,7 +523,12 @@ function gologin() {
 			<p rel="schema:url" resource="https://www.daangn.com/556391615"></p>
 			<p property="schema:priceCurrency" content="KRW"></p>
 			<p id="article-price" property="schema:price" content="5000.0"
-				style="font-size: 18px; font-weight: bold;"><%=item_list.get(0).getItem_price()%>원
+				style="font-size: 18px; font-weight: bold;"><%
+										int upPrice = item_list.get(0).getItem_price();
+										DecimalFormat decimalFormat = new DecimalFormat("#,###");
+										String formattedPrice = decimalFormat.format(upPrice);
+										%>
+										<%=formattedPrice %>원
 			</p>
 			<div property="schema:description" id="article-detail">
 				<p><%=item_list.get(0).getItem_info()%></p>
