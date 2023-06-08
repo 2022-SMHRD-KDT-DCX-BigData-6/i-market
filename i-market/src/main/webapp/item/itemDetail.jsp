@@ -1,4 +1,3 @@
-<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@page import="java.text.DecimalFormat"%>
 <%@page import="com.main.model.itemBargainDAO"%>
 <%@page import="com.main.model.itemBargainDTO"%>
@@ -374,8 +373,8 @@ function gologin() {
 						<div class="slick-list draggable">
 							<div class="slick-track"
 								style="opacity: 1; width: 729px; transform: translate3d(0px, 0px, 0px);">
-								<div class="	" data-slick-index="0" aria-hidden="false"
-									style="width: center;">
+								<div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false"
+									style="width: 729px;">
 									<div>
 										<a href="itemPhotoDetail.jsp?item_idx=<%=item_idx%>"
 											style="width: 100%; display: inline-block;" tabindex="0">
@@ -405,7 +404,7 @@ function gologin() {
 					<div style="display: flex;">
 						<div id="article-profile-left">
 							<div id="nickname"><%=item_list.get(0).getUser_id()%></div>
-							<div id="region-name"><%=item_list.get(0).getUser_addr_at()%>
+							<div id="region-name"><%=item_list.get(0).getUser_addr_at()%></div>
 						</div>
 					</div>
 					<div id="article-profile-right">
@@ -561,7 +560,7 @@ function gologin() {
 		%>
 	</article>
 
-	<!-- Scripts -->
+	<!— Scripts —>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.dropotron.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>

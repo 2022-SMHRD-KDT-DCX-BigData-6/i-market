@@ -47,7 +47,7 @@ public class uploaditemService extends HttpServlet {
 			if (cnt == 0) {
 				response.sendRedirect("item/uploadItemBoard.jsp");
 			} else {
-				response.sendRedirect("item/itemListMain.jsp");
+				response.sendRedirect("item/uploadItemBoard.jsp");
 			}
 
 		} catch (Exception e) {

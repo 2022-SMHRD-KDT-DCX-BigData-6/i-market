@@ -21,6 +21,10 @@
 		select * from t_iteminfo order by item_idx
 	</select>
 	
+	<select id="showItemHit" resultType="com.main.model.t_iteminfoDTO">
+		select * from t_iteminfo order by item_view desc
+	</select>
+	
 	<select id="showBargain" resultType="com.main.model.itemBargainDTO">
 		select * from t_bargain where item_idx=#{item_idx} order by bar_price
 	</select>

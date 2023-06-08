@@ -28,6 +28,14 @@ public class t_iteminfoDAO {
 		return item_list;
 	}
 	
+	public List<t_iteminfoDTO> showItemHit() {
+		List<t_iteminfoDTO> item_list = sqlSession.selectList("com.smhrd.database.hifiveMapper.showItemHit");
+
+		sqlSession.close();
+
+		return item_list;
+	}
+	
 	public List<t_iteminfoDTO> showItemSearch(String itemSearchKey) {
 		List<t_iteminfoDTO> item_list = sqlSession.selectList("com.smhrd.database.hifiveMapper.searchItem", itemSearchKey);
 
