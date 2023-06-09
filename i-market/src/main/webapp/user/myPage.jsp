@@ -45,7 +45,7 @@ input[type="submit"], button, .button {
 }
 
 /* Button */
-input[type="submit"], input[type="reset"], button, .button {
+input[type="submit"], input[type="reset"], button, .button{
 	-webkit-appearance: none;
 	display: inline-block;
 	text-decoration: none;
@@ -85,7 +85,7 @@ input[type="button"] {
 	transition: background-color .25s ease-in-out;
 }
 
-#button1, #button2 {
+#button1, #button2 , input[type="button"].chat {
 	-webkit-appearance: none;
 	display: inline-block;
 	text-decoration: none;
@@ -125,7 +125,7 @@ input[type="button"] {
 	transition: background-color .25s ease-in-out;
 }
 
-#button1:hover, #button2:hover {
+#button1:hover, #button2:hover, input[type="button"].chat:hover {
 	background: rgb(235, 225, 15);
 }
 
@@ -133,7 +133,7 @@ button:hover, .button:hover {
 	background: rgb(235, 225, 15);
 }
 
-input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover
+input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover, .chat:hover
 	{
 	background: #217214a3;
 }
@@ -226,6 +226,9 @@ html, body, div, span, applet, object, iframe, h2, h3, h4, h5, h6, p,
 	details, embed, figure, figcaption, footer, header, hgroup, menu, nav,
 	output, ruby, section, summary, time, mark, audio, video {
 	font-family: 'Hi Melody', cursive;
+}
+.chat {
+font-family: 'Hi Melody', cursive;
 }
 </style>
 </head>
@@ -369,9 +372,25 @@ html, body, div, span, applet, object, iframe, h2, h3, h4, h5, h6, p,
 						</div>
 						<br>
 						<div>
-							<font size=5>주소 : <%=profile.getUser_addr()%></font>
+							<font size=5 style="padding-left: 290px;">주소 : <%=profile.getUser_addr()%></font>
 						</div>
 						<br>
+					
+				<div style="">
+							<input type="button" value="내 채팅보기" onclick="openPop()" class="chat">
+					<!-- 쿼리스트링 방식 : url?name=value&name=value -->
+					<a href="update.jsp?id=<%=profile.getUser_id()%>"> <input
+						type="button" id="button1" value="개인정보수정" class="button fit"
+						style="font-family: 'Hi Melody', cursive;">
+					</a>
+					<a href="main.jsp" style=""> <input
+						type="button" id="button2" value="되돌아가기" class="button fit"
+						style="font-family: 'Hi Melody', cursive;">
+					</a>
+				</div>
+						</section>
+					</div>
+				</div>
 						<section id="main">
 						<div class="container">
 							<div class="col-12">
@@ -425,26 +444,6 @@ html, body, div, span, applet, object, iframe, h2, h3, h4, h5, h6, p,
 							</div>
 						</div>
 						</section>
-						<div>
-							<input type="button" value="내 채팅보기" onclick="openPop()">
-						</div>
-						<br>
-						</section>
-					</div>
-				</div>
-				<div style="float: left; margin-left: 630px;">
-					<!-- 쿼리스트링 방식 : url?name=value&name=value -->
-					<a href="update.jsp?id=<%=profile.getUser_id()%>"> <input
-						type="button" id="button1" value="개인정보수정" class="button fit"
-						style="font-family: 'Hi Melody', cursive;">
-					</a>
-				</div>
-				<div>
-					<a href="main.jsp" style="padding-right: 600px;"> <input
-						type="button" id="button2" value="되돌아가기" class="button fit"
-						style="font-family: 'Hi Melody', cursive;">
-					</a>
-				</div>
 				<div style="clear: both"></div>
 				</section>
 			</div>
