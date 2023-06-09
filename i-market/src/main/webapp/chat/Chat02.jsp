@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Forty by HTML5 UP</title>
+<title><%= session.getAttribute("user_id")%>님의 채팅방</title>
 <script src="https://kit.fontawesome.com/7b42c1f2dd.js" crossorigin="anonymous"></script>
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

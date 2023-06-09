@@ -298,6 +298,7 @@ td {
 		String croom_title= "croom_title";
 		session.setAttribute("croom_content", croom_content);
 		session.setAttribute("croom_title", croom_title);
+
 		%>
 	</section>
 	<button class="chat-input" id="writer" onclick="closePop()">채팅종료</button>
