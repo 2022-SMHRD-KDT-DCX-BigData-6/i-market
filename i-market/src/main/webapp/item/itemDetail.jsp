@@ -398,7 +398,7 @@ function gologin() {
 		</section>
 
 		<section id="article-profile">
-			<a id="article-profile-link" href="/u/kxz8o6Y4YYV7qDXA">
+			<div id="article-profile-link">
 				<h3 class="hide">프로필</h3>
 				<div class="space-between">
 					<div style="display: flex;">

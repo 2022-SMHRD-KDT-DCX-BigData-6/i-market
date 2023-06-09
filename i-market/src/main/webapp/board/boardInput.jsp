@@ -306,7 +306,7 @@ section, summary, time, mark, audio, video {
 
 							<form action="../BoardWriteService" method="post" enctype="multipart/form-data">
 								<div class="title">
-								<h1>제목 <input type="text" name="b_title" maxlength="30"></h1><br>
+								<h1>제목 <input type="text" name="b_title" id="b_title" maxlength="30"></h1><br>
 								</div>
 								<div class="content">
 								<h1>&nbsp;내용</h1> 
